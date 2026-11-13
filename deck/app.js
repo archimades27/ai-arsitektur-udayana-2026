@@ -131,9 +131,9 @@
   const overviewItems = Array.from(overviewGrid.querySelectorAll('.overview-item'));
 
   function chapterHrefForIndex(numOneBased) {
-    if (numOneBased >= 18) return '#sec-18';
-    if (numOneBased >= 11) return '#sec-11';
-    if (numOneBased >= 8) return '#sec-08';
+    if (numOneBased >= 19) return '#sec-19';
+    if (numOneBased >= 12) return '#sec-12';
+    if (numOneBased >= 9) return '#sec-09';
     if (numOneBased >= 5) return '#sec-05';
     if (numOneBased >= 4) return '#sec-04';
     return '#sec-01';
@@ -353,7 +353,7 @@
       url: 'https://archimades27.github.io/ai-arsitektur-udayana-2026/',
       caption: 'PINDAI KAMERA • WEB + PDF',
       svgTitle: 'Kode QR menuju Presentasi Web Interaktif dan Unduhan Handbook PDF',
-      desc: 'Satu tautan membuka dek web interaktif 20 bagian secara utuh di ponsel atau laptop peserta, lengkap dengan unduhan buku pegangan PDF 12 halaman dan contoh gambar kerja AutoCAD MCP (.dxf).',
+      desc: 'Satu tautan membuka dek web interaktif 21 bagian secara utuh di ponsel atau laptop peserta, lengkap dengan unduhan buku pegangan PDF 12 halaman serta berkas parametrik Grasshopper (.gh), Rhino (.3dm), dan gambar kerja AutoCAD MCP (.dxf).',
       path: 'M2 2.5h7m1 0h4m2 0h1m2 0h2m3 0h1m3 0h7M2 3.5h1m5 0h1m1 0h1m2 0h1m4 0h1m1 0h3m1 0h1m3 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m4 0h2m1 0h1m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m3 0h2m3 0h1m1 0h5m1 0h2m1 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h2m1 0h5m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m5 0h3m5 0h1m2 0h2m1 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M13 9.5h1m1 0h1m5 0h2m1 0h3M2 10.5h1m2 0h7m1 0h1m3 0h3m1 0h1m4 0h2m2 0h1m1 0h3M2 11.5h3m1 0h2m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2m4 0h3M5 12.5h2m1 0h2m2 0h1m3 0h2m5 0h6m1 0h3m1 0h1M2 13.5h2m3 0h1m1 0h5m2 0h2m1 0h1m1 0h2m2 0h2m2 0h1m2 0h2M2 14.5h2m4 0h3m1 0h2m1 0h2m1 0h1m1 0h3m5 0h1m4 0h1M3 15.5h1m1 0h2m5 0h3m3 0h2m5 0h1m1 0h1m1 0h1m1 0h1M8 16.5h1m1 0h1m3 0h2m2 0h1m1 0h2m1 0h2m3 0h1m1 0h3M2 17.5h2m1 0h1m4 0h1m1 0h2m2 0h2m3 0h1m5 0h1m3 0h2m1 0h1M4 18.5h2m2 0h1m1 0h2m1 0h1m7 0h1m2 0h8M2 19.5h4m1 0h1m1 0h3m1 0h7m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1M2 20.5h2m1 0h6m2 0h1m2 0h3m2 0h3m1 0h1m2 0h2m1 0h2m1 0h1M2 21.5h1m1 0h4m7 0h3m4 0h1m2 0h2m1 0h1m1 0h3m1 0h1M3 22.5h1m1 0h2m1 0h1m1 0h1m1 0h3m2 0h2m1 0h2m7 0h1m1 0h1m1 0h1M2 23.5h3m1 0h1m3 0h1m1 0h2m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m1 0h1M2 24.5h1m1 0h2m1 0h2m4 0h2m1 0h2m1 0h1m3 0h4m1 0h1m1 0h1m1 0h3M2 25.5h1m2 0h3m2 0h2m3 0h2m2 0h2m3 0h2m1 0h1m2 0h1m1 0h1M2 26.5h3m2 0h3m1 0h3m3 0h2m2 0h1m3 0h6m3 0h1M10 27.5h2m1 0h1m1 0h4m1 0h1m1 0h1m3 0h1m3 0h1m1 0h2M2 28.5h7m1 0h1m1 0h1m1 0h2m1 0h1m2 0h7m1 0h1m1 0h1m1 0h1M2 29.5h1m5 0h1m1 0h1m2 0h1m1 0h2m3 0h3m2 0h2m3 0h4M2 30.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m1 0h7m2 0h1M2 31.5h1m1 0h3m1 0h1m1 0h3m1 0h2m1 0h1m2 0h3m2 0h1m1 0h1m1 0h1m1 0h4M2 32.5h1m1 0h3m1 0h1m2 0h3m2 0h1m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2M2 33.5h1m5 0h1m2 0h2m3 0h1m1 0h1m1 0h3m1 0h2m1 0h1m1 0h6M2 34.5h7m1 0h2m2 0h1m2 0h1m1 0h1m2 0h1m2 0h2m1 0h4'
     },
     pdf: {
@@ -788,7 +788,7 @@
     setSolarViewMode(btn.dataset.solarView || 'preview');
   });
 
-  bindToggleGroup('.solar-focus-btn', (btn) => {
+  bindToggleGroup('.solar-focus-btn[data-sfocus]', (btn) => {
     const idx = Number(btn.dataset.sfocus) || 0;
     const item = solarFocusData[idx] || solarFocusData[0];
     if (solarViewportShell?.dataset.solarMode === 'live') {
@@ -1638,6 +1638,142 @@
     mcpDemoVideo.addEventListener('ended', syncMcpPlayLabel);
     syncMcpPlayLabel();
   }
+
+  const reaViewMeta = {
+    ingetrazo: {
+      pill: 'INGETRAZO v0.6.1 • POINT CLOUD & 3DGS v1.0.2',
+      subtag: 'Clone SketchUp + LayOut • GPL-3.0 • MCP Aktif'
+    },
+    cadcraft: {
+      pill: 'CADCRAFT v0.20.1 (RUST) • RENDER .DXF LIVE',
+      subtag: 'Clone AutoCAD Ringan • 198 Entitas Paviliun-Studio-Tropis-MCP.dxf'
+    },
+    pipeline: {
+      pill: 'MATRIKS REA (170 TOOLS) & EKOSISTEM OPENAEC',
+      subtag: 'Alur Spesifikasi Clean-Room • Bukan Pembajakan Kode'
+    }
+  };
+
+  const reaStepsData = [
+    {
+      defaultView: 'ingetrazo',
+      ingetrazoRect: [6, 26, 1286, 876],
+      cadcraftRect: [24, 60, 1220, 602],
+      pipelineTier: 0,
+      rpcServer: 'MCP • rea (170 tools) + ingetrazo',
+      rpcCall: 'rea.trace_application_feature({ target: "push_pull_skp_ifc4" }) -> ingetrazo.query_model()',
+      t: '01 • Apa Itu REA (Reverse Engineer Anything) & Rekonstruksi Clean-Room',
+      bullets: [
+        '<strong>Jembatan analisis ke agen koding:</strong> Server MCP <code>morluto/rea</code> menyediakan 170 <em>tools</em> (terhubung ke Ghidra, Hopper, JADX &amp; pengurai biner) untuk memetakan struktur berkas serta perilaku fitur aplikasi secara terukur',
+        '<strong>Prinsip Clean-Room (bukan pembajakan):</strong> Temuan analisis ditulis menjadi dokumen spesifikasi perilaku &amp; <em>obligation ledger</em>, lalu agen merakit implementasi baru yang bersih di atas pustaka terbuka (Rust/C++/Python)',
+        '<strong>Dampak di dunia arsitektur:</strong> Mempercepat lahirnya alternatif <em>open-source</em> untuk pemodelan 3D, CAD 2D, BIM <code>IFC4</code>, dan <em>markup</em> PDF yang langsung memiliki dukungan MCP sejak hari pertama'
+      ]
+    },
+    {
+      defaultView: 'ingetrazo',
+      ingetrazoRect: [1298, 66, 296, 854],
+      cadcraftRect: [24, 60, 1220, 602],
+      pipelineTier: 1,
+      rpcServer: 'MCP • ingetrazo + Point Cloud 3DGS v1.0.2',
+      rpcCall: 'ingetrazo.run_python({ plugin: "archimades27/pointcloud-splat", points: 369541, mode: "scan_to_bim" })',
+      t: '02 • IngeTrazo v0.6.1 & Ekstensi Point Cloud 3DGS (@archi.mades)',
+      bullets: [
+        '<strong>Alternatif terbuka SketchUp + LayOut:</strong> Berlisensi <code>GPL-3.0</code>, membuka berkas <code>.skp</code> (2013 s.d. 2026), memiliki <em>Sheet Composer</em> berskala ke PDF, klasifikasi <code>IFC4</code>, serta server MCP bawaan (<code>run_python</code>, <code>query_model</code>)',
+        '<strong>Kontribusi langsung narasumber:</strong> Ekstensi resmi <strong>Point Cloud &amp; 3D Gaussian Splatting v1.0.2</strong> (<code>archimades27/ingetrazo-pointcloud-splat</code>) merender <strong>369.541 titik pindaian</strong> pada 60+ FPS (C/SIMD) untuk <em>Section Box</em> &amp; <em>Scan-to-BIM</em>',
+        '<strong>Manfaat studio &amp; kampus:</strong> Mahasiswa dan biro dapat memodelkan eksisting tapak dari hasil pindaian LiDAR/fotogrametri ke 3D tanpa terikat biaya langganan tahunan yang mahal'
+      ]
+    },
+    {
+      defaultView: 'cadcraft',
+      ingetrazoRect: [6, 26, 1286, 876],
+      cadcraftRect: [24, 60, 1220, 602],
+      pipelineTier: 2,
+      rpcServer: 'MCP • cadcraft (Rust v0.20.1) + bimcraft',
+      rpcCall: 'cadcraft.open("Paviliun-Studio-Tropis-MCP.dxf") -> cadcraft.render({ entities: 198, width: 1600 })',
+      t: '03 • Gelombang Clone CAD & BIM Berbasis Rust (CADCraft, OpenCAD & BIMCraft)',
+      bullets: [
+        '<strong>CADCraft v0.20.1 &amp; OpenCADStudio:</strong> Alternatif 2D/3D AutoCAD ringan berbasis Rust dengan baris perintah familier (<code>LINE</code>, <code>OFFSET</code>, <code>TRIM</code>), dukungan <code>.dxf</code>/<code>.dwg</code>, kompilasi WebAssembly, dan server MCP terintegrasi',
+        '<strong>Render langsung di MacBook ini:</strong> Tangkapan di samping adalah keluaran nyata <code>cadcraft.render</code> saat membuka berkas <strong>198 entitas</strong> <code>Paviliun-Studio-Tropis-MCP.dxf</code> lengkap dengan jadwal ruang dan kusen',
+        '<strong>BIMCraft v0.9.0 (Alternatif Revit):</strong> Pemodel BIM parametrik berbasis Rust (pintasan <code>WA</code> dinding, <code>DR</code> pintu, <em>Ribbon UI</em>, jadwal kuantitas otomatis, dan pertukaran terbuka <code>IFC2x3</code>/<code>IFC4</code>)'
+      ]
+    },
+    {
+      defaultView: 'pipeline',
+      ingetrazoRect: [1298, 66, 296, 854],
+      cadcraftRect: [1272, 162, 300, 322],
+      pipelineTier: 3,
+      rpcServer: 'GOVERNANCE • OpenAEC (IFC4 / .DXF) & Decider',
+      rpcCall: 'rea.verify_reconstruction({ clean_room: true, export_standard: ["IFC4", "DXF", "PDF/A"] })',
+      t: '04 • Ekosistem OpenAEC, Instrumen Kustom & Sikap Kritis Decider',
+      bullets: [
+        '<strong>Melengkapi rantai kerja:</strong> Hadir pula <strong>Open PDF Studio</strong> (alternatif Bluebeam Revu untuk <em>markup</em> gambar kerja) berdampingan dengan instrumen spesifik biro hasil <em>vibe coding</em> seperti <strong>Helios Solar Engine v2.0</strong> &amp; <strong>Site Inspector 360°</strong>',
+        '<strong>Batas legal &amp; etika profesi:</strong> Gunakan <em>software clone</em> yang dibangun lewat <strong>spesifikasi clean-room</strong> berlisensi terbuka yang sah; hindari pembajakan lisensi maupun penyalinan kode sumber tertutup',
+        '<strong>Keputusan Decider di proyek nyata:</strong> Manfaatkan <em>clone</em> ringan &amp; ber-MCP untuk eksplorasi cepat, studi kampus, dan otomasi skrip, sembari mengunci format terbuka (<code>IFC4</code> / <code>.dxf</code>) saat berkoordinasi DED lintas disiplin di Revit/CAD industri'
+      ]
+    }
+  ];
+
+  let currentReaView = 'ingetrazo';
+  let currentReaStep = 0;
+
+  const reaViewportShell = document.getElementById('rea-viewport-shell');
+  const reaStagePill = document.getElementById('rea-stage-pill');
+  const reaStageSubtag = document.getElementById('rea-stage-subtag');
+  const reaPanelIngetrazo = document.getElementById('rea-panel-ingetrazo');
+  const reaPanelCadcraft = document.getElementById('rea-panel-cadcraft');
+  const reaPanelPipeline = document.getElementById('rea-panel-pipeline');
+  const reaIngetrazoRect = document.getElementById('rea-ingetrazo-rect');
+  const reaCadcraftRect = document.getElementById('rea-cadcraft-rect');
+  const reaRpcServer = document.getElementById('rea-rpc-server');
+  const reaRpcCall = document.getElementById('rea-rpc-call');
+  const reaReadout = document.getElementById('rea-readout');
+  const reaViewBtns = Array.from(document.querySelectorAll('.rea-view-btn[data-rea-view]'));
+  const reaStepBtns = Array.from(document.querySelectorAll('.rea-step-btn[data-rea]'));
+
+  function renderReaStage() {
+    const stepItem = reaStepsData[currentReaStep] || reaStepsData[0];
+    const viewMeta = reaViewMeta[currentReaView] || reaViewMeta.ingetrazo;
+
+    if (reaViewportShell) {
+      reaViewportShell.dataset.reaView = currentReaView;
+      reaViewportShell.dataset.reaStep = String(currentReaStep);
+    }
+    if (reaStagePill) reaStagePill.textContent = viewMeta.pill;
+    if (reaStageSubtag) reaStageSubtag.textContent = viewMeta.subtag;
+
+    if (reaPanelIngetrazo) reaPanelIngetrazo.hidden = currentReaView !== 'ingetrazo';
+    if (reaPanelCadcraft) reaPanelCadcraft.hidden = currentReaView !== 'cadcraft';
+    if (reaPanelPipeline) {
+      reaPanelPipeline.hidden = currentReaView !== 'pipeline';
+      reaPanelPipeline.dataset.activeLayer = String(stepItem.pipelineTier ?? currentReaStep);
+    }
+
+    setSvgFocusRect(reaIngetrazoRect, stepItem.ingetrazoRect);
+    setSvgFocusRect(reaCadcraftRect, stepItem.cadcraftRect);
+
+    reaViewBtns.forEach((b) => {
+      b.setAttribute('aria-pressed', String(b.dataset.reaView === currentReaView));
+    });
+    reaStepBtns.forEach((b, idx) => {
+      b.setAttribute('aria-pressed', String(idx === currentReaStep));
+    });
+
+    if (reaRpcServer) reaRpcServer.textContent = stepItem.rpcServer;
+    if (reaRpcCall) reaRpcCall.textContent = stepItem.rpcCall;
+    if (reaReadout) reaReadout.innerHTML = renderPointBox(stepItem.t, stepItem.bullets);
+  }
+
+  bindToggleGroup('.rea-view-btn[data-rea-view]', (btn) => {
+    currentReaView = btn.dataset.reaView || 'ingetrazo';
+    renderReaStage();
+  });
+
+  bindToggleGroup('.rea-step-btn[data-rea]', (btn) => {
+    currentReaStep = Number(btn.dataset.rea) || 0;
+    const stepItem = reaStepsData[currentReaStep] || reaStepsData[0];
+    currentReaView = stepItem.defaultView || 'ingetrazo';
+    renderReaStage();
+  });
 
   // Respect prefers-reduced-motion on autoplaying media (`lazy-load-video-and-audio`)
   const reducedMotionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');

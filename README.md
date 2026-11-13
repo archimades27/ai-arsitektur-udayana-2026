@@ -4,7 +4,7 @@ Materi terbuka webinar **Kelompok Studi Cipta Loka**, Program Studi Arsitektur, 
 
 ## Akses Cepat Peserta
 
-1. **Presentasi Web Interaktif (Full Experience, 20 Bagian):**
+1. **Presentasi Web Interaktif (Full Experience, 21 Bagian):**
    https://archimades27.github.io/ai-arsitektur-udayana-2026/
 2. **Buku Pegangan Peserta (PDF 12 Halaman A4):**
    [`output/Handbook-AI-in-Architecture-Udayana-2026.pdf`](./output/Handbook-AI-in-Architecture-Udayana-2026.pdf)
@@ -19,7 +19,7 @@ Materi terbuka webinar **Kelompok Studi Cipta Loka**, Program Studi Arsitektur, 
 
 ## Struktur Repositori
 
-- `deck/` : Presentasi web interaktif berbasis HTML, CSS, dan JavaScript murni (*Continuous Atelier Monograph*, mendukung Mode Gelap & Mode Terang, panel Catatan Lisan pembicara, simulasi sirip fasad barat, studi kasus nyata multi-platform MCP untuk SketchUp 2027, tangkapan asli Rhino 8 + Grasshopper `rhinomcp`, dan AutoCAD 2026, serta simulasi fiktif Hermes Agent + Telegram Bot).
+- `deck/` : Presentasi web interaktif berbasis HTML, CSS, dan JavaScript murni (*Continuous Atelier Monograph*, mendukung Mode Gelap & Mode Terang, panel Catatan Lisan pembicara, simulasi sirip fasad barat, studi kasus nyata multi-platform MCP untuk SketchUp 2027, tangkapan asli Rhino 8 + Grasshopper `rhinomcp`, dan AutoCAD 2026, simulasi fiktif Hermes Agent + Telegram Bot, serta perkembangan software clone arsitektur berbasis REA seperti IngeTrazo + Point Cloud 3DGS, CADCraft, dan BIMCraft).
 - `handbook/` : Sumber cetak buku pegangan A4 (`handbook.html`) untuk menghasilkan PDF 12 halaman.
 - `output/` : Berkas siap unduh bagi peserta (`Handbook-AI-in-Architecture-Udayana-2026.pdf`, `Paviliun-Studio-Tropis-MCP.gh`, `Paviliun-Studio-Tropis-MCP.3dm`, `Paviliun-Studio-Tropis-MCP.dxf`, dan biodata narasumber).
 - `kajian_etika_hak_cipta_ai_arsitektur.md` : Naskah lengkap kajian batas analogi delegasi tim manusia vs instrumen AI, rujukan UU Hak Cipta No. 28 Tahun 2014, serta akuntabilitas profesi arsitek sebagai *Decider*.

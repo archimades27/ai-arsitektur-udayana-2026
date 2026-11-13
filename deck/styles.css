@@ -2987,10 +2987,54 @@ svg [hidden] {
 }
 
 #ai-paradigm-svg,
-#ethics-authorship-svg {
+#ethics-authorship-svg,
+#rea-pipeline-svg {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.rea-viewport-shell {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-tile);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #1C1F24;
+}
+
+.rea-pane {
+  position: relative;
+  width: 100%;
+}
+
+.rea-pane[hidden] {
+  display: none !important;
+}
+
+.rea-pane img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rea-pane--cadcraft {
+  background: #1C232A;
+}
+
+.rea-pane--pipeline {
+  background: var(--bg-elevated);
+}
+
+.rea-pipeline-viewport {
+  border: 0;
+  border-radius: 0;
+  padding: 0.7rem 0.85rem;
+}
+
+#rea-ingetrazo-rect,
+#rea-cadcraft-rect {
+  transition: all 0.28s var(--ease-expo);
 }
 
 .ai-svg-tier {
@@ -3028,13 +3072,15 @@ svg [hidden] {
 
 .ai-paradigm-stage[data-active-layer="0"] .ai-svg-tier[data-tier="0"],
 .ai-paradigm-stage[data-active-layer="1"] .ai-svg-tier[data-tier="1"],
-.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"] {
+.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"],
+.ai-paradigm-stage[data-active-layer="3"] .ai-svg-tier[data-tier="3"] {
   opacity: 1;
 }
 
 .ai-paradigm-stage[data-active-layer="0"] .ai-svg-tier[data-tier="0"] .ai-tier-box,
 .ai-paradigm-stage[data-active-layer="1"] .ai-svg-tier[data-tier="1"] .ai-tier-box,
-.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"] .ai-tier-box {
+.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"] .ai-tier-box,
+.ai-paradigm-stage[data-active-layer="3"] .ai-svg-tier[data-tier="3"] .ai-tier-box {
   fill: var(--surface);
   stroke: var(--accent);
   stroke-width: 2;
@@ -3042,20 +3088,23 @@ svg [hidden] {
 
 .ai-paradigm-stage[data-active-layer="0"] .ai-svg-tier[data-tier="0"] .ai-tier-badge,
 .ai-paradigm-stage[data-active-layer="1"] .ai-svg-tier[data-tier="1"] .ai-tier-badge,
-.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"] .ai-tier-badge {
+.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"] .ai-tier-badge,
+.ai-paradigm-stage[data-active-layer="3"] .ai-svg-tier[data-tier="3"] .ai-tier-badge {
   fill: var(--accent-fill);
   stroke: var(--accent);
 }
 
 .ai-paradigm-stage[data-active-layer="0"] .ai-svg-tier[data-tier="0"] .ai-tier-num,
 .ai-paradigm-stage[data-active-layer="1"] .ai-svg-tier[data-tier="1"] .ai-tier-num,
-.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"] .ai-tier-num {
+.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"] .ai-tier-num,
+.ai-paradigm-stage[data-active-layer="3"] .ai-svg-tier[data-tier="3"] .ai-tier-num {
   fill: #FAF8F5;
 }
 
 .ai-paradigm-stage[data-active-layer="0"] .ai-svg-tier[data-tier="0"] .ai-tier-title,
 .ai-paradigm-stage[data-active-layer="1"] .ai-svg-tier[data-tier="1"] .ai-tier-title,
-.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"] .ai-tier-title {
+.ai-paradigm-stage[data-active-layer="2"] .ai-svg-tier[data-tier="2"] .ai-tier-title,
+.ai-paradigm-stage[data-active-layer="3"] .ai-svg-tier[data-tier="3"] .ai-tier-title {
   fill: var(--accent);
 }
 
