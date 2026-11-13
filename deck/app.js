@@ -2156,7 +2156,7 @@ posisi_x = [
       const step = 6;
       const cols = Math.floor(w / step);
       const rows = Math.floor(h / step);
-      const milestones = [115, 360, 615, 848];
+      const milestones = [96, 332, 604, 848];
 
       for (let gy = 1; gy < rows - 1; gy++) {
         const y = gy * step + 3;
