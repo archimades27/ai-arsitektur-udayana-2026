@@ -1321,59 +1321,97 @@
       ]
     },
     rhino: {
-      stagePill: 'RHINO 8 & GRASSHOPPER • RHINOMCP (:1999)',
-      subTag: 'gh_build_graph • NURBS & Dataflow',
+      stagePill: 'RHINO 8 & GRASSHOPPER • LIVE RHINOMCP (:1999)',
+      subTag: 'Paviliun-Studio-Tropis-MCP.gh • .3dm',
+      views: {
+        split: {
+          src: 'assets/rhino-gh-split.png',
+          w: 1600,
+          h: 760,
+          alt: 'Tangkapan layar asli kanvas Grasshopper dan viewport Perspective Rhino 8 hasil eksekusi rhinomcp di MacBook ini: empat grup komponen Number Slider, Series Y, Profil 320x60mm, Rotate 30 deg, Extrude 3,20 m, dan Solid 11 Brep menampilkan pratinjau langsung 11 sirip merah transparan pada fasad barat Paviliun Studio Tropis.',
+          rects: [
+            [[23, 190, 458, 164], null],
+            [[23, 382, 280, 182], null],
+            [[558, 184, 372, 160], null],
+            [[448, 382, 468, 158], [954, 180, 446, 480]]
+          ]
+        },
+        canvas: {
+          src: 'assets/rhino-gh-canvas.png',
+          w: 1800,
+          h: 771,
+          alt: 'Ekspor resolusi tinggi asli kanvas Grasshopper (Paviliun-Studio-Tropis-MCP.gh) dari Rhino 8: Grup 01 Parameter Slider dan Series Y (0,60 m x 11), Grup 02 Profil Penampang Sirip (320 x 60 mm), Grup 03 Rantai Transformasi Rotate 30 deg, dan Grup 04 Extrude 3,2 m serta Cap Solid (11 Brep).',
+          rects: [
+            [[26, 20, 892, 312], null],
+            [[26, 392, 542, 352], null],
+            [[1076, 12, 720, 304], null],
+            [[862, 392, 910, 306], null]
+          ]
+        },
+        viewport: {
+          src: 'assets/rhino-gh-viewport.png',
+          w: 1400,
+          h: 875,
+          alt: 'Tangkapan asli viewport Perspective Rhino 8 (Paviliun-Studio-Tropis-MCP.3dm): pelat lantai, 8 kolom baja grid 6 meter, kaca fasad barat biru muda, atap lengkung NURBS Loft tritisan 1,80 m, serta pratinjau merah transparan 11 Brep sirip vertikal Grasshopper yang diputar 30 derajat.',
+          rects: [
+            [[110, 560, 540, 265], null],
+            [[128, 295, 505, 480], null],
+            [[128, 295, 505, 480], null],
+            [[48, 200, 1300, 650], null]
+          ]
+        }
+      },
       steps: [
         {
-          btnTitle: '01. Parameter Slider & Series',
-          btnSub: 'Bangun Number Slider modul 0.60 m & sudut 30°',
+          btnTitle: '01. Parameter Slider & Series Y',
+          btnSub: 'X = -0,70 m • Modul 0,60 m • Jumlah 11 -> Bidang Dasar',
           ghGroup: 0,
           rpcServer: 'JSON-RPC • rhinomcp :1999',
-          rpcCall: 'mcp_rhino.gh_build_graph({ components: [{ alias: "mod", component_name: "Number Slider", value: 0.6 }, { alias: "ang", value: 30 }] })',
-          t: '01 • Merakit Parameter Awal di Kanvas Grasshopper',
+          rpcCall: 'mcp_rhino.gh_build_graph({ sliders: { x_fasad_m: -0.70, modul_m: 0.60, jumlah: 11 }, nodes: ["Series Y", "Titik Fasad", "Bidang Dasar"] })',
+          t: '01 • Merakit Parameter Awal Asli di Kanvas Grasshopper',
           bullets: [
-            'Agen memanggil <code>gh_build_graph</code> untuk menaruh <strong>Number Slider</strong> jarak modul (<code>0.60 m</code>), sudut putar (<code>30°</code>), dan <strong>Series</strong> (<code>11</code> titik)',
-            'Tidak sekadar menghasilkan geometri mati: seluruh hubungan antar-parameter tetap hidup di kanvas Grasshopper',
-            'Arsitek bebas menggeser slider kapan saja saat menguji alternatif bukaan barat'
+            'Tangkapan di samping adalah kanvas <strong>Grasshopper asli</strong> di Rhino 8 MacBook ini (berkas <code>Paviliun-Studio-Tropis-MCP.gh</code>) hasil panggilan <code>gh_build_graph</code>',
+            'Tiga <strong>Number Slider</strong> (<code>X Fasad Barat = -0.70</code>, <code>Modul Sirip = 0.60</code>, <code>Jumlah Sirip = 11</code>) mengalir ke <code>Series Y</code>, <code>Titik Fasad</code>, dan <code>Bidang Dasar</code>',
+            'Seluruh relasi dataflow tetap hidup sehingga arsitek dapat menggeser slider kapan saja'
           ]
         },
         {
-          btnTitle: '02. Rantai Transformasi Move & Rotate',
-          btnSub: 'Hubungkan kabel dataflow 11 bidang kerja fasad',
+          btnTitle: '02. Profil Penampang 320 x 60 mm',
+          btnSub: 'Lebar 0,32 m • Tebal 0,06 m • Radius 0,00 -> Rectangle',
           ghGroup: 1,
           rpcServer: 'JSON-RPC • rhinomcp :1999',
-          rpcCall: 'mcp_rhino.gh_mutate_graph({ connections: [{ source: "series", target: "move_y" }, { source: "ang_rad", target: "rot_3d" }] })',
-          t: '02 • Menyambung Kabel Dataflow Move & Rotate 3D',
+          rpcCall: 'mcp_rhino.gh_build_graph({ component: "Rectangle", nickname: "Profil 320x60mm", x_m: 0.32, y_m: 0.06, radius_m: 0.00 })',
+          t: '02 • Membentuk Kurva Penampang Sirip pada 11 Bidang Kerja',
           bullets: [
-            '<code>gh_mutate_graph</code> menghubungkan keluaran <strong>Series</strong> ke vektor <strong>Unit Y + Move</strong> sepanjang bentang 6,0 m',
-            'Konversi derajat ke radian memutar kesebelas bidang sirip sebesar <code>30.0°</code> terhadap sumbu Z secara presisi',
-            'Jika panjang fasad berubah dari 6 m ke 9 m, jumlah modul menyesuaikan otomatis tanpa gambar ulang'
+            'Keluaran 11 bidang kerja dari <code>Bidang Dasar</code> langsung diumpankan ke komponen <strong>Rectangle</strong> (<code>Profil 320x60mm</code>)',
+            'Dimensi penampang dikendalikan slider <code>Lebar Sirip = 0.32 m</code>, <code>Tebal Sirip = 0.06 m</code>, dan <code>Radius Sudut = 0.00 m</code>',
+            'Jika material sirip diganti dari kayu komposit ke aluminium berongga, ukuran penampang cukup digeser dari satu grup ini'
           ]
         },
         {
-          btnTitle: '03. Extrude NURBS & Kanopi Loft',
-          btnSub: 'Bentuk 11 Brep sirip 3,2 m & permukaan atap tropis',
+          btnTitle: '03. Rantai Transformasi Rotate 30°',
+          btnSub: 'Sudut Putar 30,0° -> Radians -> Rotate 30 deg',
           ghGroup: 2,
           rpcServer: 'JSON-RPC • rhinomcp :1999',
-          rpcCall: 'mcp_rhino.extrude_curve({ profile_mm: [300, 60], height_m: 3.20 }) + mcp_rhino.loft({ overhang_m: 1.80 })',
-          t: '03 • Pembentukan Geometri NURBS Presisi di Rhino 8',
+          rpcCall: 'mcp_rhino.gh_mutate_graph({ slider: "Sudut Putar (deg)", value: 30.0, chain: ["Radians", "Rotate 30 deg"] })',
+          t: '03 • Memutar 11 Penampang Sirip Sebesar 30,0° Secara Presisi',
           bullets: [
-            'Profil penampang sirip <code>300 x 60 mm</code> diekstrusi setinggi <code>3,20 m</code> menjadi objek <strong>Brep NURBS</strong> yang bersih',
-            'Kurva rangka atap dihubungkan dengan operasi <code>loft</code> untuk membentuk kanopi peneduh beroverhang <code>1,80 m</code>',
-            'Toleransi dokumen Rhino dijaga ketat agar siap diteruskan ke fabrikasi maupun analisis termal'
+            'Slider <code>Sudut Putar (deg) = 30.0</code> dikonversi melalui node <strong>Radians</strong> sebelum masuk ke input sudut (<code>A</code>) pada <strong>Rotate 30 deg</strong>',
+            'Poros putar setiap sirip dikunci pada masing-masing <code>Bidang Dasar</code> agar tidak meleset dari garis fasad barat',
+            'Arsitek bebas menguji respons bayangan dari <code>0°</code> hingga <code>60°</code> secara seketika di viewport Rhino 8'
           ]
         },
         {
-          btnTitle: '04. Preview Viewport & Bake Layer',
-          btnSub: 'Tangkap pratinjau perspektif & kunci ke ARS-FASAD-SIRIP',
+          btnTitle: '04. Extrude 3,20 m & Pratinjau Rhino 8',
+          btnSub: 'Tinggi 3,20 m -> Extrude Sirip -> Solid 11 Brep + Loft Atap',
           ghGroup: 3,
           rpcServer: 'JSON-RPC • rhinomcp :1999',
-          rpcCall: 'mcp_rhino.gh_capture_preview({ viewport: "perspective", width: 1200 }) -> bake("ARS-FASAD-SIRIP")',
-          t: '04 • Audit Visual Viewport & Bake Terstruktur',
+          rpcCall: 'mcp_rhino.gh_run_solution() -> Extrude(3.20) -> CapHoles("Solid 11 Brep") + ViewCapture("Paviliun-Studio-Tropis-MCP.3dm")',
+          t: '04 • Ekstrusi Solid 11 Brep & Pratinjau Langsung di Viewport Rhino 8',
           bullets: [
-            '<code>gh_capture_preview</code> menangkap tampilan perspektif Rhino tanpa perlu <em>bake</em> prematur saat masih eksplorasi',
-            'Setelah disetujui arsitek (<em>Decider</em>), 11 Brep dikunci (<em>Bake</em>) ke layer <code>ARS-FASAD-SIRIP</code>',
-            'Geometri siap diekspor ke Revit BIM (<code>.3dm</code> / <code>Rhino.Inside.Revit</code>) atau gambar potongan CAD'
+            'Slider <code>Tinggi Sirip = 3.20 m</code> mendorong vektor <code>Tinggi Z</code> ke <strong>Extrude Sirip</strong> lalu ditutup rapat oleh <strong>Solid 11 Brep</strong> (<em>Cap Holes</em>)',
+            'Perhatikan warna merah transparan khas pratinjau <strong>Grasshopper</strong> pada viewport <em>Perspective</em> Rhino 8 di sisi kanan bersama atap lengkung NURBS <em>Loft</em>',
+            'Setelah disetujui arsitek (<em>Decider</em>), 11 Brep siap di-<em>Bake</em> ke berkas <code>Paviliun-Studio-Tropis-MCP.3dm</code> untuk lanjut ke Revit BIM'
           ]
         }
       ]
@@ -1440,6 +1478,7 @@
 
   let currentMcpPlat = 'sketchup';
   let currentMcpStep = 0;
+  let currentRhinoView = 'split';
 
   const mcpReadout = document.getElementById('mcp-readout');
   const mcpRpcServer = document.getElementById('mcp-rpc-server');
@@ -1449,11 +1488,31 @@
   const mcpStageSubtag = document.getElementById('mcp-stage-subtag');
   const mcpPanelSketchup = document.getElementById('mcp-panel-sketchup');
   const mcpPanelRhino = document.getElementById('mcp-panel-rhino');
+  const mcpRhinoViewBar = document.getElementById('mcp-rhino-view-bar');
+  const mcpRhinoImg = document.getElementById('mcp-rhino-img');
+  const mcpGhSvg = document.getElementById('mcp-gh-svg');
+  const mcpGhFocusRect = document.getElementById('mcp-gh-focus-rect');
+  const mcpGhFocusRectB = document.getElementById('mcp-gh-focus-rect-b');
   const mcpPanelAutocad = document.getElementById('mcp-panel-autocad');
   const mcpCadFocusRect = document.getElementById('mcp-cad-focus-rect');
   const mcpDemoVideo = document.getElementById('mcp-demo-video');
   const mcpVidPlayBtn = document.getElementById('mcp-vid-play-btn');
   const mcpStepBtns = Array.from(document.querySelectorAll('.mcp-node-btn[data-mcp]'));
+
+  function setSvgFocusRect(el, rect) {
+    if (!el) return;
+    if (!rect) {
+      el.setAttribute('hidden', '');
+      el.style.display = 'none';
+      return;
+    }
+    el.removeAttribute('hidden');
+    el.style.display = '';
+    el.setAttribute('x', String(rect[0]));
+    el.setAttribute('y', String(rect[1]));
+    el.setAttribute('width', String(rect[2]));
+    el.setAttribute('height', String(rect[3]));
+  }
 
   function renderMcpStage(seekVideo) {
     const platData = mcpCatalog[currentMcpPlat] || mcpCatalog.sketchup;
@@ -1465,16 +1524,36 @@
     }
     if (mcpStagePill) mcpStagePill.textContent = platData.stagePill;
     const isSketchup = currentMcpPlat === 'sketchup';
+    const isRhino = currentMcpPlat === 'rhino';
     if (mcpVidPlayBtn) mcpVidPlayBtn.hidden = !isSketchup;
+    if (mcpRhinoViewBar) mcpRhinoViewBar.hidden = !isRhino;
     if (mcpStageSubtag) {
       mcpStageSubtag.hidden = isSketchup;
       mcpStageSubtag.textContent = platData.subTag;
     }
 
-    if (mcpPanelSketchup) mcpPanelSketchup.hidden = currentMcpPlat !== 'sketchup';
+    if (mcpPanelSketchup) mcpPanelSketchup.hidden = !isSketchup;
     if (mcpPanelRhino) {
-      mcpPanelRhino.hidden = currentMcpPlat !== 'rhino';
+      mcpPanelRhino.hidden = !isRhino;
       mcpPanelRhino.dataset.ghActive = String(item.ghGroup ?? currentMcpStep);
+      mcpPanelRhino.dataset.rhinoView = currentRhinoView;
+      if (isRhino && mcpCatalog.rhino.views) {
+        const vInfo = mcpCatalog.rhino.views[currentRhinoView] || mcpCatalog.rhino.views.split;
+        if (mcpRhinoImg) {
+          if (mcpRhinoImg.getAttribute('src') !== vInfo.src) {
+            mcpRhinoImg.setAttribute('src', vInfo.src);
+          }
+          mcpRhinoImg.setAttribute('width', String(vInfo.w));
+          mcpRhinoImg.setAttribute('height', String(vInfo.h));
+          mcpRhinoImg.setAttribute('alt', vInfo.alt);
+        }
+        if (mcpGhSvg) {
+          mcpGhSvg.setAttribute('viewBox', `0 0 ${vInfo.w} ${vInfo.h}`);
+        }
+        const pair = vInfo.rects[currentMcpStep] || vInfo.rects[0] || [null, null];
+        setSvgFocusRect(mcpGhFocusRect, pair[0]);
+        setSvgFocusRect(mcpGhFocusRectB, pair[1]);
+      }
     }
     if (mcpPanelAutocad) {
       mcpPanelAutocad.hidden = currentMcpPlat !== 'autocad';
@@ -1528,6 +1607,11 @@
   bindToggleGroup('.mcp-platform-btn', (btn) => {
     currentMcpPlat = btn.dataset.mcpPlat || 'sketchup';
     currentMcpStep = 0;
+    renderMcpStage(false);
+  });
+
+  bindToggleGroup('.mcp-rhino-view-btn', (btn) => {
+    currentRhinoView = btn.dataset.rhinoView || 'split';
     renderMcpStage(false);
   });
 

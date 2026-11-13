@@ -569,6 +569,13 @@
                 <span class="solar-epw-tag" id="mcp-stage-subtag" hidden>gh_build_graph • Satuan Meter/Milimeter</span>
               </div>
 
+              <!-- Sub-view Switcher Khusus Tangkapan Asli Rhino 8 & Grasshopper -->
+              <div class="lens-group mcp-rhino-subbar" id="mcp-rhino-view-bar" role="group" aria-label="Pilih tampilan tangkapan asli Rhino 8 dan Grasshopper" hidden>
+                <button type="button" class="lens-btn mcp-rhino-view-btn" data-rhino-view="split" aria-pressed="true">Layar Belah (GH + Rhino 8)</button>
+                <button type="button" class="lens-btn mcp-rhino-view-btn" data-rhino-view="canvas" aria-pressed="false">Kanvas Grasshopper (.GH)</button>
+                <button type="button" class="lens-btn mcp-rhino-view-btn" data-rhino-view="viewport" aria-pressed="false">Viewport 3D Rhino 8 (.3DM)</button>
+              </div>
+
               <!-- Panel 01: SketchUp 2027 Live Recorded Video -->
               <div class="mcp-video-frame" id="mcp-panel-sketchup">
                 <video
@@ -590,121 +597,21 @@
                 </video>
               </div>
 
-              <!-- Panel 02: Rhino 8 & Grasshopper MCP Parametric Node Graph + 3D NURBS Preview -->
-              <div class="mcp-gh-frame" id="mcp-panel-rhino" data-gh-active="0" hidden>
-                <svg id="mcp-gh-svg" viewBox="0 0 800 450" width="800" height="450" role="img"
-                  aria-label="Diagram kanvas node Grasshopper gh_build_graph terhubung ke viewport perspektif Rhino 8 untuk membangkitkan 11 sirip fasad barat 30 derajat dan kanopi tropis">
-                  <rect x="0" y="0" width="800" height="450" fill="#0E1318" />
-                  <!-- Left Canvas: Grasshopper Node Graph -->
-                  <rect x="14" y="14" width="474" height="422" rx="8" fill="#141B22" stroke="#31414F" stroke-width="1.2" />
-                  <text x="28" y="36" font-family="var(--font-mono)" font-size="10.5" font-weight="700" fill="#8CE8DA">GRASSHOPPER CANVAS • mcp_rhino.gh_build_graph()</text>
-
-                  <!-- Dataflow Bezier Wires -->
-                  <path d="M 206 82 C 232 82, 232 104, 256 104" fill="none" stroke="#8CE8DA" stroke-width="2" />
-                  <path d="M 206 202 C 232 202, 232 118, 256 118" fill="none" stroke="#8CE8DA" stroke-width="2" />
-                  <path d="M 206 142 C 232 142, 232 184, 256 184" fill="none" stroke="#F5923E" stroke-width="2" />
-                  <path d="M 470 112 C 484 112, 484 172, 256 172" fill="none" stroke="#7A8B99" stroke-width="1.5" stroke-dasharray="4 3" />
-                  <path d="M 470 184 C 482 232, 34 232, 44 294" fill="none" stroke="#F5923E" stroke-width="2" />
-                  <path d="M 250 294 C 272 294, 272 294, 294 294" fill="none" stroke="#F5923E" stroke-width="2" />
-                  <path d="M 250 368 C 272 368, 272 368, 294 368" fill="none" stroke="#8CE8DA" stroke-width="2" />
-
-                  <!-- GH Group 0: Sliders & Series -->
-                  <g class="gh-node-group" data-gh-group="0">
-                    <rect class="gh-node-card" x="28" y="58" width="178" height="46" rx="6" />
-                    <text class="gh-node-head" x="38" y="76">Number Slider • Modul</text>
-                    <text class="gh-node-val" x="38" y="94">0.60 m (min 0.40 .. 1.20)</text>
-
-                    <rect class="gh-node-card" x="28" y="118" width="178" height="46" rx="6" />
-                    <text class="gh-node-head" x="38" y="136">Number Slider • Sudut</text>
-                    <text class="gh-node-val" x="38" y="154">30.0° (min 0° .. 75°)</text>
-
-                    <rect class="gh-node-card" x="28" y="178" width="178" height="48" rx="6" />
-                    <text class="gh-node-head" x="38" y="196">Series • Titik Fasad</text>
-                    <text class="gh-node-val" x="38" y="214">S=0.0 • N=0.60 • C=11</text>
-                  </g>
-
-                  <!-- GH Group 1: Move & Rotate -->
-                  <g class="gh-node-group" data-gh-group="1">
-                    <rect class="gh-node-card" x="256" y="80" width="214" height="58" rx="6" />
-                    <text class="gh-node-head" x="268" y="100">Unit Y + Move</text>
-                    <text class="gh-node-val" x="268" y="120">Sebar 11 plane sepanjang 6.0 m</text>
-
-                    <rect class="gh-node-card" x="256" y="154" width="214" height="58" rx="6" />
-                    <text class="gh-node-head" x="268" y="174">Radians + Rotate 3D</text>
-                    <text class="gh-node-val" x="268" y="194">Putar sumbu Z sebesar 30.0°</text>
-                  </g>
-
-                  <!-- GH Group 2: Extrude & Loft -->
-                  <g class="gh-node-group" data-gh-group="2">
-                    <rect class="gh-node-card" x="44" y="264" width="206" height="58" rx="6" />
-                    <text class="gh-node-head" x="56" y="284">Rectangle + Extrude</text>
-                    <text class="gh-node-val" x="56" y="304">Sirip 300x60 mm • Tinggi 3.2 m</text>
-
-                    <rect class="gh-node-card" x="44" y="338" width="206" height="58" rx="6" />
-                    <text class="gh-node-head" x="56" y="358">Loft + Offset Surface</text>
-                    <text class="gh-node-val" x="56" y="378">Kanopi NURBS tritisan 1.80 m</text>
-                  </g>
-
-                  <!-- GH Group 3: Preview & Bake -->
-                  <g class="gh-node-group" data-gh-group="3">
-                    <rect class="gh-node-card" x="294" y="264" width="176" height="58" rx="6" />
-                    <text class="gh-node-head" x="306" y="284">gh_capture_preview</text>
-                    <text class="gh-node-val" x="306" y="304">Viewport Perspective PNG</text>
-
-                    <rect class="gh-node-card" x="294" y="338" width="176" height="58" rx="6" />
-                    <text class="gh-node-head" x="306" y="358">Bake -&gt; Rhino Layer</text>
-                    <text class="gh-node-val" x="306" y="378">ARS-FASAD-SIRIP (11 Brep)</text>
-                  </g>
-
-                  <text x="28" y="422" font-family="var(--font-mono)" font-size="9.5" fill="#9EB0BE">Dataflow terjaga: ubah slider -&gt; seluruh 11 Brep diperbarui otomatis</text>
-
-                  <!-- Right Inset: Rhino 8 Perspective Viewport -->
-                  <rect x="500" y="14" width="286" height="422" rx="8" fill="#0B1015" stroke="#31414F" stroke-width="1.2" />
-                  <rect x="512" y="24" width="154" height="22" rx="4" fill="#18222C" stroke="#3E5366" stroke-width="1" />
-                  <text x="520" y="39" font-family="var(--font-mono)" font-size="10" font-weight="700" fill="#EAF2F7">Perspective • Rhino 8</text>
-
-                  <!-- Isometric Construction Grid -->
-                  <g stroke="#1E2B36" stroke-width="1">
-                    <line x1="528" y1="336" x2="668" y2="266" />
-                    <line x1="556" y1="350" x2="696" y2="280" />
-                    <line x1="584" y1="364" x2="724" y2="294" />
-                    <line x1="612" y1="378" x2="752" y2="308" />
-                    <line x1="528" y1="336" x2="612" y2="378" />
-                    <line x1="574" y1="313" x2="658" y2="355" />
-                    <line x1="620" y1="290" x2="704" y2="332" />
-                    <line x1="668" y1="266" x2="752" y2="308" />
-                  </g>
-
-                  <!-- Pavilion Floor Slab & Canopy Loft Wireframe -->
-                  <polygon points="548,334 676,270 746,305 618,369" fill="rgba(140,232,218,0.08)" stroke="#588294" stroke-width="1.5" />
-                  <polygon points="528,176 668,108 764,148 624,218" fill="rgba(140,232,218,0.13)" stroke="#8CE8DA" stroke-width="2" />
-                  <path d="M 556,190 L 696,120 M 590,204 L 730,134" stroke="#8CE8DA" stroke-width="1" stroke-dasharray="4 3" />
-
-                  <!-- 11 Parametric Rotated 3D Louver Blades along West Edge -->
-                  <g fill="rgba(245,146,62,0.34)" stroke="#F5923E" stroke-width="1.6">
-                    <polygon points="552,330 562,323 562,192 552,199" />
-                    <polygon points="564,324 574,317 574,186 564,193" />
-                    <polygon points="576,318 586,311 586,180 576,187" />
-                    <polygon points="588,312 598,305 598,174 588,181" />
-                    <polygon points="600,306 610,299 610,168 600,175" />
-                    <polygon points="612,300 622,293 622,162 612,169" />
-                    <polygon points="624,294 634,287 634,156 624,163" />
-                    <polygon points="636,288 646,281 646,150 636,157" />
-                    <polygon points="648,282 658,275 658,144 648,151" />
-                    <polygon points="660,276 670,269 670,138 660,145" />
-                    <polygon points="672,270 682,263 682,132 672,139" />
-                  </g>
-
-                  <!-- XYZ World Axes Triad -->
-                  <line x1="534" y1="406" x2="564" y2="406" stroke="#FF6B6B" stroke-width="2" />
-                  <line x1="534" y1="406" x2="552" y2="390" stroke="#51CF66" stroke-width="2" />
-                  <line x1="534" y1="406" x2="534" y2="378" stroke="#4DABF7" stroke-width="2" />
-                  <text x="568" y="410" font-family="var(--font-mono)" font-size="9.5" fill="#FF8787">X</text>
-                  <text x="556" y="390" font-family="var(--font-mono)" font-size="9.5" fill="#69DB7C">Y</text>
-                  <text x="530" y="373" font-family="var(--font-mono)" font-size="9.5" fill="#74C0FC">Z</text>
-
-                  <rect x="598" y="396" width="174" height="24" rx="12" fill="#26180E" stroke="#F5923E" stroke-width="1.2" />
-                  <text x="685" y="412" text-anchor="middle" font-family="var(--font-mono)" font-size="9.5" font-weight="700" fill="#F5923E">11 BREPS • 30° • 0.60 M</text>
+              <!-- Panel 02: Rhino 8 & Grasshopper Authentic Live MCP Capture (.GH + .3DM) -->
+              <div class="mcp-gh-frame" id="mcp-panel-rhino" data-gh-active="0" data-rhino-view="split" hidden>
+                <img
+                  id="mcp-rhino-img"
+                  src="assets/rhino-gh-split.png"
+                  width="1600"
+                  height="760"
+                  loading="lazy"
+                  alt="Tangkapan layar asli kanvas Grasshopper dan viewport Perspective Rhino 8 hasil eksekusi rhinomcp di MacBook ini: empat grup komponen Number Slider, Series Y, Profil 320x60mm, Rotate 30 deg, Extrude 3,20 m, dan Solid 11 Brep menampilkan pratinjau langsung 11 sirip merah transparan pada fasad barat Paviliun Studio Tropis."
+                >
+                <svg id="mcp-gh-svg" class="solar-callout-svg" viewBox="0 0 1600 760" shape-rendering="crispEdges" aria-hidden="true">
+                  <rect id="mcp-gh-focus-rect" x="23" y="190" width="458" height="164" rx="8"
+                    fill="rgba(217, 78, 15, 0.08)" stroke="#D94E0F" stroke-width="4.5" stroke-dasharray="12 7" />
+                  <rect id="mcp-gh-focus-rect-b" x="954" y="180" width="446" height="480" rx="8" hidden
+                    fill="rgba(217, 78, 15, 0.06)" stroke="#D94E0F" stroke-width="4.5" stroke-dasharray="12 7" />
                 </svg>
               </div>
 
@@ -715,7 +622,6 @@
                   width="1600"
                   height="602"
                   loading="lazy"
-                  fetchpriority="low"
                   alt="Gambar kerja denah Paviliun Studio Tropis 18x6 meter hasil eksekusi nyata AutoCAD MCP: grid as 1-4 dan A-B, dinding bata berarsir dengan pintu D1-D2 dan jendela W1-W4, 8 kolom baja, 11 blok sirip fasad barat diputar 30 derajat, dimensi milimeter, serta Room Schedule 103,55 m² dan Window Schedule."
                 >
                 <svg id="mcp-cad-svg" class="solar-callout-svg" viewBox="0 0 1600 602" shape-rendering="crispEdges" aria-hidden="true">
@@ -1757,7 +1663,7 @@ posisi_x = [
             <span class="meta-kicker">AKSES TERBUKA PESERTA • FULL EXPERIENCE &amp; REPOSITORI</span>
             <h3 class="qr-hub-title">Pindai untuk Membuka Presentasi Interaktif sekaligus Mengunduh Handbook PDF</h3>
             <p class="qr-hub-desc" id="closing-qr-desc">
-              Satu tautan membuka dek web interaktif 20 bagian secara utuh di ponsel atau laptop peserta, lengkap dengan unduhan buku pegangan PDF 12 halaman dan contoh gambar kerja AutoCAD MCP (<code>.dxf</code>).
+              Satu tautan membuka dek web interaktif 20 bagian secara utuh di ponsel atau laptop peserta, lengkap dengan unduhan buku pegangan PDF 12 halaman serta berkas asli definisi Grasshopper (<code>.gh</code>), model Rhino 8 (<code>.3dm</code>), dan gambar kerja AutoCAD MCP (<code>.dxf</code>).
             </p>
 
             <div class="lens-group qr-target-bar" role="group" aria-label="Pilih tujuan tautan pada kode QR">
@@ -1773,7 +1679,9 @@ posisi_x = [
 
             <div class="qr-download-actions">
               <a class="chrome-btn qr-action-primary" href="../output/Handbook-AI-in-Architecture-Udayana-2026.pdf" download="Handbook-AI-in-Architecture-Udayana-2026.pdf">Unduh Handbook PDF (12 Hlm)</a>
-              <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.dxf" download="Paviliun-Studio-Tropis-MCP.dxf">Unduh Contoh AutoCAD (.DXF)</a>
+              <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.gh" download="Paviliun-Studio-Tropis-MCP.gh">Unduh Grasshopper (.GH)</a>
+              <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.3dm" download="Paviliun-Studio-Tropis-MCP.3dm">Unduh Rhino 8 (.3DM)</a>
+              <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.dxf" download="Paviliun-Studio-Tropis-MCP.dxf">Unduh AutoCAD (.DXF)</a>
               <a class="chrome-btn" href="https://github.com/archimades27/ai-arsitektur-udayana-2026" target="_blank" rel="noopener noreferrer">Buka Repositori GitHub</a>
             </div>
           </div>
@@ -1871,7 +1779,7 @@ posisi_x = [
 
       <div class="qr-info-column">
         <p class="qr-hub-desc" id="modal-qr-desc">
-          Pindai kode QR ini untuk membuka presentasi web interaktif 20 bagian secara langsung sekaligus mengunduh buku pegangan PDF 12 halaman dan contoh gambar kerja AutoCAD MCP.
+          Pindai kode QR ini untuk membuka presentasi web interaktif 20 bagian secara langsung sekaligus mengunduh buku pegangan PDF 12 halaman serta berkas asli Grasshopper (<code>.gh</code>), Rhino 8 (<code>.3dm</code>), dan AutoCAD MCP (<code>.dxf</code>).
         </p>
 
         <div class="lens-group qr-target-bar" role="group" aria-label="Pilih tujuan tautan pada kode QR di jendela ini">
@@ -1887,7 +1795,9 @@ posisi_x = [
 
         <div class="qr-download-actions">
           <a class="chrome-btn qr-action-primary" href="../output/Handbook-AI-in-Architecture-Udayana-2026.pdf" download="Handbook-AI-in-Architecture-Udayana-2026.pdf">Unduh Handbook PDF (12 Hlm)</a>
-          <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.dxf" download="Paviliun-Studio-Tropis-MCP.dxf">Unduh Contoh AutoCAD (.DXF)</a>
+          <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.gh" download="Paviliun-Studio-Tropis-MCP.gh">Unduh Grasshopper (.GH)</a>
+          <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.3dm" download="Paviliun-Studio-Tropis-MCP.3dm">Unduh Rhino 8 (.3DM)</a>
+          <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.dxf" download="Paviliun-Studio-Tropis-MCP.dxf">Unduh AutoCAD (.DXF)</a>
           <a class="chrome-btn" href="https://github.com/archimades27/ai-arsitektur-udayana-2026" target="_blank" rel="noopener noreferrer">Buka Repositori GitHub</a>
         </div>
       </div>
