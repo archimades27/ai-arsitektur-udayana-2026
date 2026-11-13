@@ -353,7 +353,7 @@
       url: 'https://archimades27.github.io/ai-arsitektur-udayana-2026/',
       caption: 'PINDAI KAMERA • WEB + PDF',
       svgTitle: 'Kode QR menuju Presentasi Web Interaktif dan Unduhan Handbook PDF',
-      desc: 'Satu tautan membuka dek web interaktif 21 bagian secara utuh di ponsel atau laptop peserta, lengkap dengan unduhan buku pegangan PDF 12 halaman serta berkas parametrik Grasshopper (.gh), Rhino (.3dm), dan gambar kerja AutoCAD MCP (.dxf).',
+      desc: 'Satu tautan membuka dek web interaktif 21 bagian secara utuh di ponsel atau laptop peserta, lengkap dengan unduhan buku pegangan PDF 12 halaman, berkas parametrik Grasshopper (.gh), Rhino (.3dm), AutoCAD MCP (.dxf), serta dua simulasi WebGL 4D BIM mandiri (.html).',
       path: 'M2 2.5h7m1 0h4m2 0h1m2 0h2m3 0h1m3 0h7M2 3.5h1m5 0h1m1 0h1m2 0h1m4 0h1m1 0h3m1 0h1m3 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m4 0h2m1 0h1m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m3 0h2m3 0h1m1 0h5m1 0h2m1 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h2m1 0h5m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m5 0h3m5 0h1m2 0h2m1 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M13 9.5h1m1 0h1m5 0h2m1 0h3M2 10.5h1m2 0h7m1 0h1m3 0h3m1 0h1m4 0h2m2 0h1m1 0h3M2 11.5h3m1 0h2m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2m4 0h3M5 12.5h2m1 0h2m2 0h1m3 0h2m5 0h6m1 0h3m1 0h1M2 13.5h2m3 0h1m1 0h5m2 0h2m1 0h1m1 0h2m2 0h2m2 0h1m2 0h2M2 14.5h2m4 0h3m1 0h2m1 0h2m1 0h1m1 0h3m5 0h1m4 0h1M3 15.5h1m1 0h2m5 0h3m3 0h2m5 0h1m1 0h1m1 0h1m1 0h1M8 16.5h1m1 0h1m3 0h2m2 0h1m1 0h2m1 0h2m3 0h1m1 0h3M2 17.5h2m1 0h1m4 0h1m1 0h2m2 0h2m3 0h1m5 0h1m3 0h2m1 0h1M4 18.5h2m2 0h1m1 0h2m1 0h1m7 0h1m2 0h8M2 19.5h4m1 0h1m1 0h3m1 0h7m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1M2 20.5h2m1 0h6m2 0h1m2 0h3m2 0h3m1 0h1m2 0h2m1 0h2m1 0h1M2 21.5h1m1 0h4m7 0h3m4 0h1m2 0h2m1 0h1m1 0h3m1 0h1M3 22.5h1m1 0h2m1 0h1m1 0h1m1 0h3m2 0h2m1 0h2m7 0h1m1 0h1m1 0h1M2 23.5h3m1 0h1m3 0h1m1 0h2m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m1 0h1M2 24.5h1m1 0h2m1 0h2m4 0h2m1 0h2m1 0h1m3 0h4m1 0h1m1 0h1m1 0h3M2 25.5h1m2 0h3m2 0h2m3 0h2m2 0h2m3 0h2m1 0h1m2 0h1m1 0h1M2 26.5h3m2 0h3m1 0h3m3 0h2m2 0h1m3 0h6m3 0h1M10 27.5h2m1 0h1m1 0h4m1 0h1m1 0h1m3 0h1m3 0h1m1 0h2M2 28.5h7m1 0h1m1 0h1m1 0h2m1 0h1m2 0h7m1 0h1m1 0h1m1 0h1M2 29.5h1m5 0h1m1 0h1m2 0h1m1 0h2m3 0h3m2 0h2m3 0h4M2 30.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m1 0h7m2 0h1M2 31.5h1m1 0h3m1 0h1m1 0h3m1 0h2m1 0h1m2 0h3m2 0h1m1 0h1m1 0h1m1 0h4M2 32.5h1m1 0h3m1 0h1m2 0h3m2 0h1m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2M2 33.5h1m5 0h1m2 0h2m3 0h1m1 0h1m1 0h3m1 0h2m1 0h1m1 0h6M2 34.5h7m1 0h2m2 0h1m2 0h1m1 0h1m2 0h1m2 0h2m1 0h4'
     },
     pdf: {
@@ -369,7 +369,7 @@
       url: 'https://github.com/archimades27/ai-arsitektur-udayana-2026',
       caption: 'PINDAI KAMERA • GITHUB REPO',
       svgTitle: 'Kode QR menuju Repositori GitHub archimades27/ai-arsitektur-udayana-2026',
-      desc: 'Membuka repositori GitHub sumber terbuka berisi kode HTML/CSS/JS presentasi ini, Handbook PDF 12 halaman, kajian etika & hak cipta, serta berkas gambar kerja AutoCAD MCP (.dxf).',
+      desc: 'Membuka repositori GitHub sumber terbuka berisi kode HTML/CSS/JS presentasi ini, dua simulasi WebGL 4D BIM mandiri, Handbook PDF 12 halaman, kajian etika & hak cipta, serta berkas MCP (.gh, .3dm, .dxf).',
       path: 'M2 2.5h7m1 0h1m1 0h3m2 0h1m2 0h1m4 0h1m2 0h7M2 3.5h1m5 0h1m4 0h2m3 0h1m1 0h4m4 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m2 0h1m1 0h3m2 0h4m1 0h4m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m6 0h3m1 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h2m3 0h1m4 0h1m2 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h6m4 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M10 9.5h5m2 0h10M2 10.5h1m3 0h1m1 0h3m1 0h1m3 0h1m1 0h2m3 0h1m3 0h5m2 0h1M3 11.5h4m3 0h1m3 0h2m1 0h4m2 0h1m1 0h1m1 0h1m3 0h3M4 12.5h1m3 0h1m1 0h1m1 0h1m4 0h1m1 0h2m1 0h2m1 0h1m2 0h1m2 0h1m1 0h1M4 13.5h1m1 0h2m1 0h3m2 0h1m1 0h2m1 0h2m2 0h1m1 0h1m1 0h1m5 0h1M2 14.5h1m1 0h1m2 0h2m1 0h1m1 0h1m2 0h2m3 0h6m2 0h1m1 0h2m1 0h2M4 15.5h2m3 0h1m2 0h1m2 0h1m2 0h2m3 0h3m3 0h1M3 16.5h1m3 0h2m3 0h1m5 0h2m2 0h1m2 0h1m1 0h2m4 0h1M6 17.5h1m2 0h2m3 0h3m2 0h1m3 0h9M3 18.5h1m2 0h4m1 0h1m1 0h1m3 0h1m1 0h1m1 0h4m1 0h1m1 0h1m1 0h1m2 0h1M2 19.5h1m1 0h2m1 0h1m1 0h3m2 0h2m1 0h2m1 0h1m4 0h1m1 0h1m3 0h3M3 20.5h1m1 0h2m1 0h1m1 0h1m1 0h8m2 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1M2 21.5h1m1 0h1m5 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h3m1 0h2m2 0h1m3 0h2M5 22.5h6m5 0h1m3 0h1m1 0h3m3 0h4M2 23.5h2m2 0h1m3 0h1m2 0h4m2 0h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1M4 24.5h2m1 0h4m3 0h1m2 0h3m2 0h1m1 0h4m1 0h1m3 0h1M5 25.5h2m2 0h1m1 0h2m3 0h5m2 0h1m3 0h4m3 0h1M2 26.5h2m3 0h4m1 0h1m3 0h1m2 0h1m2 0h9m3 0h1M10 27.5h1m6 0h2m1 0h1m1 0h1m2 0h2m3 0h1m1 0h2M2 28.5h7m1 0h2m1 0h2m1 0h2m1 0h1m2 0h2m2 0h1m1 0h1m1 0h2M2 29.5h1m5 0h1m3 0h7m3 0h3m1 0h1m3 0h1m2 0h2M2 30.5h1m1 0h3m1 0h1m1 0h1m4 0h2m6 0h2m1 0h6m2 0h1M2 31.5h1m1 0h3m1 0h1m5 0h1m2 0h4m2 0h1m1 0h2m1 0h3m1 0h1M2 32.5h1m1 0h3m1 0h1m2 0h4m1 0h5m1 0h1m2 0h2m1 0h3M2 33.5h1m5 0h1m3 0h2m2 0h1m1 0h3m2 0h1m1 0h3M2 34.5h7m1 0h1m2 0h1m2 0h2m1 0h1m1 0h6m1 0h1m2 0h1m2 0h1'
     }
   };
@@ -1773,6 +1773,221 @@
     const stepItem = reaStepsData[currentReaStep] || reaStepsData[0];
     currentReaView = stepItem.defaultView || 'ingetrazo';
     renderReaStage();
+  });
+
+  // Sec 18 (#sec-18): Interactive AI-Generated 4D BIM Web Presentation Stage
+  const bimProjectsMeta = {
+    pemogan: {
+      pill: 'FORMA BIM STUDIO • TIPE A PEMOGAN (437 ELEMEN IFC2X3)',
+      subtag: 'Ekspor Revit .IFC -> WebGL 4D 26 Minggu & QTO Mandiri',
+      imgSrc: 'assets/bim-web-pemogan-4d.png',
+      w: 1600,
+      h: 920,
+      alt: 'Tangkapan antarmuka FORMA BIM Project Studio hasil AI untuk proyek hunian Tipe A Pemogan: daftar 16 fase konstruksi di kiri, model 3D IFC2X3 437 elemen dengan dinding minggu ke-12 disorot kuning di tengah, slider potongan dan lini masa 26 minggu di bawah, serta panel kanan Phase Intelligence dan volume bersih QTO dinding 35,274 m3.',
+      demoHref: 'demos/tipe-a-pemogan-4d.html',
+      extLabel: 'Demo 4D BIM: Hunian Pemogan ↗',
+      iframeTitle: 'Simulasi WebGL 4D BIM Hunian Tipe A Pemogan (437 elemen IFC2X3, 26 minggu)',
+      defaultStep: 0
+    },
+    stair: {
+      pill: 'STAIR II BUILD SEQUENCE • INTI TANGGA & LIFT (330 ELEMEN IFC4)',
+      subtag: 'Koordinasi Lembar A092-A094 & S030-S032 -> Gantt Jalur Kritis 124 Hari',
+      imgSrc: 'assets/bim-web-stair-4d.png',
+      w: 1600,
+      h: 1000,
+      alt: 'Tangkapan antarmuka Stair II Build Sequence hasil AI pada hari ke-103 dari 124 hari: model cutaway 3D IFC4 empat lantai inti tangga dan lift di kiri-tengah, panel Simulation Status dan Element Inspector di kanan, serta bagan Gantt Dependency-Driven Programme 38 aktivitas berjalur kritis di bawah.',
+      demoHref: 'demos/stair-ii-4d.html',
+      extLabel: 'Demo 4D BIM: Tangga & Lift IFC4 ↗',
+      iframeTitle: 'Simulasi WebGL 4D BIM Stair II Build Sequence (330 elemen IFC4, 124 hari)',
+      defaultStep: 3
+    }
+  };
+
+  const bimStepsData = [
+    {
+      proj: 'pemogan',
+      rectA: [248, 6, 1072, 742],
+      rectB: null,
+      rpcServer: 'ALUR BIM -> WEB • Revit IFC2X3 + WebGL Mandiri',
+      rpcCall: 'Tipe A.ifc (437 elemen, 85.426 segitiga, 387 QTO) -> Tipe-A-Pemogan-simulasi-4D.html',
+      t: '01 • DED Revit BIM sebagai Sumber Kebenaran & Kemasan WebGL Mandiri',
+      bullets: [
+        '<strong>Revit tetap sumber data utama:</strong> Konsistensi tunggal denah, potongan, detail sambungan, dan bebas benturan MEP/struktur tetap wajib dikunci di perangkat BIM/CAD otoritatif untuk konstruksi lapangan',
+        '<strong>Jembatan presentasi tanpa instalasi:</strong> Dari ekspor <code>Tipe A.ifc</code> (<code>IFC2X3</code>, <strong>437 elemen bergeometri</strong>, <strong>85.426 segitiga</strong>), AI merakit satu berkas <code>.html</code> mandiri yang langsung berjalan di Chrome, Edge, atau Safari tanpa server',
+        '<strong>Komunikasi imersif ke klien &amp; penguji:</strong> Pemilik proyek, kontraktor, maupun dosen penguji dapat memutar model 3D, mengupas atap, dan memeriksa kuantitas asli BIM dari ponsel atau laptop mana pun'
+      ]
+    },
+    {
+      proj: 'pemogan',
+      rectA: [6, 114, 238, 798],
+      rectB: [252, 752, 1066, 160],
+      rpcServer: 'SIMULASI 4D • 16 Fase Konstruksi & Potongan Z',
+      rpcCall: 'setWeek(12) -> Fase 06 Dinding & Partisi (kuning aktif) + Slider Potongan + Buka Atap',
+      t: '02 • Simulasi Urutan Konstruksi 4D 26 Minggu & Slider Potongan Interaktif',
+      bullets: [
+        '<strong>Urutan logis dari bawah ke atas:</strong> Mengurai <strong>16 fase konstruksi</strong> selama <strong>26 minggu</strong> mulai dari fondasi &amp; <em>sloof</em>, kolom lantai 1, pelat lantai 2, rangka atap, kusen, MEP, hingga serah terima',
+        '<strong>Kode warna visual di lapangan:</strong> Abu-abu terang menandai elemen terpasang, <strong>kuning keemasan</strong> menandai pekerjaan minggu berjalan (contoh: <em>Minggu 12 Dinding &amp; Partisi</em>), dan siluet transparan menandai tahap mendatang',
+        '<strong>Eksplorasi ruang dalam:</strong> Tombol <em>Buka atap</em>, penyaring per lantai (<code>Ground</code>, <code>Level 1</code>, <code>Level 2</code>), dan <em>Slider potongan</em> mengiris bangunan secara <em>real-time</em> saat rapat koordinasi'
+      ]
+    },
+    {
+      proj: 'pemogan',
+      rectA: [1326, 114, 268, 798],
+      rectB: null,
+      rpcServer: 'QTO & STUDIO • 432 Set Kuantitas IFC + Jadwal CSV',
+      rpcCall: 'inspectElement(GlobalId) -> QTO Wall: 35,274 m3 + WallStandardCase: 6,705 m3 + BQ Draft',
+      t: '03 • Inspeksi GlobalId, Kuantitas QTO Asli IFC & Ruang Kerja BIM Studio',
+      bullets: [
+        '<strong>Transparansi kuantitas per elemen:</strong> Memuat <strong>432 set kuantitas</strong> pada <strong>387 elemen ber-QTO</strong> langsung dari atribut <code>BaseQuantities</code> Revit (mis. fase dinding menampilkan <code>Wall: 35,274 m³</code> &amp; <code>WallStandardCase: 6,705 m³</code>)',
+        '<strong>Paket FORMA BIM Project Studio:</strong> Menyatukan peninjau 3D <code>.ifc</code>, pengedit jadwal <code>.csv</code>, pustaka lembar kerja <code>.pdf</code>, serta draf estimasi <em>Bill of Quantities</em> dalam satu jendela browser',
+        '<strong>Saringan wajib Decider:</strong> Sistem menandai <strong>16 objek generik belum terpetakan</strong>; jadwal durasi, jeda <em>curing</em> beton, serta harga satuan BQ wajib diverifikasi arsitek dan <em>Quantity Surveyor</em> sebelum tender'
+      ]
+    },
+    {
+      proj: 'stair',
+      rectA: [14, 136, 1236, 616],
+      rectB: [14, 764, 1578, 228],
+      rpcServer: 'KOORDINASI IFC4 • Stair II (A092-A094 vs S030-S032)',
+      rpcCall: 'Stair_II.ifc (330 elemen IFC4, 60 anak tangga, 38 aktivitas, jalur kritis 124 hari)',
+      t: '04 • Rekonstruksi Detail Tangga-Lift IFC4 & Deteksi Selisih Gambar Kerja',
+      bullets: [
+        '<strong>Model detail 4 lantai berstandar IFC4:</strong> Merakit <strong>330 elemen tervalidasi IFC4</strong> dari <code>Basement -3,05 m</code> hingga <code>+8,00 m</code> (dinding inti <em>shaft</em> lift 200 mm, tangga beton bertulang, serta 3 larian tangga baja <strong>60 anak tangga</strong>)',
+        '<strong>Program Gantt berbasis ketergantungan:</strong> Menghubungkan <strong>38 aktivitas konstruksi</strong> berjalur kritis (<em>critical path</em>) <strong>124 hari kalender</strong> lengkap dengan <em>Element Inspector</em> (<code>IfcBuildingStorey</code>, material &amp; elevasi)',
+        '<strong>Nilai tambah audit pra-konstruksi:</strong> Saat menyusun model presentasi BIM dari lembar arsitektur (<code>A092-A094</code>) dan struktur (<code>S030-S032</code>), terdeteksi selisih notasi <code>FFL +4,000 m</code> vs <code>SFL +3,850 m</code> serta label kapasitas lift (<code>450 kg</code> vs <code>400 kg</code>) untuk segera diklarifikasi arsitek'
+      ]
+    }
+  ];
+
+  let currentBimProj = 'pemogan';
+  let currentBimStep = 0;
+  let currentBimMode = 'preview';
+
+  const bimViewportShell = document.getElementById('bimweb-viewport-shell');
+  const bimStagePill = document.getElementById('bimweb-stage-pill');
+  const bimStageSubtag = document.getElementById('bimweb-stage-subtag');
+  const bimPreviewPane = document.getElementById('bimweb-preview-pane');
+  const bimPreviewImg = document.getElementById('bimweb-preview-img');
+  const bimCalloutSvg = document.getElementById('bimweb-callout-svg');
+  const bimFocusRectA = document.getElementById('bimweb-focus-rect');
+  const bimFocusRectB = document.getElementById('bimweb-focus-rect-b');
+  const bimLivePane = document.getElementById('bimweb-live-pane');
+  const bimLiveStatus = document.getElementById('bimweb-live-status');
+  const bimLiveIframe = document.getElementById('bimweb-live-iframe');
+  const bimLiveToggle = document.getElementById('bimweb-live-toggle');
+  const bimExtLink = document.getElementById('bimweb-ext-link');
+  const bimRpcServer = document.getElementById('bimweb-rpc-server');
+  const bimRpcCall = document.getElementById('bimweb-rpc-call');
+  const bimReadout = document.getElementById('bimweb-readout');
+  const bimProjBtns = Array.from(document.querySelectorAll('.bimweb-proj-btn[data-bim-proj]'));
+  const bimStepBtns = Array.from(document.querySelectorAll('.bimweb-step-btn[data-bimstep]'));
+
+  function syncBimLiveIframe(projMeta) {
+    if (!bimLiveIframe) return;
+    bimLiveIframe.setAttribute('title', projMeta.iframeTitle);
+    bimLiveIframe.setAttribute('width', String(projMeta.w));
+    bimLiveIframe.setAttribute('height', String(projMeta.h));
+    if (currentBimMode === 'live' && bimLiveIframe.getAttribute('src') !== projMeta.demoHref) {
+      if (bimLiveStatus) {
+        bimLiveStatus.innerHTML = `Memuat kanvas WebGL 3D/4D <code>${projMeta.demoHref}</code>... Gunakan klik-tarik untuk <strong>Orbit</strong>, gulir untuk <strong>Zoom</strong>, atau klik elemen untuk <strong>GlobalId &amp; QTO</strong>.`;
+      }
+      bimLiveIframe.setAttribute('src', projMeta.demoHref);
+    }
+  }
+
+  if (bimLiveIframe && bimLiveStatus) {
+    bimLiveIframe.addEventListener('load', () => {
+      const loadedSrc = bimLiveIframe.getAttribute('src');
+      if (loadedSrc) {
+        bimLiveStatus.innerHTML = `Aktif: <code>${loadedSrc}</code> • Klik-tarik untuk <strong>Orbit</strong>, gulir untuk <strong>Zoom</strong>, dan klik objek untuk <strong>GlobalId &amp; QTO</strong>.`;
+      }
+    });
+  }
+
+  function renderBimWebStage() {
+    const stepItem = bimStepsData[currentBimStep] || bimStepsData[0];
+    const projMeta = bimProjectsMeta[currentBimProj] || bimProjectsMeta.pemogan;
+    const isLive = currentBimMode === 'live';
+
+    if (bimViewportShell) {
+      bimViewportShell.dataset.bimProj = currentBimProj;
+      bimViewportShell.dataset.bimMode = currentBimMode;
+      bimViewportShell.dataset.bimStep = String(currentBimStep);
+    }
+    if (bimStagePill) bimStagePill.textContent = projMeta.pill;
+    if (bimStageSubtag) bimStageSubtag.textContent = projMeta.subtag;
+
+    if (bimExtLink) {
+      bimExtLink.setAttribute('href', projMeta.demoHref);
+      bimExtLink.textContent = projMeta.extLabel;
+    }
+
+    if (bimPreviewPane) bimPreviewPane.hidden = isLive;
+    if (bimLivePane) bimLivePane.hidden = !isLive;
+    if (bimLiveToggle) bimLiveToggle.setAttribute('aria-pressed', String(isLive));
+
+    if (bimPreviewImg) {
+      if (bimPreviewImg.getAttribute('src') !== projMeta.imgSrc) {
+        bimPreviewImg.setAttribute('src', projMeta.imgSrc);
+      }
+      bimPreviewImg.setAttribute('width', String(projMeta.w));
+      bimPreviewImg.setAttribute('height', String(projMeta.h));
+      bimPreviewImg.setAttribute('alt', projMeta.alt);
+    }
+    if (bimCalloutSvg) {
+      bimCalloutSvg.setAttribute('viewBox', `0 0 ${projMeta.w} ${projMeta.h}`);
+    }
+
+    const sameProjAsStep = stepItem.proj === currentBimProj;
+    const rectA = sameProjAsStep
+      ? stepItem.rectA
+      : currentBimProj === 'stair'
+        ? [14, 136, 1236, 616]
+        : [248, 6, 1072, 742];
+    const rectB = sameProjAsStep ? stepItem.rectB : null;
+    setSvgFocusRect(bimFocusRectA, rectA);
+    setSvgFocusRect(bimFocusRectB, rectB);
+
+    syncBimLiveIframe(projMeta);
+
+    bimProjBtns.forEach((b) => {
+      b.setAttribute('aria-pressed', String(b.dataset.bimProj === currentBimProj));
+    });
+    bimStepBtns.forEach((b, idx) => {
+      b.setAttribute('aria-pressed', String(idx === currentBimStep));
+    });
+
+    if (bimRpcServer) bimRpcServer.textContent = stepItem.rpcServer;
+    if (bimRpcCall) bimRpcCall.textContent = stepItem.rpcCall;
+    if (bimReadout) bimReadout.innerHTML = renderPointBox(stepItem.t, stepItem.bullets);
+  }
+
+  bimProjBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const nextProj = btn.dataset.bimProj || 'pemogan';
+      currentBimProj = nextProj;
+      const curStepItem = bimStepsData[currentBimStep] || bimStepsData[0];
+      if (curStepItem.proj !== nextProj) {
+        currentBimStep = bimProjectsMeta[nextProj]?.defaultStep ?? 0;
+      }
+      renderBimWebStage();
+    });
+  });
+
+  if (bimLiveToggle) {
+    bimLiveToggle.addEventListener('click', () => {
+      currentBimMode = currentBimMode === 'live' ? 'preview' : 'live';
+      renderBimWebStage();
+    });
+  }
+
+  bindToggleGroup('.bimweb-step-btn[data-bimstep]', (btn) => {
+    currentBimStep = Number(btn.dataset.bimstep) || 0;
+    const stepItem = bimStepsData[currentBimStep] || bimStepsData[0];
+    currentBimProj = stepItem.proj || 'pemogan';
+    if (currentBimMode === 'live') {
+      currentBimMode = 'preview';
+    }
+    renderBimWebStage();
   });
 
   // Respect prefers-reduced-motion on autoplaying media (`lazy-load-video-and-audio`)

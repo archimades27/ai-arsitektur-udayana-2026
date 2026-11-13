@@ -3033,8 +3033,52 @@ svg [hidden] {
 }
 
 #rea-ingetrazo-rect,
-#rea-cadcraft-rect {
+#rea-cadcraft-rect,
+#bimweb-focus-rect,
+#bimweb-focus-rect-b {
   transition: all 0.28s var(--ease-expo);
+}
+
+.bimweb-proj-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.bimweb-viewport-shell {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-tile);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0F141C;
+  color-scheme: only dark;
+  color: #F5F3EE;
+}
+
+.bimweb-preview-pane {
+  position: relative;
+  width: 100%;
+}
+
+.bimweb-preview-pane[hidden],
+.bimweb-live-pane[hidden] {
+  display: none !important;
+}
+
+.bimweb-preview-pane img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bimweb-live-pane {
+  aspect-ratio: 16 / 10;
+  min-height: 430px;
+}
+
+.bimweb-live-iframe {
+  overflow: auto;
 }
 
 .ai-svg-tier {
@@ -3668,6 +3712,11 @@ svg [hidden] {
 
   .solar-viewport-shell[data-solar-mode="live"] {
     aspect-ratio: 4 / 3;
+  }
+
+  .bimweb-live-pane {
+    aspect-ratio: 4 / 3;
+    min-height: 340px;
   }
 }
 

@@ -14,12 +14,15 @@ Materi terbuka webinar **Kelompok Studi Cipta Loka**, Program Studi Arsitektur, 
    [`output/Paviliun-Studio-Tropis-MCP.3dm`](./output/Paviliun-Studio-Tropis-MCP.3dm)
 5. **Contoh Gambar Kerja Hasil Eksekusi AutoCAD MCP (`.DXF`):**
    [`output/Paviliun-Studio-Tropis-MCP.dxf`](./output/Paviliun-Studio-Tropis-MCP.dxf)
-6. **Kajian Akademik Delegasi Desain, Hak Cipta & Etika Profesi:**
+6. **Simulasi Presentasi Web 4D BIM Mandiri Hasil AI (WebGL Satu Berkas HTML):**
+   - Hunian Tipe A Pemogan (`IFC2X3`, 437 elemen, 16 fase / 26 minggu + QTO): [`deck/demos/tipe-a-pemogan-4d.html`](./deck/demos/tipe-a-pemogan-4d.html)
+   - Inti Tangga & Lift Stair II (`IFC4`, 330 elemen, 60 anak tangga, jalur kritis 124 hari): [`deck/demos/stair-ii-4d.html`](./deck/demos/stair-ii-4d.html)
+7. **Kajian Akademik Delegasi Desain, Hak Cipta & Etika Profesi:**
    [`kajian_etika_hak_cipta_ai_arsitektur.md`](./kajian_etika_hak_cipta_ai_arsitektur.md)
 
 ## Struktur Repositori
 
-- `deck/` : Presentasi web interaktif berbasis HTML, CSS, dan JavaScript murni (*Continuous Atelier Monograph*, mendukung Mode Gelap & Mode Terang, panel Catatan Lisan pembicara, simulasi sirip fasad barat, studi kasus nyata multi-platform MCP untuk SketchUp 2027, tangkapan asli Rhino 8 + Grasshopper `rhinomcp`, dan AutoCAD 2026, simulasi fiktif Hermes Agent + Telegram Bot, serta perkembangan software clone arsitektur berbasis REA seperti IngeTrazo + Point Cloud 3DGS, CADCraft, dan BIMCraft).
+- `deck/` : Presentasi web interaktif berbasis HTML, CSS, dan JavaScript murni (*Continuous Atelier Monograph*, mendukung Mode Gelap & Mode Terang, panel Catatan Lisan pembicara, simulasi sirip fasad barat, studi kasus nyata multi-platform MCP untuk SketchUp 2027, tangkapan asli Rhino 8 + Grasshopper `rhinomcp`, dan AutoCAD 2026, simulasi fiktif Hermes Agent + Telegram Bot, perkembangan software clone arsitektur berbasis REA seperti IngeTrazo + Point Cloud 3DGS, CADCraft, dan BIMCraft, serta panggung interaktif Presentasi Web 4D BIM hasil AI di `deck/demos/`).
 - `handbook/` : Sumber cetak buku pegangan A4 (`handbook.html`) untuk menghasilkan PDF 12 halaman.
 - `output/` : Berkas siap unduh bagi peserta (`Handbook-AI-in-Architecture-Udayana-2026.pdf`, `Paviliun-Studio-Tropis-MCP.gh`, `Paviliun-Studio-Tropis-MCP.3dm`, `Paviliun-Studio-Tropis-MCP.dxf`, dan biodata narasumber).
 - `kajian_etika_hak_cipta_ai_arsitektur.md` : Naskah lengkap kajian batas analogi delegasi tim manusia vs instrumen AI, rujukan UU Hak Cipta No. 28 Tahun 2014, serta akuntabilitas profesi arsitek sebagai *Decider*.

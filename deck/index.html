@@ -1215,7 +1215,7 @@
               </div>
               <div class="matrix-wide-copy">
                 <h3>07. Documentation &amp; Presentation</h3>
-                <p>Gambar kerja DED, struktur, &amp; MEP wajib presisi di Revit/CAD; presentasi klien dipercepat multi-image video generation &amp; vibe coding web.</p>
+                <p>Gambar kerja DED, struktur, &amp; MEP wajib presisi di Revit/CAD; presentasi BIM klien dipercepat aplikasi web 4D IFC, multi-image video, &amp; vibe coding web.</p>
               </div>
             </article>
           </div>
@@ -1634,40 +1634,103 @@ posisi_x = [
       </div>
     </section>
 
-    <!-- SEC 18: IMPLEMENTASI FASE 07 DOCUMENTATION DRAWING & VIBE CODING WEB -->
+    <!-- SEC 18: IMPLEMENTASI FASE 07 DOCUMENTATION DRAWING & PRESENTASI WEB 4D BIM HASIL AI -->
     <section id="sec-18" class="flow-band scroll-reveal-section" tabindex="-1"
-      data-index="18" data-title="Implementasi Fase 07: DED BIM & Vibe Web"
-      data-notes="3 menit. Penutup Bab 04 pada tahap hilir Fase 07: Documentation Drawing wajib tetap presisi di Revit BIM dan CAD untuk konstruksi lapangan, sedangkan tahap Presentation maupun utilitas internal seperti Helios Solar Engine kini dapat dirakit secara cepat dengan Vibe Coding berbasis web.">
+      data-index="18" data-title="Implementasi Fase 07: DED BIM & Web 4D"
+      data-notes="3.5 menit. Penutup Bab 04 pada tahap hilir Fase 07: Documentation Drawing wajib tetap dikunci di Revit BIM dan CAD sebagai sumber kebenaran konstruksi lapangan. Dari berkas .ifc, jadwal .csv, dan lembar .pdf tersebut, AI kini merakit Presentasi Web 4D BIM mandiri satu berkas HTML (Tipe A Pemogan 437 elemen IFC2X3 26 minggu beserta QTO, dan Stair II 330 elemen IFC4 124 hari) agar klien, kontraktor, maupun penguji dapat memutar model 3D, menggeser potongan, dan memeriksa GlobalId langsung di browser tanpa instalasi software BIM.">
       <div class="band-container">
         <div class="section-plate">
           <div class="section-meta">
-            <span class="meta-kicker">Bab 04 • Implementasi Fase 07: Dokumen Teknis &amp; Komunikasi Interaktif</span>
+            <span class="meta-kicker">Bab 04 • Implementasi Fase 07: DED BIM &amp; Presentasi Web 4D BIM Hasil AI</span>
             <span class="meta-index">18 <small>/21</small></span>
           </div>
-          <h2 class="section-h2"><span class="tone-smoke">Hilir yang meyakinkan:</span> documentation drawing &amp; vibe coding web presentation</h2>
+          <h2 class="section-h2"><span class="tone-smoke">Hilir yang meyakinkan:</span> ketepatan DED BIM &amp; presentasi web 4D BIM hasil AI</h2>
 
-          <div class="friction-grid">
-            <article class="panel-box">
-              <span class="meta-kicker">Ketepatan Konstruksi • Revit BIM &amp; CAD</span>
-              <h3>Documentation Drawing</h3>
-              <ul class="clean-list">
-                <li>Konsistensi tunggal denah, tampak, potongan &amp; detail</li>
-                <li>Koordinasi bebas benturan (struktur, MEP, drainase)</li>
-                <li>Otomasi penomoran lembar, jadwal kusen &amp; tabel volume</li>
-                <li>Dokumen hukum &amp; pedoman kerja presisi di lapangan</li>
-              </ul>
-            </article>
+          <div class="solar-stage-layout bimweb-stage-layout">
+            <div class="solar-stage-col">
+              <div class="solar-stage-bar">
+                <div class="mcp-stage-tag">
+                  <span class="mcp-rpc-badge" id="bimweb-stage-pill">FORMA BIM STUDIO • TIPE A PEMOGAN (437 ELEMEN IFC2X3)</span>
+                  <span class="mcp-stage-subtag" id="bimweb-stage-subtag">Ekspor Revit .IFC -&gt; WebGL 4D 26 Minggu &amp; QTO Mandiri</span>
+                </div>
+                <div class="solar-stage-actions">
+                  <div class="lens-group bimweb-proj-bar" role="group" aria-label="Pilih studi kasus presentasi web 4D BIM hasil AI">
+                    <button type="button" class="chrome-btn bimweb-proj-btn" data-bim-proj="pemogan" aria-pressed="true">01. Hunian Tipe A (IFC2X3)</button>
+                    <button type="button" class="chrome-btn bimweb-proj-btn" data-bim-proj="stair" aria-pressed="false">02. Tangga &amp; Lift (IFC4)</button>
+                  </div>
+                  <button type="button" class="chrome-btn bimweb-live-btn" id="bimweb-live-toggle" aria-pressed="false">Live 3D/4D di Slide</button>
+                  <a class="chrome-btn solar-ext-link" id="bimweb-ext-link" href="demos/tipe-a-pemogan-4d.html" target="_blank" rel="noopener noreferrer">Demo 4D BIM: Hunian Pemogan ↗</a>
+                </div>
+              </div>
 
-            <article class="panel-box panel-box--highlight">
-              <span class="meta-kicker">Komunikasi Imersif • HTML / CSS / JS</span>
-              <h3>Presentation via Vibe Coding Web-Based</h3>
-              <ul class="clean-list">
-                <li>Merakit kanvas presentasi continuous parallax dengan cepat</li>
-                <li>Menyematkan komparasi opsi, tab program &amp; motion graphic</li>
-                <li>Mudah dibuka klien atau penguji dari perangkat apa pun</li>
-                <li>Presentasi web malam ini adalah contoh nyata alur tersebut</li>
-              </ul>
-            </article>
+              <div class="bimweb-viewport-shell" id="bimweb-viewport-shell" data-bim-proj="pemogan" data-bim-mode="preview" data-bim-step="0">
+                <div class="bimweb-preview-pane" id="bimweb-preview-pane">
+                  <img
+                    id="bimweb-preview-img"
+                    src="assets/bim-web-pemogan-4d.png"
+                    width="1600"
+                    height="920"
+                    loading="lazy"
+                    alt="Tangkapan antarmuka FORMA BIM Project Studio hasil AI untuk proyek hunian Tipe A Pemogan: daftar 16 fase konstruksi di kiri, model 3D IFC2X3 437 elemen dengan dinding minggu ke-12 disorot kuning di tengah, slider potongan dan lini masa 26 minggu di bawah, serta panel kanan Phase Intelligence dan volume bersih QTO dinding 35,274 m3."
+                  >
+                  <svg id="bimweb-callout-svg" class="solar-callout-svg" viewBox="0 0 1600 920" shape-rendering="crispEdges" aria-hidden="true">
+                    <rect id="bimweb-focus-rect" x="248" y="6" width="1072" height="742" rx="10"
+                      fill="rgba(245, 146, 62, 0.09)" stroke="#F5923E" stroke-width="3" stroke-dasharray="10 6" />
+                    <rect id="bimweb-focus-rect-b" x="6" y="114" width="238" height="798" rx="10"
+                      fill="rgba(245, 146, 62, 0.07)" stroke="#F5923E" stroke-width="2.6" stroke-dasharray="8 5" hidden style="display:none" />
+                  </svg>
+                </div>
+
+                <div class="solar-live-pane bimweb-live-pane" id="bimweb-live-pane" hidden>
+                  <div class="solar-live-status" id="bimweb-live-status" role="status" aria-live="polite">
+                    Memuat kanvas WebGL 3D/4D <code>demos/tipe-a-pemogan-4d.html</code>... Gunakan klik-tarik untuk <strong>Orbit</strong>, gulir untuk <strong>Zoom</strong>, atau klik elemen untuk <strong>GlobalId &amp; QTO</strong>.
+                  </div>
+                  <iframe
+                    id="bimweb-live-iframe"
+                    class="solar-live-iframe bimweb-live-iframe"
+                    width="1600"
+                    height="920"
+                    title="Simulasi WebGL 4D BIM Hunian Tipe A Pemogan (437 elemen IFC2X3, 26 minggu)"
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+
+              <div class="mcp-rpc-bar" aria-live="polite">
+                <span class="mcp-rpc-badge" id="bimweb-rpc-server">ALUR BIM -&gt; WEB • Revit IFC2X3 + WebGL Mandiri</span>
+                <code id="bimweb-rpc-call">Tipe A.ifc (437 elemen, 85.426 segitiga, 387 QTO) -&gt; Tipe-A-Pemogan-simulasi-4D.html</code>
+              </div>
+            </div>
+
+            <div class="solar-inspector-col">
+              <div class="solar-focus-list" role="group" aria-label="Pilih empat kapabilitas DED BIM dan presentasi web 4D BIM hasil AI">
+                <button type="button" class="solar-focus-btn bimweb-step-btn" data-bimstep="0" aria-pressed="true">
+                  <strong>01. DED BIM Tetap Sumber Kebenaran</strong>
+                  <span>Revit/CAD mengunci gambar kerja; ekspor .ifc dikemas ke web</span>
+                </button>
+                <button type="button" class="solar-focus-btn bimweb-step-btn" data-bimstep="1" aria-pressed="false">
+                  <strong>02. Simulasi 4D 26 Minggu &amp; Slider Potongan</strong>
+                  <span>Tipe A Pemogan: 16 fase, buka atap, filter level &amp; potong Z</span>
+                </button>
+                <button type="button" class="solar-focus-btn bimweb-step-btn" data-bimstep="2" aria-pressed="false">
+                  <strong>03. Inspeksi GlobalId, Volume QTO &amp; Studio BQ</strong>
+                  <span>387 elemen berkuantitas IFC, jadwal CSV &amp; pustaka gambar PDF</span>
+                </button>
+                <button type="button" class="solar-focus-btn bimweb-step-btn" data-bimstep="3" aria-pressed="false">
+                  <strong>04. Audit Koordinasi Arsitektur-Struktur (IFC4)</strong>
+                  <span>Stair II: 330 elemen, 60 anak tangga &amp; jalur kritis 124 hari</span>
+                </button>
+              </div>
+
+              <div class="detail-box" id="bimweb-readout" aria-live="polite">
+                <h3>01 • DED Revit BIM sebagai Sumber Kebenaran &amp; Kemasan WebGL Mandiri</h3>
+                <ul class="clean-list">
+                  <li><strong>Revit tetap sumber data utama:</strong> Konsistensi tunggal denah, potongan, detail sambungan, dan bebas benturan MEP/struktur tetap wajib dikunci di perangkat BIM/CAD otoritatif untuk konstruksi lapangan</li>
+                  <li><strong>Jembatan presentasi tanpa instalasi:</strong> Dari ekspor <code>Tipe A.ifc</code> (<code>IFC2X3</code>, <strong>437 elemen bergeometri</strong>, <strong>85.426 segitiga</strong>), AI merakit satu berkas <code>.html</code> mandiri yang langsung berjalan di Chrome, Edge, atau Safari tanpa server</li>
+                  <li><strong>Komunikasi imersif ke klien &amp; penguji:</strong> Pemilik proyek, kontraktor, maupun dosen penguji dapat memutar model 3D, mengupas atap, dan memeriksa kuantitas asli BIM dari ponsel atau laptop mana pun</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1818,7 +1881,7 @@ posisi_x = [
             <span class="meta-kicker">AKSES TERBUKA PESERTA • FULL EXPERIENCE &amp; REPOSITORI</span>
             <h3 class="qr-hub-title">Pindai untuk Membuka Presentasi Interaktif sekaligus Mengunduh Handbook PDF</h3>
             <p class="qr-hub-desc" id="closing-qr-desc">
-              Satu tautan membuka dek web interaktif 21 bagian secara utuh di ponsel atau laptop peserta, lengkap dengan unduhan buku pegangan PDF 12 halaman serta berkas asli definisi Grasshopper (<code>.gh</code>), model Rhino 8 (<code>.3dm</code>), dan gambar kerja AutoCAD MCP (<code>.dxf</code>).
+              Satu tautan membuka dek web interaktif 21 bagian secara utuh di ponsel atau laptop peserta, lengkap dengan unduhan buku pegangan PDF 12 halaman, berkas asli Grasshopper (<code>.gh</code>), Rhino 8 (<code>.3dm</code>), AutoCAD MCP (<code>.dxf</code>), serta dua simulasi WebGL 4D BIM mandiri (<code>.html</code>).
             </p>
 
             <div class="lens-group qr-target-bar" role="group" aria-label="Pilih tujuan tautan pada kode QR">
@@ -1837,6 +1900,8 @@ posisi_x = [
               <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.gh" download="Paviliun-Studio-Tropis-MCP.gh">Unduh Grasshopper (.GH)</a>
               <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.3dm" download="Paviliun-Studio-Tropis-MCP.3dm">Unduh Rhino 8 (.3DM)</a>
               <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.dxf" download="Paviliun-Studio-Tropis-MCP.dxf">Unduh AutoCAD (.DXF)</a>
+              <a class="chrome-btn" href="demos/tipe-a-pemogan-4d.html" target="_blank" rel="noopener noreferrer">Demo 4D BIM: Hunian Pemogan ↗</a>
+              <a class="chrome-btn" href="demos/stair-ii-4d.html" target="_blank" rel="noopener noreferrer">Demo 4D BIM: Tangga &amp; Lift IFC4 ↗</a>
               <a class="chrome-btn" href="https://github.com/archimades27/ai-arsitektur-udayana-2026" target="_blank" rel="noopener noreferrer">Buka Repositori GitHub</a>
             </div>
           </div>
@@ -1917,6 +1982,11 @@ posisi_x = [
         <strong>BIMCraft &amp; OpenAEC (Alternatif Open-Source BIM IFC4, CAD &amp; PDF Studio):</strong>
         <a href="https://github.com/IPedrax/BIMCraft" target="_blank" rel="noopener noreferrer">github.com/IPedrax/BIMCraft</a>
       </li>
+      <li>
+        <strong>Presentasi Web 4D BIM Mandiri Hasil AI (Ekspor Revit IFC2X3 &amp; Koordinasi IFC4):</strong>
+        <a href="demos/tipe-a-pemogan-4d.html" target="_blank" rel="noopener noreferrer">Demo 4D BIM: Hunian Pemogan ↗</a> •
+        <a href="demos/stair-ii-4d.html" target="_blank" rel="noopener noreferrer">Demo 4D BIM: Tangga &amp; Lift IFC4 ↗</a>
+      </li>
     </ul>
     <p class="slide-takeaway">
       Catatan metodologi: Bangunan SDE4 NUS adalah referensi arsitektur nyata; bagian hak cipta &amp; etika disusun sebagai bahan diskusi akademik dan bukan pendapat hukum formal.
@@ -1946,7 +2016,7 @@ posisi_x = [
 
       <div class="qr-info-column">
         <p class="qr-hub-desc" id="modal-qr-desc">
-          Pindai kode QR ini untuk membuka presentasi web interaktif 21 bagian secara langsung sekaligus mengunduh buku pegangan PDF 12 halaman serta berkas asli Grasshopper (<code>.gh</code>), Rhino 8 (<code>.3dm</code>), dan AutoCAD MCP (<code>.dxf</code>).
+          Pindai kode QR ini untuk membuka presentasi web interaktif 21 bagian secara langsung sekaligus mengunduh buku pegangan PDF 12 halaman, berkas asli Grasshopper (<code>.gh</code>), Rhino 8 (<code>.3dm</code>), AutoCAD MCP (<code>.dxf</code>), serta dua simulasi WebGL 4D BIM mandiri (<code>.html</code>).
         </p>
 
         <div class="lens-group qr-target-bar" role="group" aria-label="Pilih tujuan tautan pada kode QR di jendela ini">
@@ -1965,6 +2035,8 @@ posisi_x = [
           <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.gh" download="Paviliun-Studio-Tropis-MCP.gh">Unduh Grasshopper (.GH)</a>
           <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.3dm" download="Paviliun-Studio-Tropis-MCP.3dm">Unduh Rhino 8 (.3DM)</a>
           <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.dxf" download="Paviliun-Studio-Tropis-MCP.dxf">Unduh AutoCAD (.DXF)</a>
+          <a class="chrome-btn" href="demos/tipe-a-pemogan-4d.html" target="_blank" rel="noopener noreferrer">Demo 4D BIM: Hunian Pemogan ↗</a>
+          <a class="chrome-btn" href="demos/stair-ii-4d.html" target="_blank" rel="noopener noreferrer">Demo 4D BIM: Tangga &amp; Lift IFC4 ↗</a>
           <a class="chrome-btn" href="https://github.com/archimades27/ai-arsitektur-udayana-2026" target="_blank" rel="noopener noreferrer">Buka Repositori GitHub</a>
         </div>
       </div>
