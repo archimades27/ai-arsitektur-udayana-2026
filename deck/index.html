@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <script>
+    try {
+      const savedScheme = localStorage.getItem('color-scheme');
+      if (savedScheme === 'light' || savedScheme === 'dark' || savedScheme === 'light dark') {
+        document.querySelector('meta[name="color-scheme"]').content = savedScheme;
+      }
+    } catch (_) {}
+  </script>
+  <title>AI in Architecture: Redefining the Design Process | Ar. I Made Sucita Ariasandika</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-flow">Langsung ke alur materi</a>
+
+  <!-- Minimalist 3-Cluster Atelier Top Chrome (`content-first-noise-reduction` & Forge Reference) -->
+  <header class="site-topbar">
+    <div class="topbar-left">
+      <span class="live-section-readout" id="live-section-readout">01 / 20 • SAMPUL ACARA</span>
+      <div class="quick-tools" role="group" aria-label="Kontrol cepat presentasi">
+        <button type="button" class="chrome-btn" id="toggle-notes" popovertarget="notes-panel">Catatan Lisan</button>
+        <button type="button" class="chrome-btn" id="motion-toggle" aria-pressed="false">Jeda Gerak</button>
+        <button type="button" class="chrome-btn" id="theme-toggle" aria-label="Ganti skema warna terang atau gelap">
+          <span class="theme-label-when-dark">Mode Terang</span>
+          <span class="theme-label-when-light">Mode Gelap</span>
+        </button>
+      </div>
+    </div>
+
+    <a class="atelier-crest" href="#sec-01" aria-label="Kembali ke puncak halaman: Ar. I Made Sucita Ariasandika, Universitas Udayana">
+      <svg class="crest-mark" viewBox="0 0 36 20" width="32" height="18" aria-hidden="true">
+        <path d="M2 18 L18 3 L34 18" fill="none" stroke="currentColor" stroke-width="2.2" />
+        <path d="M10 18 L18 10.5 L26 18" fill="none" stroke="var(--accent)" stroke-width="2" />
+      </svg>
+      <span class="crest-wordmark">ARCHI.MADES</span>
+    </a>
+
+    <div class="topbar-right">
+      <nav class="chapter-nav" aria-label="Navigasi bab utama">
+        <a class="chapter-link" href="#sec-01" aria-current="true">Pembuka</a>
+        <a class="chapter-link" href="#sec-04">01 Workflow</a>
+        <a class="chapter-link" href="#sec-05">02 AI &amp; MCP</a>
+        <a class="chapter-link" href="#sec-08">03 Decider</a>
+        <a class="chapter-link" href="#sec-11">04 Implementasi</a>
+        <a class="chapter-link" href="#sec-18">05 Relevansi</a>
+      </nav>
+      <button type="button" class="navigate-trigger" id="drawer-open" aria-expanded="false" aria-controls="nav-drawer">
+        <span>NAVIGATE</span>
+        <span class="nav-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Slide-In Atelier Navigation Drawer (`navigation-drawer` guide) -->
+  <dialog class="atelier-drawer" id="nav-drawer" aria-labelledby="drawer-title">
+    <div class="drawer-scroller">
+      <div class="drawer-sheet">
+        <div class="drawer-head">
+          <div>
+            <span class="meta-kicker">INDEKS ALUR WEBINAR • CIPTA LOKA UNUD</span>
+            <h2 id="drawer-title">Peta 20 Bagian &amp; Sumber</h2>
+          </div>
+          <div class="drawer-head-actions">
+            <button type="button" class="chrome-btn" id="open-qr">QR &amp; Unduh</button>
+            <button type="button" class="chrome-btn" id="open-refs">Referensi</button>
+            <button type="button" class="chrome-btn" id="drawer-close" autofocus>Tutup</button>
+          </div>
+        </div>
+        <div class="drawer-body">
+          <div class="overview-grid" id="overview-grid"></div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <main id="main-flow" tabindex="-1">
+
+    <!-- SEC 01: GENERATIVE PIXEL-GLYPH ATELIER HERO STAGE -->
+    <section id="sec-01" class="flow-band flow-band--hero parallax-stage" tabindex="-1"
+      data-index="01" data-title="Sampul Acara"
+      data-notes="Pembukaan (2 menit). Sapa panitia Kelompok Studi Cipta Loka, dosen, dan mahasiswa Arsitektur Universitas Udayana. Sampaikan alur diskusi malam ini: mulai dari perkenalan praktik, memahami rantai workflow arsitektur 7 fase, mengenal cara kerja AI, MCP, dan Hermes Agent, menetapkan prinsip Arsitek sebagai Decider, hingga melihat implementasi nyatanya dari hulu ke hilir.">
+
+      <div class="band-container hero-atelier-stage">
+        <!-- Monumental Pixel-Art Cross-Glyph (+ / ▫ / ·) Volumetric Sculpture + Mixed Editorial Manifesto -->
+        <div class="parallax-layer parallax-layer--fore hero-heading-stack">
+          <div class="glyph-stage-shell hero-glyph-shell" id="hero-glyph-shell" data-glyph-mode="3">
+            <canvas id="hero-glyph-canvas" class="glyph-canvas" width="1040" height="500" aria-hidden="true"></canvas>
+          </div>
+          <p class="eyebrow-centered">KELOMPOK STUDI CIPTA LOKA • ARSITEKTUR UNIVERSITAS UDAYANA</p>
+          <h1 class="hero-display">
+            AI in Architecture:<br>
+            <span class="tone-smoke">Redefining the</span> Design Process
+          </h1>
+          <ul class="point-pills point-pills--centered" aria-label="Empat pilar materi utama (klik untuk mengubah harmoni matriks visual)">
+            <li><button type="button" class="hero-pillar-btn" data-glyph-preset="0" aria-pressed="false">Workflow 7 Fase</button></li>
+            <li><button type="button" class="hero-pillar-btn" data-glyph-preset="1" aria-pressed="false">AI, MCP &amp; Hermes Agent</button></li>
+            <li><button type="button" class="hero-pillar-btn" data-glyph-preset="2" aria-pressed="false">Implementasi Hulu ke Hilir</button></li>
+            <li><button type="button" class="hero-pillar-btn" data-glyph-preset="3" aria-pressed="true">Arsitek sebagai Decider</button></li>
+          </ul>
+        </div>
+
+        <!-- Reflective Studio Floor Metadata Strip -->
+        <dl class="hero-datum-strip">
+          <div>
+            <dt>Narasumber</dt>
+            <dd>Ar. I Made Sucita Ariasandika (@archi.mades)</dd>
+          </div>
+          <div>
+            <dt>Waktu &amp; Media</dt>
+            <dd>Jumat, 13 Nov 2026 • 18.00 sampai 21.00 WITA • Zoom</dd>
+          </div>
+          <div>
+            <dt>Jejak Praktik</dt>
+            <dd>Alumni Arsitektur Unud • 16+ Tahun Praktik</dd>
+          </div>
+          <div>
+            <dt>Materi &amp; Repositori</dt>
+            <dd class="hero-datum-dd-actions">
+              <span>Web Interaktif, PDF 12 Hlm &amp; .DXF</span>
+              <button type="button" class="chrome-btn hero-qr-btn" id="hero-open-qr">Buka QR &amp; Unduh Materi</button>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Scroll-Driven Kinetic Datum Ribbon 01 -->
+    <div class="kinetic-ribbon-wrap" aria-hidden="true">
+      <div class="kinetic-ribbon kinetic-ribbon--left">
+        <span>DATA COLLECTING - PROJECT BRIEF</span><span>•</span>
+        <span>SITE ANALYSIS</span><span>•</span>
+        <span>SPACE PROGRAMMING</span><span>•</span>
+        <span>CONCEPTUAL</span><span>•</span>
+        <span>SCHEMATIC</span><span>•</span>
+        <span>DEVELOPMENT</span><span>•</span>
+        <span>DOCUMENTATION &amp; PRESENTATION</span>
+      </div>
+    </div>
+
+    <!-- SEC 02: PARALLAX FAN-OUT MOSAIC & CAREER TRAJECTORY -->
+    <section id="sec-02" class="flow-band parallax-stage scroll-reveal-section" tabindex="-1"
+      data-index="02" data-title="Jejak Praktik & Evolusi Alat"
+      data-notes="Perkenalan & CV (2.5 menit). Ceritakan masa kuliah di Arsitektur Unud (2006 sampai 2010), lalu perjalanan praktik di Bali Lawang Design, Nusantara Karya, hingga Emporio Architect. Tekankan bahwa alat terus berubah dari sketsa dan CAD menuju BIM, MCP, dan AI, tetapi kita tetap memegang kendali penuh merancang ruang untuk manusia.">
+
+      <div class="band-container">
+        <!-- Centered Manifesto Over Volumetric Cross-Glyph Horizon Sculpture -->
+        <div class="mosaic-manifesto-stage">
+          <div class="mosaic-glyph-shell" id="mosaic-glyph-shell" aria-hidden="true">
+            <canvas id="mosaic-glyph-canvas" class="mosaic-glyph-canvas" width="960" height="300"></canvas>
+          </div>
+
+          <div class="manifesto-overlay">
+            <span class="meta-kicker">02 / 20 • PERKENALAN &amp; PERSPEKTIF PRAKTISI</span>
+            <h2 class="display-serif-lg">
+              Alat Terus Berevolusi<br>
+              <span class="tone-smoke">Arsitek Tetap</span> Memegang Kendali
+            </h2>
+          </div>
+        </div>
+
+        <div class="section-plate">
+          <!-- Motion Graphic: Volumetric Cross-Glyph Career Trajectory Wave with Solid Readable Capsules -->
+          <div class="mg-timeline-banner career-glyph-shell" id="career-glyph-shell" aria-hidden="true">
+            <canvas id="career-glyph-canvas" class="career-glyph-canvas" width="960" height="128"></canvas>
+            <svg viewBox="0 0 960 128" width="960" height="128" class="career-glyph-labels">
+              <g transform="translate(115,64)">
+                <rect x="-62" y="-52" width="124" height="22" rx="11" class="mg-svg-pill" />
+                <text y="-37" text-anchor="middle" fill="currentColor" font-family="var(--font-mono)" font-size="11" font-weight="700">2006 Unud</text>
+                <rect x="-58" y="30" width="116" height="20" rx="10" class="mg-svg-pill mg-svg-pill--sub" />
+                <text y="44" text-anchor="middle" fill="currentColor" font-size="10.5" font-weight="600">Sketsa &amp; CAD</text>
+              </g>
+              <g transform="translate(360,64)">
+                <rect x="-76" y="-52" width="152" height="22" rx="11" class="mg-svg-pill" />
+                <text y="-37" text-anchor="middle" fill="currentColor" font-family="var(--font-mono)" font-size="11" font-weight="700">2010 Bali Lawang</text>
+                <rect x="-70" y="30" width="140" height="20" rx="10" class="mg-svg-pill mg-svg-pill--sub" />
+                <text y="44" text-anchor="middle" fill="currentColor" font-size="10.5" font-weight="600">3D SketchUp/Rhino</text>
+              </g>
+              <g transform="translate(615,64)">
+                <rect x="-86" y="-52" width="172" height="22" rx="11" class="mg-svg-pill" />
+                <text y="-37" text-anchor="middle" fill="currentColor" font-family="var(--font-mono)" font-size="11" font-weight="700">2014 Nusantara Karya</text>
+                <rect x="-76" y="30" width="152" height="20" rx="10" class="mg-svg-pill mg-svg-pill--sub" />
+                <text y="44" text-anchor="middle" fill="currentColor" font-size="10.5" font-weight="600">Koordinasi BIM Revit</text>
+              </g>
+              <g transform="translate(848,64)">
+                <rect x="-82" y="-52" width="164" height="22" rx="11" class="mg-svg-pill mg-svg-pill--accent" />
+                <text y="-37" text-anchor="middle" fill="var(--accent)" font-family="var(--font-mono)" font-size="11" font-weight="700">2023-2026 Emporio</text>
+                <rect x="-72" y="30" width="144" height="20" rx="10" class="mg-svg-pill mg-svg-pill--sub" />
+                <text y="44" text-anchor="middle" fill="currentColor" font-size="10.5" font-weight="600">AI, MCP &amp; Vibe Web</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="bio-layout">
+            <aside class="portrait-card parallax-layer parallax-layer--mid">
+              <img src="assets/speaker-portrait.png" width="900" height="1020" loading="lazy" alt="Potret Ar. I Made Sucita Ariasandika">
+              <div>
+                <p class="portrait-name">Ar. I Made Sucita Ariasandika</p>
+                <p class="portrait-handle">@archi.mades</p>
+                <ul class="skill-tags" aria-label="Perangkat kerja utama">
+                  <li>Revit</li>
+                  <li>SketchUp</li>
+                  <li>Rhino</li>
+                </ul>
+              </div>
+            </aside>
+
+            <ul class="career-milestones">
+              <li><strong>2006 sampai 2010</strong><span>Arsitektur Unud</span></li>
+              <li><strong>2010 sampai 2012</strong><span>Bali Lawang Design</span></li>
+              <li><strong>2014 sampai 2023</strong><span>Nusantara Karya</span></li>
+              <li><strong>2023 sampai Kini</strong><span>Emporio Architect</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 03: SYMMETRICAL 5-PILLAR PERSPECTIVE LINEUP -->
+    <section id="sec-03" class="flow-band flow-band--fleet scroll-reveal-section" tabindex="-1"
+      data-index="03" data-title="Lima Fokus Pembahasan"
+      data-notes="2 menit. Tunjukkan alur 5 bab malam ini yang mengalir runtut: (1) Workflow Arsitektur 7 Fase, (2) Mengenal apa itu AI, MCP, dan Hermes Agent, (3) Prinsip Arsitek sebagai Decider di poros tengah, (4) Implementasi nyata di sepanjang workflow arsitektur, dan (5) Kompas agar tetap relevan di dunia AI.">
+      <div class="band-container">
+        <div class="fleet-header">
+          <span class="meta-kicker">03 / 20 • KERANGKA DISKUSI MALAM INI</span>
+          <h2 class="display-serif-lg">
+            Lima Poros <span class="tone-smoke">Pembahasan</span>
+          </h2>
+          <p class="fleet-sub">Memahami alur kerja arsitektur lebih dulu, membedah cara kerja AI, MCP, dan Hermes Agent, lalu menerapkannya dengan kendali, etika, dan akuntabilitas seorang Decider.</p>
+        </div>
+
+        <div class="agenda-index agenda-index--perspective">
+          <a class="agenda-card agenda-card--outer" href="#sec-04">
+            <div>
+              <span class="agenda-num">01</span>
+              <h3>Workflow Arsitektur</h3>
+              <p>Tujuh fase rantai kerja dari project brief hingga dokumentasi dan presentasi.</p>
+            </div>
+            <span class="agenda-jump-hint">Buka Bab 01</span>
+          </a>
+
+          <a class="agenda-card agenda-card--inner" href="#sec-05">
+            <div>
+              <span class="agenda-num">02</span>
+              <h3>Apa Itu AI, MCP &amp; Hermes</h3>
+              <p>Membedah lapisan AI, jembatan protokol MCP ke 3D, dan asisten agen harian.</p>
+            </div>
+            <span class="agenda-jump-hint">Buka Bab 02</span>
+          </a>
+
+          <a class="agenda-card agenda-card--centerpiece" href="#sec-08">
+            <div>
+              <span class="agenda-num">03</span>
+              <h3>Arsitek sebagai Decider</h3>
+              <p>Jangan biarkan AI menentukan; literasi, batas hak cipta, dan etika profesi.</p>
+            </div>
+            <span class="agenda-jump-hint">Poros Utama • Bab 03</span>
+          </a>
+
+          <a class="agenda-card agenda-card--inner" href="#sec-11">
+            <div>
+              <span class="agenda-num">04</span>
+              <h3>Implementasi di Workflow</h3>
+              <p>Penerapan nyata dari Solar Study, konsep tropis, parametrik hingga DED &amp; web.</p>
+            </div>
+            <span class="agenda-jump-hint">Buka Bab 04</span>
+          </a>
+
+          <a class="agenda-card agenda-card--outer" href="#sec-18">
+            <div>
+              <span class="agenda-num">05</span>
+              <h3>Tetap Relevan di Dunia AI</h3>
+              <p>Nilai tambah manusiawi, kepekaan ruang, dan lima kompas mahasiswa.</p>
+            </div>
+            <span class="agenda-jump-hint">Buka Bab 05</span>
+          </a>
+        </div>
+
+        <div class="fleet-cta-row">
+          <a class="atelier-bracket-btn" href="#sec-04">MULAI TELUSURI BAB 01</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAND 02: BAB 01 WORKFLOW ARSITEKTUR END-TO-END (SEC 04, 7-Phase Iterative Loop) -->
+    <div class="scrolly-region">
+      <div class="band-container scrolly-split">
+        <!-- Sticky Left Atelier Panel (`scrollytelling` guide) -->
+        <aside class="scrolly-sticky-stage" aria-label="Visualisasi gerak rantai tujuh fase arsitektur">
+          <div class="mg-stage-card" id="bab1-mg-stage" data-active-scene="0" data-active-stage="0">
+            <div class="mg-stage-header">
+              <span class="meta-kicker" id="bab1-mg-kicker">MOTION DIAGRAM • RANTAI ITERATIF</span>
+              <span class="mg-state-pill" id="bab1-mg-badge">Fase 01 / 07</span>
+            </div>
+
+            <div class="bab1-pixel-shell" id="bab1-pixel-shell">
+              <canvas id="bab1-pixel-canvas" class="bab1-pixel-canvas" width="460" height="360" aria-hidden="true"></canvas>
+              <svg id="bab1-mg-svg" viewBox="0 0 460 360" width="460" height="360" class="mg-architectural-svg mg-architectural-svg--pixel" role="img"
+                aria-label="Diagram matriks glif silang volumetrik rantai tujuh fase arsitektur: Fase 01 Data Collecting - Project Brief sedang aktif.">
+                <!-- Scene 0: Volumetric Cross-Glyph Ring with High-Contrast Solid Pill Badges -->
+                <g class="mg-scene mg-scene--0">
+                  <circle id="mg-loop-progress" cx="230" cy="180" r="118" pathLength="700" fill="none" opacity="0" />
+                  <path id="mg-feedback-path" d="M 287.5 121.6 A 82 82 0 0 0 239.8 98.6" fill="none" opacity="0" />
+                  <polygon id="mg-feedback-head" points="239.8,98.6 248.1,95.4 247.1,103.7" opacity="0" />
+
+                  <g class="mg-loop-node" data-mg-node="0" data-state="active" transform="translate(230,62)">
+                    <circle class="mg-node-disc" r="15" />
+                    <text class="mg-node-num" dy="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11.5" font-weight="700">01</text>
+                    <rect class="mg-label-pill" x="-54" y="-42" width="108" height="20" rx="10" />
+                    <text class="mg-node-label" y="-29" text-anchor="middle" font-family="var(--font-mono)" font-size="10" font-weight="700">DATA &amp; BRIEF</text>
+                  </g>
+                  <g class="mg-loop-node" data-mg-node="1" data-state="upcoming" transform="translate(322,106)">
+                    <circle class="mg-node-disc" r="15" />
+                    <text class="mg-node-num" dy="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11.5" font-weight="700">02</text>
+                    <rect class="mg-label-pill" x="20" y="-10" width="106" height="20" rx="10" />
+                    <text class="mg-node-label" x="73" dy="3.5" text-anchor="middle" font-family="var(--font-mono)" font-size="10" font-weight="700">SITE ANALYSIS</text>
+                  </g>
+                  <g class="mg-loop-node" data-mg-node="2" data-state="upcoming" transform="translate(345,206)">
+                    <circle class="mg-node-disc" r="15" />
+                    <text class="mg-node-num" dy="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11.5" font-weight="700">03</text>
+                    <rect class="mg-label-pill" x="18" y="-10" width="94" height="20" rx="10" />
+                    <text class="mg-node-label" x="65" dy="3.5" text-anchor="middle" font-family="var(--font-mono)" font-size="10" font-weight="700">PROGRAMMING</text>
+                  </g>
+                  <g class="mg-loop-node" data-mg-node="3" data-state="upcoming" transform="translate(281,286)">
+                    <circle class="mg-node-disc" r="15" />
+                    <text class="mg-node-num" dy="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11.5" font-weight="700">04</text>
+                    <rect class="mg-label-pill" x="-46" y="21" width="92" height="20" rx="10" />
+                    <text class="mg-node-label" y="34.5" text-anchor="middle" font-family="var(--font-mono)" font-size="10" font-weight="700">CONCEPTUAL</text>
+                  </g>
+                  <g class="mg-loop-node" data-mg-node="4" data-state="upcoming" transform="translate(179,286)">
+                    <circle class="mg-node-disc" r="15" />
+                    <text class="mg-node-num" dy="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11.5" font-weight="700">05</text>
+                    <rect class="mg-label-pill" x="-44" y="21" width="88" height="20" rx="10" />
+                    <text class="mg-node-label" y="34.5" text-anchor="middle" font-family="var(--font-mono)" font-size="10" font-weight="700">SCHEMATIC</text>
+                  </g>
+                  <g class="mg-loop-node" data-mg-node="5" data-state="upcoming" transform="translate(115,206)">
+                    <circle class="mg-node-disc" r="15" />
+                    <text class="mg-node-num" dy="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11.5" font-weight="700">06</text>
+                    <rect class="mg-label-pill" x="-112" y="-10" width="94" height="20" rx="10" />
+                    <text class="mg-node-label" x="-65" dy="3.5" text-anchor="middle" font-family="var(--font-mono)" font-size="10" font-weight="700">DEVELOPMENT</text>
+                  </g>
+                  <g class="mg-loop-node" data-mg-node="6" data-state="upcoming" transform="translate(138,106)">
+                    <circle class="mg-node-disc" r="15" />
+                    <text class="mg-node-num" dy="4" text-anchor="middle" font-family="var(--font-mono)" font-size="11.5" font-weight="700">07</text>
+                    <rect class="mg-label-pill" x="-112" y="-10" width="92" height="20" rx="10" />
+                    <text class="mg-node-label" x="-66" dy="3.5" text-anchor="middle" font-family="var(--font-mono)" font-size="10" font-weight="700">DOC &amp; PRES</text>
+                  </g>
+
+                  <circle cx="230" cy="180" r="54" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2" />
+                  <text id="mg-hub-kicker" x="230" y="164" text-anchor="middle" font-family="var(--font-mono)" font-size="9" font-weight="700" letter-spacing="0.8" fill="var(--accent)">FASE 01 / 07</text>
+                  <text id="mg-hub-title" x="230" y="183" text-anchor="middle" font-family="var(--font-mono)" font-size="11.5" font-weight="700" fill="currentColor">DATA &amp; BRIEF</text>
+                  <text id="mg-hub-sub" x="230" y="200" text-anchor="middle" font-family="var(--font-mono)" font-size="9" font-weight="600" fill="currentColor" opacity="0.88">Uji Balik &lt;- Tapak</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="sticky-editorial-foot">
+              <span class="sticky-chapter-serif" id="bab1-serif-label">01 • Data &amp; Brief</span>
+              <p class="mg-stage-caption" id="bab1-mg-caption">
+                Mengumpulkan kebutuhan pengguna, anggaran, dan aturan lahan sebagai jangkar awal.
+              </p>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Panel for Bab 01 -->
+        <div class="scrolly-stream">
+
+          <!-- SEC 04 -->
+          <section id="sec-04" class="scrolly-card section-plate scroll-reveal-section" tabindex="-1"
+            data-bab1-scene="0" data-index="04" data-title="Alur Kerja End-to-End"
+            data-notes="3 menit. Sebelum berbicara tentang AI, kita dudukkan lebih dulu rantai kerja utuh arsitektur dalam tujuh fase yang saling menguji: 1) Data Collecting - Project Brief, 2) Site Analysis, 3) Space Programming, 4) Conceptual, 5) Schematic, 6) Development, hingga 7) Documentation & Presentation. Klik simpul fase bila ingin menyorot detail tiap tahap.">
+            <div class="section-meta">
+              <span class="meta-kicker">Bab 01 • Workflow &amp; Rantai Kerja Arsitektur</span>
+              <span class="meta-index">04 <small>/20</small></span>
+            </div>
+            <h2 class="section-h2"><span class="tone-smoke">Rantai kerja arsitektur:</span> tujuh fase yang saling menguji</h2>
+
+            <div class="stage-grid stage-grid--7" role="group" aria-label="Tujuh fase utama proses kerja arsitektur">
+              <button type="button" class="stage-node" data-stage="0" aria-pressed="true">
+                <span class="stage-num">FASE 01</span>
+                <span class="stage-name">Data Collecting - Project Brief</span>
+              </button>
+              <button type="button" class="stage-node" data-stage="1" aria-pressed="false">
+                <span class="stage-num">FASE 02</span>
+                <span class="stage-name">Site Analysis</span>
+              </button>
+              <button type="button" class="stage-node" data-stage="2" aria-pressed="false">
+                <span class="stage-num">FASE 03</span>
+                <span class="stage-name">Space Programming</span>
+              </button>
+              <button type="button" class="stage-node" data-stage="3" aria-pressed="false">
+                <span class="stage-num">FASE 04</span>
+                <span class="stage-name">Conceptual</span>
+              </button>
+              <button type="button" class="stage-node" data-stage="4" aria-pressed="false">
+                <span class="stage-num">FASE 05</span>
+                <span class="stage-name">Schematic</span>
+              </button>
+              <button type="button" class="stage-node" data-stage="5" aria-pressed="false">
+                <span class="stage-num">FASE 06</span>
+                <span class="stage-name">Development</span>
+              </button>
+              <button type="button" class="stage-node stage-node--wide" data-stage="6" aria-pressed="false">
+                <span class="stage-num">FASE 07</span>
+                <span class="stage-name">Documentation &amp; Presentation</span>
+              </button>
+            </div>
+
+            <div class="detail-box" id="stage-readout" aria-live="polite">
+              <h3>Fase 01 • Data Collecting - Project Brief</h3>
+              <ul class="clean-list">
+                <li><strong>Input:</strong> Kebutuhan pengguna, visi ruang, anggaran &amp; aturan tata ruang (GSB/KDB/KLB)</li>
+                <li><strong>Data Primer:</strong> Ukur batas lahan, topografi, jaringan utilitas &amp; dokumentasi eksisting</li>
+                <li><strong>Putaran Balik:</strong> Batasan regulasi dan lahan menyempurnakan target Project Brief</li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BAND 03: BAB 02 MENGENAL APA ITU AI, MCP & HERMES AGENT (SEC 05 - 07) -->
+    <section id="sec-05" class="flow-band parallax-stage scroll-reveal-section" tabindex="-1"
+      data-index="05" data-title="Apa Itu AI dalam Arsitektur"
+      data-notes="3 menit. Masuk ke Bab 02: sebelum menerapkan AI ke workflow tadi, kita luruskan dulu apa itu AI bagi seorang arsitek. AI hari ini bukan sekadar pembuat gambar instan, melainkan terbagi dalam 3 lapisan kemampuan: (1) LLM & Analitik untuk teks, tabel, dan kode, (2) AI Generatif Multimodal untuk citra, simulasi web, dan video, serta (3) Sistem AI Agent yang memegang tools dan protokol MCP untuk mengeksekusi tugas nyata.">
+
+      <div class="parallax-watermark parallax-layer parallax-layer--deep" aria-hidden="true">02</div>
+
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 02 • Mengenal Cara Kerja AI dalam Arsitektur</span>
+            <span class="meta-index">05 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Apa itu AI bagi arsitek:</span> membedakan model bahasa, generatif visual, dan sistem agen</h2>
+
+          <div class="ai-paradigm-layout">
+            <div class="ai-paradigm-stage" id="ai-paradigm-stage" data-active-layer="0">
+              <div class="mcp-stage-bar">
+                <span class="mg-state-pill" id="ai-stage-pill">LAPISAN 01 • LLM &amp; ANALITIK</span>
+                <span class="solar-epw-tag" id="ai-stage-io">Input: Teks &amp; Angka -&gt; Output: Tabel &amp; Kode</span>
+              </div>
+
+              <div class="svg-viewport ai-paradigm-viewport">
+                <svg id="ai-paradigm-svg" viewBox="0 0 560 286" width="560" height="286" role="img"
+                  aria-label="Diagram arsitektur tiga lapisan kecerdasan buatan dari instruksi arsitek menuju verifikasi model terukur">
+                  <!-- Top Anchor: Architect Criteria -->
+                  <rect x="96" y="10" width="368" height="32" rx="16" class="mg-svg-pill mg-svg-pill--accent" />
+                  <text x="280" y="30" text-anchor="middle" font-family="var(--font-mono)" font-size="10.5" font-weight="700" fill="var(--accent)">INSTRUKSI &amp; KRITERIA ARSITEK (DECIDER)</text>
+                  <line x1="280" y1="42" x2="280" y2="58" stroke="var(--accent)" stroke-width="1.8" />
+
+                  <!-- Tier 0: LLM & Analytical -->
+                  <g class="ai-svg-tier" data-tier="0">
+                    <rect class="ai-tier-box" x="28" y="58" width="504" height="52" rx="8" />
+                    <rect class="ai-tier-badge" x="42" y="71" width="36" height="26" rx="6" />
+                    <text class="ai-tier-num" x="60" y="88" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700">01</text>
+                    <text class="ai-tier-title" x="92" y="80" font-family="var(--font-mono)" font-size="11.2" font-weight="700">LLM &amp; ANALITIK (TEKS, TABEL &amp; KODE)</text>
+                    <text class="ai-tier-sub" x="92" y="98" font-size="10.5">Membedah regulasi, menyusun tabel program ruang &amp; menulis skrip parameter</text>
+                  </g>
+
+                  <line x1="280" y1="110" x2="280" y2="122" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="3 3" />
+
+                  <!-- Tier 1: Generative Multimodal -->
+                  <g class="ai-svg-tier" data-tier="1">
+                    <rect class="ai-tier-box" x="28" y="122" width="504" height="52" rx="8" />
+                    <rect class="ai-tier-badge" x="42" y="135" width="36" height="26" rx="6" />
+                    <text class="ai-tier-num" x="60" y="152" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700">02</text>
+                    <text class="ai-tier-title" x="92" y="144" font-family="var(--font-mono)" font-size="11.2" font-weight="700">AI GENERATIF (CITRA, SIMULASI &amp; VIDEO)</text>
+                    <text class="ai-tier-sub" x="92" y="162" font-size="10.5">Eksplorasi suasana ruang, utilitas web iklim surya &amp; interpolasi multi-image ke video</text>
+                  </g>
+
+                  <line x1="280" y1="174" x2="280" y2="186" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="3 3" />
+
+                  <!-- Tier 2: Connected AI Agent + Tools/MCP -->
+                  <g class="ai-svg-tier" data-tier="2">
+                    <rect class="ai-tier-box" x="28" y="186" width="504" height="52" rx="8" />
+                    <rect class="ai-tier-badge" x="42" y="199" width="36" height="26" rx="6" />
+                    <text class="ai-tier-num" x="60" y="216" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700">03</text>
+                    <text class="ai-tier-title" x="92" y="208" font-family="var(--font-mono)" font-size="11.2" font-weight="700">SISTEM AI AGENT + TOOLS &amp; PROTOKOL MCP</text>
+                    <text class="ai-tier-sub" x="92" y="226" font-size="10.5">Hermes Agent &amp; jembatan MCP ke berkas lokal, SketchUp, Rhino &amp; CAD</text>
+                  </g>
+
+                  <line x1="280" y1="238" x2="280" y2="252" stroke="var(--accent)" stroke-width="1.8" />
+                  <!-- Bottom Anchor: Verified Output -->
+                  <rect x="78" y="252" width="404" height="26" rx="13" class="mg-svg-pill" />
+                  <text x="280" y="268.5" text-anchor="middle" font-family="var(--font-mono)" font-size="10" font-weight="700" fill="currentColor">AUDIT MODEL TERUKUR • REVIT BIM, CAD &amp; LAPANGAN</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="mcp-inspector-col">
+              <div class="mcp-nodes mcp-nodes--stacked" role="group" aria-label="Pilih tiga lapisan teknologi AI dalam arsitektur">
+                <button type="button" class="mcp-node-btn ai-layer-btn" data-ailayer="0" aria-pressed="true">
+                  <strong>01. LLM &amp; Analitik (Teks &amp; Kode)</strong>
+                  <span>Mengolah brief, tabel program ruang &amp; skrip parameter</span>
+                </button>
+                <button type="button" class="mcp-node-btn ai-layer-btn" data-ailayer="1" aria-pressed="false">
+                  <strong>02. AI Generatif (Citra, Iklim &amp; Video)</strong>
+                  <span>Studi gubahan suasana, web simulasi surya &amp; video ruang</span>
+                </button>
+                <button type="button" class="mcp-node-btn ai-layer-btn" data-ailayer="2" aria-pressed="false">
+                  <strong>03. Sistem AI Agent (Hermes &amp; MCP)</strong>
+                  <span>Asisten aktif yang memegang tools berkas, jadwal &amp; API 3D</span>
+                </button>
+              </div>
+
+              <div class="detail-box" id="ai-layer-readout" aria-live="polite">
+                <h3>01 • Large Language Model (LLM) &amp; Analitik Kode</h3>
+                <ul class="clean-list">
+                  <li><strong>Cara Kerja:</strong> Memprediksi struktur teks, logika tabel, dan sintaks kode pemrograman dari konteks yang diberikan arsitek</li>
+                  <li><strong>Peran di Studio/Biro:</strong> Merangkum transkrip brief klien, menyusun draf Space Programming, hingga merakit kode Python/HTML</li>
+                  <li><strong>Batas Kritis:</strong> Rawan halusinasi angka dan regulasi bila tidak diikat pada dokumen SNI atau Perda asli</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 06: APA ITU MCP & CARA KERJANYA DI SKETCHUP, RHINO/GRASSHOPPER & AUTOCAD -->
+    <section id="sec-06" class="flow-band scroll-reveal-section" tabindex="-1"
+      data-index="06" data-title="Apa Itu MCP di SketchUp, Rhino & AutoCAD"
+      data-notes="4 menit. Jelaskan apa itu Model Context Protocol (MCP): protokol terbuka berbasis JSON-RPC yang menjembatani AI Agent ke API software arsitektur. Tunjukkan tiga contoh nyata di panggung ini: (1) rekaman video langsung SketchUp 2027 MCP, (2) rantai node parametrik Rhino 8 & Grasshopper MCP (gh_build_graph), serta (3) gambar kerja denah & tabel jadwal ruang otomatis hasil eksekusi nyata AutoCAD 2026 MCP (.dxf).">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 02 • Mengenal Model Context Protocol (MCP) Lintas Perangkat</span>
+            <span class="meta-index">06 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Apa itu MCP:</span> jembatan protokol dari AI ke SketchUp, Rhino + Grasshopper, dan AutoCAD</h2>
+
+          <div class="filter-bar mcp-platform-bar" role="group" aria-label="Pilih contoh koneksi MCP pada perangkat lunak arsitektur">
+            <button type="button" class="lens-btn mcp-platform-btn" data-mcp-plat="sketchup" aria-pressed="true">01. SketchUp 2027 MCP (Video Live)</button>
+            <button type="button" class="lens-btn mcp-platform-btn" data-mcp-plat="rhino" aria-pressed="false">02. Rhino 8 &amp; Grasshopper MCP</button>
+            <button type="button" class="lens-btn mcp-platform-btn" data-mcp-plat="autocad" aria-pressed="false">03. AutoCAD 2026 MCP (Output .DXF)</button>
+          </div>
+
+          <!-- Multi-Platform MCP Stage: SketchUp Video + Rhino/Grasshopper Graph + AutoCAD Live Output -->
+          <div class="mcp-video-layout" id="mcp-live-stage" data-mcp-plat="sketchup" data-mcp-active="0">
+            <div class="mcp-video-col">
+              <div class="mcp-stage-bar">
+                <span class="mg-state-pill" id="mcp-stage-pill">SKETCHUP 2027.0 • LIVE MCP CAPTURE (:8080)</span>
+                <button type="button" class="lens-btn mcp-vid-btn" id="mcp-vid-play-btn" aria-pressed="true">Jeda Video</button>
+                <span class="solar-epw-tag" id="mcp-stage-subtag" hidden>gh_build_graph • Satuan Meter/Milimeter</span>
+              </div>
+
+              <!-- Panel 01: SketchUp 2027 Live Recorded Video -->
+              <div class="mcp-video-frame" id="mcp-panel-sketchup">
+                <video
+                  id="mcp-demo-video"
+                  class="mcp-demo-video"
+                  controls
+                  loading="lazy"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="metadata"
+                  width="1280"
+                  height="720"
+                  poster="assets/sketchup-mcp-poster.jpg"
+                  aria-label="Rekaman kerja nyata SketchUp 2027 MCP di MacBook ini: membangun grid kolom 6 meter, menempatkan dan memutar 11 sirip fasad barat 30 derajat, memasang atap tritisan tropis 1,8 meter, serta menguji bayangan sore Denpasar."
+                >
+                  <source src="assets/sketchup-mcp-demo.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <!-- Panel 02: Rhino 8 & Grasshopper MCP Parametric Node Graph + 3D NURBS Preview -->
+              <div class="mcp-gh-frame" id="mcp-panel-rhino" data-gh-active="0" hidden>
+                <svg id="mcp-gh-svg" viewBox="0 0 800 450" width="800" height="450" role="img"
+                  aria-label="Diagram kanvas node Grasshopper gh_build_graph terhubung ke viewport perspektif Rhino 8 untuk membangkitkan 11 sirip fasad barat 30 derajat dan kanopi tropis">
+                  <rect x="0" y="0" width="800" height="450" fill="#0E1318" />
+                  <!-- Left Canvas: Grasshopper Node Graph -->
+                  <rect x="14" y="14" width="474" height="422" rx="8" fill="#141B22" stroke="#31414F" stroke-width="1.2" />
+                  <text x="28" y="36" font-family="var(--font-mono)" font-size="10.5" font-weight="700" fill="#8CE8DA">GRASSHOPPER CANVAS • mcp_rhino.gh_build_graph()</text>
+
+                  <!-- Dataflow Bezier Wires -->
+                  <path d="M 206 82 C 232 82, 232 104, 256 104" fill="none" stroke="#8CE8DA" stroke-width="2" />
+                  <path d="M 206 202 C 232 202, 232 118, 256 118" fill="none" stroke="#8CE8DA" stroke-width="2" />
+                  <path d="M 206 142 C 232 142, 232 184, 256 184" fill="none" stroke="#F5923E" stroke-width="2" />
+                  <path d="M 470 112 C 484 112, 484 172, 256 172" fill="none" stroke="#7A8B99" stroke-width="1.5" stroke-dasharray="4 3" />
+                  <path d="M 470 184 C 482 232, 34 232, 44 294" fill="none" stroke="#F5923E" stroke-width="2" />
+                  <path d="M 250 294 C 272 294, 272 294, 294 294" fill="none" stroke="#F5923E" stroke-width="2" />
+                  <path d="M 250 368 C 272 368, 272 368, 294 368" fill="none" stroke="#8CE8DA" stroke-width="2" />
+
+                  <!-- GH Group 0: Sliders & Series -->
+                  <g class="gh-node-group" data-gh-group="0">
+                    <rect class="gh-node-card" x="28" y="58" width="178" height="46" rx="6" />
+                    <text class="gh-node-head" x="38" y="76">Number Slider • Modul</text>
+                    <text class="gh-node-val" x="38" y="94">0.60 m (min 0.40 .. 1.20)</text>
+
+                    <rect class="gh-node-card" x="28" y="118" width="178" height="46" rx="6" />
+                    <text class="gh-node-head" x="38" y="136">Number Slider • Sudut</text>
+                    <text class="gh-node-val" x="38" y="154">30.0° (min 0° .. 75°)</text>
+
+                    <rect class="gh-node-card" x="28" y="178" width="178" height="48" rx="6" />
+                    <text class="gh-node-head" x="38" y="196">Series • Titik Fasad</text>
+                    <text class="gh-node-val" x="38" y="214">S=0.0 • N=0.60 • C=11</text>
+                  </g>
+
+                  <!-- GH Group 1: Move & Rotate -->
+                  <g class="gh-node-group" data-gh-group="1">
+                    <rect class="gh-node-card" x="256" y="80" width="214" height="58" rx="6" />
+                    <text class="gh-node-head" x="268" y="100">Unit Y + Move</text>
+                    <text class="gh-node-val" x="268" y="120">Sebar 11 plane sepanjang 6.0 m</text>
+
+                    <rect class="gh-node-card" x="256" y="154" width="214" height="58" rx="6" />
+                    <text class="gh-node-head" x="268" y="174">Radians + Rotate 3D</text>
+                    <text class="gh-node-val" x="268" y="194">Putar sumbu Z sebesar 30.0°</text>
+                  </g>
+
+                  <!-- GH Group 2: Extrude & Loft -->
+                  <g class="gh-node-group" data-gh-group="2">
+                    <rect class="gh-node-card" x="44" y="264" width="206" height="58" rx="6" />
+                    <text class="gh-node-head" x="56" y="284">Rectangle + Extrude</text>
+                    <text class="gh-node-val" x="56" y="304">Sirip 300x60 mm • Tinggi 3.2 m</text>
+
+                    <rect class="gh-node-card" x="44" y="338" width="206" height="58" rx="6" />
+                    <text class="gh-node-head" x="56" y="358">Loft + Offset Surface</text>
+                    <text class="gh-node-val" x="56" y="378">Kanopi NURBS tritisan 1.80 m</text>
+                  </g>
+
+                  <!-- GH Group 3: Preview & Bake -->
+                  <g class="gh-node-group" data-gh-group="3">
+                    <rect class="gh-node-card" x="294" y="264" width="176" height="58" rx="6" />
+                    <text class="gh-node-head" x="306" y="284">gh_capture_preview</text>
+                    <text class="gh-node-val" x="306" y="304">Viewport Perspective PNG</text>
+
+                    <rect class="gh-node-card" x="294" y="338" width="176" height="58" rx="6" />
+                    <text class="gh-node-head" x="306" y="358">Bake -&gt; Rhino Layer</text>
+                    <text class="gh-node-val" x="306" y="378">ARS-FASAD-SIRIP (11 Brep)</text>
+                  </g>
+
+                  <text x="28" y="422" font-family="var(--font-mono)" font-size="9.5" fill="#9EB0BE">Dataflow terjaga: ubah slider -&gt; seluruh 11 Brep diperbarui otomatis</text>
+
+                  <!-- Right Inset: Rhino 8 Perspective Viewport -->
+                  <rect x="500" y="14" width="286" height="422" rx="8" fill="#0B1015" stroke="#31414F" stroke-width="1.2" />
+                  <rect x="512" y="24" width="154" height="22" rx="4" fill="#18222C" stroke="#3E5366" stroke-width="1" />
+                  <text x="520" y="39" font-family="var(--font-mono)" font-size="10" font-weight="700" fill="#EAF2F7">Perspective • Rhino 8</text>
+
+                  <!-- Isometric Construction Grid -->
+                  <g stroke="#1E2B36" stroke-width="1">
+                    <line x1="528" y1="336" x2="668" y2="266" />
+                    <line x1="556" y1="350" x2="696" y2="280" />
+                    <line x1="584" y1="364" x2="724" y2="294" />
+                    <line x1="612" y1="378" x2="752" y2="308" />
+                    <line x1="528" y1="336" x2="612" y2="378" />
+                    <line x1="574" y1="313" x2="658" y2="355" />
+                    <line x1="620" y1="290" x2="704" y2="332" />
+                    <line x1="668" y1="266" x2="752" y2="308" />
+                  </g>
+
+                  <!-- Pavilion Floor Slab & Canopy Loft Wireframe -->
+                  <polygon points="548,334 676,270 746,305 618,369" fill="rgba(140,232,218,0.08)" stroke="#588294" stroke-width="1.5" />
+                  <polygon points="528,176 668,108 764,148 624,218" fill="rgba(140,232,218,0.13)" stroke="#8CE8DA" stroke-width="2" />
+                  <path d="M 556,190 L 696,120 M 590,204 L 730,134" stroke="#8CE8DA" stroke-width="1" stroke-dasharray="4 3" />
+
+                  <!-- 11 Parametric Rotated 3D Louver Blades along West Edge -->
+                  <g fill="rgba(245,146,62,0.34)" stroke="#F5923E" stroke-width="1.6">
+                    <polygon points="552,330 562,323 562,192 552,199" />
+                    <polygon points="564,324 574,317 574,186 564,193" />
+                    <polygon points="576,318 586,311 586,180 576,187" />
+                    <polygon points="588,312 598,305 598,174 588,181" />
+                    <polygon points="600,306 610,299 610,168 600,175" />
+                    <polygon points="612,300 622,293 622,162 612,169" />
+                    <polygon points="624,294 634,287 634,156 624,163" />
+                    <polygon points="636,288 646,281 646,150 636,157" />
+                    <polygon points="648,282 658,275 658,144 648,151" />
+                    <polygon points="660,276 670,269 670,138 660,145" />
+                    <polygon points="672,270 682,263 682,132 672,139" />
+                  </g>
+
+                  <!-- XYZ World Axes Triad -->
+                  <line x1="534" y1="406" x2="564" y2="406" stroke="#FF6B6B" stroke-width="2" />
+                  <line x1="534" y1="406" x2="552" y2="390" stroke="#51CF66" stroke-width="2" />
+                  <line x1="534" y1="406" x2="534" y2="378" stroke="#4DABF7" stroke-width="2" />
+                  <text x="568" y="410" font-family="var(--font-mono)" font-size="9.5" fill="#FF8787">X</text>
+                  <text x="556" y="390" font-family="var(--font-mono)" font-size="9.5" fill="#69DB7C">Y</text>
+                  <text x="530" y="373" font-family="var(--font-mono)" font-size="9.5" fill="#74C0FC">Z</text>
+
+                  <rect x="598" y="396" width="174" height="24" rx="12" fill="#26180E" stroke="#F5923E" stroke-width="1.2" />
+                  <text x="685" y="412" text-anchor="middle" font-family="var(--font-mono)" font-size="9.5" font-weight="700" fill="#F5923E">11 BREPS • 30° • 0.60 M</text>
+                </svg>
+              </div>
+
+              <!-- Panel 03: AutoCAD 2026 Live MCP Generated Floor Plan & Schedules -->
+              <div class="mcp-cad-frame" id="mcp-panel-autocad" hidden>
+                <img
+                  src="assets/autocad-mcp-plan.png"
+                  width="1600"
+                  height="602"
+                  loading="lazy"
+                  fetchpriority="low"
+                  alt="Gambar kerja denah Paviliun Studio Tropis 18x6 meter hasil eksekusi nyata AutoCAD MCP: grid as 1-4 dan A-B, dinding bata berarsir dengan pintu D1-D2 dan jendela W1-W4, 8 kolom baja, 11 blok sirip fasad barat diputar 30 derajat, dimensi milimeter, serta Room Schedule 103,55 m² dan Window Schedule."
+                >
+                <svg id="mcp-cad-svg" class="solar-callout-svg" viewBox="0 0 1600 602" shape-rendering="crispEdges" aria-hidden="true">
+                  <rect id="mcp-cad-focus-rect" x="64" y="18" width="1060" height="506"
+                    fill="rgba(245, 146, 62, 0.08)" stroke="#F5923E" stroke-width="4" stroke-dasharray="12 7" />
+                </svg>
+              </div>
+
+              <div class="mcp-rpc-bar" aria-live="polite">
+                <span class="mcp-rpc-badge" id="mcp-rpc-server">JSON-RPC • sketchup_mcp :8080</span>
+                <code id="mcp-rpc-call">mcp_sketchup.create_box({ layer: "S-GRID-COL", cols: 8, grid_mm: 6000 })</code>
+              </div>
+            </div>
+
+            <div class="mcp-inspector-col">
+              <div class="mcp-nodes mcp-nodes--stacked" role="group" aria-label="Pilih tahapan eksekusi MCP pada perangkat lunak terpilih">
+                <button type="button" class="mcp-node-btn" data-mcp="0" aria-pressed="true">
+                  <strong id="mcp-btn-title-0">01. Jembatan Protokol MCP (01.2s)</strong>
+                  <span id="mcp-btn-sub-0">Plinth tapak &amp; konstruksi 8 kolom grid 6,0 m</span>
+                </button>
+                <button type="button" class="mcp-node-btn" data-mcp="1" aria-pressed="false">
+                  <strong id="mcp-btn-title-1">02. Modul &amp; Kisi Parametrik (03.6s)</strong>
+                  <span id="mcp-btn-sub-1">11 sirip West_Fin_Module @ 600 mm diputar 30°</span>
+                </button>
+                <button type="button" class="mcp-node-btn" data-mcp="2" aria-pressed="false">
+                  <strong id="mcp-btn-title-2">03. Integrasi Rangka &amp; Atap ke BIM (05.6s)</strong>
+                  <span id="mcp-btn-sub-2">7 rafter &amp; kanopi tritisan 1,8 m siap sinkronisasi Revit</span>
+                </button>
+                <button type="button" class="mcp-node-btn" data-mcp="3" aria-pressed="false">
+                  <strong id="mcp-btn-title-3">04. Audit Viewport &amp; Bayangan (07.1s)</strong>
+                  <span id="mcp-btn-sub-3">Uji bayangan Denpasar 13:45 s.d. 16:45 WITA</span>
+                </button>
+              </div>
+
+              <div class="detail-box" id="mcp-readout" aria-live="polite">
+                <h3>01 • Jembatan Protokol MCP ke SketchUp 2027</h3>
+                <ul class="clean-list">
+                  <li>Agen terhubung langsung ke server TCP lokal SketchUp (<code>127.0.0.1:8080</code>)</li>
+                  <li>Membangun pelat lantai, garis as konstruksi &amp; 8 kolom baja grid 6,0 m secara presisi</li>
+                  <li>Satuan milimeter dan penamaan layer terkunci sejak perintah pertama</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 07: APA ITU HERMES AGENT & ILUSTRASI TELEGRAM BOT (SIMULASI FIKTIF) -->
+    <section id="sec-07" class="flow-band parallax-stage scroll-reveal-section" tabindex="-1"
+      data-index="07" data-title="Hermes Agent & Ilustrasi Telegram Bot"
+      data-notes="3.5 menit. Perkenalkan Hermes Agent (Nous Research) yang dapat diakses dari mana saja melalui kanal Telegram Bot Gateway maupun Dashboard Web. Tekankan kepada peserta bahwa tampilan percakapan Telegram di layar adalah SIMULASI KASUS FIKTIF studio kampus (bukan chat proyek nyata) demi menjaga kerahasiaan komunikasi klien. Klik keempat tombol peran untuk melihat bagaimana pesan singkat dari ponsel diproses oleh modul Skills, Cron, Sessions, dan Browser.">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 02 • Mengenalkan Hermes Agent &amp; Kanal Telegram Bot</span>
+            <span class="meta-index">07 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Apa itu Hermes Agent:</span> asisten literasi, jadwal, meeting, dan referensi via Telegram Bot</h2>
+
+          <div class="hermes-mg-layout">
+            <!-- Dual-Mode Hermes Stage: Simulated Fictional Telegram Bot + Authentic Web Dashboard v0.16.0 -->
+            <div class="hermes-stage-col">
+              <div class="hermes-stage-bar">
+                <span class="mg-state-pill" id="hermes-mode-pill">TELEGRAM BOT GATEWAY • SIMULASI FIKTIF</span>
+                <div class="solar-stage-actions" role="group" aria-label="Pilih tampilan antarmuka Hermes Agent">
+                  <button type="button" class="lens-btn hermes-view-btn" data-hview="telegram" aria-pressed="true">Ilustrasi Telegram Bot</button>
+                  <button type="button" class="lens-btn hermes-view-btn" data-hview="dashboard" aria-pressed="false">Dashboard Web v0.16.0</button>
+                </div>
+              </div>
+
+              <!-- View 01 (Default): Fictional Architectural Telegram Bot Illustration (Strict Confidentiality Safe) -->
+              <div class="tg-sim-card" id="hermes-telegram-panel">
+                <div class="tg-sim-header">
+                  <div class="tg-bot-id">
+                    <span class="tg-avatar" aria-hidden="true">HM</span>
+                    <div>
+                      <strong>@HermesStudioDemo_bot</strong>
+                      <span>Hermes Gateway • Kanal Telegram Studio</span>
+                    </div>
+                  </div>
+                  <span class="tg-privacy-pill">SIMULASI FIKTIF • BUKAN CHAT KLIEN NYATA</span>
+                </div>
+
+                <div class="tg-sim-body" id="tg-sim-body" aria-live="polite">
+                  <div class="tg-bubble tg-bubble--user">
+                    <div class="tg-bubble-meta">Arsitek • Studi Kasus Fiktif Paviliun Kampus • 09:12 WITA</div>
+                    <p id="tg-user-msg">Tolong ringkaskan poin utama SNI pencahayaan alami &amp; rasio overhang bangunan kampus tropis lembap untuk bahan evaluasi studio sore ini.</p>
+                  </div>
+
+                  <div class="tg-bubble tg-bubble--bot">
+                    <div class="tg-bubble-meta">
+                      <span>Hermes Agent Bot</span>
+                      <code id="tg-bot-tool">skills:literasi • read_file • browser</code>
+                    </div>
+                    <div id="tg-bot-reply">
+                      <p><strong>Ringkasan Studi Tropis (3 Poin Kunci):</strong></p>
+                      <ul>
+                        <li><strong>SNI 03-2396:</strong> Target faktor pencahayaan alami siang hari ruang studio minimal 2,5% s.d. 3,5% merata tanpa silau langsung.</li>
+                        <li><strong>Rasio Tritisan Barat/Timur:</strong> Kombinasikan <em>overhang</em> horizontal 1,5 s.d. 1,8 m dengan sirip vertikal putar 30° untuk memotong radiasi sudut rendah.</li>
+                        <li><strong>Sumber Primer Siap Dicek:</strong> Dokumen SNI &amp; studi <em>SDE4 NUS</em> telah ditautkan ke folder bacaan studio.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tg-sim-foot">
+                  <span>Catatan Privasi: Seluruh nama bot, proyek, dan isi pesan di atas adalah ilustrasi fiktif demi menjaga kerahasiaan chat klien &amp; internal biro.</span>
+                </div>
+              </div>
+
+              <!-- View 02: Authentic Hermes Agent v0.16.0 Web Console -->
+              <div class="hermes-viewport-shell parallax-layer parallax-layer--mid" id="hermes-viewport-shell" data-hermes-step="0" hidden>
+                <img
+                  src="assets/hermes-agent-dashboard.png"
+                  width="1024"
+                  height="543"
+                  loading="lazy"
+                  fetchpriority="low"
+                  alt="Antarmuka asli Hermes Agent v0.16.0 (Nous Research): bilah sisi kiri Hermes Teal memuat Chat, Sessions, Cron, Skills, MCP, Channels, dan Kanban; konsol tengah menampilkan logo piksel HERMES-AGENT, lambang ASCII Caduceus, serta 34 tools dan 28 skills."
+                >
+                <svg id="hermes-hub-svg" class="solar-callout-svg" viewBox="0 0 1024 543" shape-rendering="crispEdges" aria-hidden="true">
+                  <rect id="hermes-focus-rect" x="312" y="198" width="474" height="176"
+                    fill="rgba(244, 201, 93, 0.08)" stroke="#F4C95D" stroke-width="3" stroke-dasharray="10 6" />
+                  <rect id="hermes-focus-corner" x="306" y="192" width="12" height="12" fill="#F4C95D" />
+                </svg>
+              </div>
+
+              <div class="hermes-cli-trace" id="hermes-cli-trace" aria-live="polite">
+                <span class="hermes-prompt-tag">hermes&gt;</span>
+                <code id="hermes-cli-cmd">channel:telegram -&gt; /skills literasi "SNI pencahayaan alami &amp; selubung fasad tropis"</code>
+                <span class="hermes-tool-pill" id="hermes-cli-tool">read_file • browser</span>
+              </div>
+            </div>
+
+            <div class="hermes-inspector-col">
+              <div class="agent-stepper" role="group" aria-label="Empat peran praktis Hermes Agent bagi arsitek">
+                <button type="button" class="step-btn" data-astep="0" aria-pressed="true">01. Tambah Literasi</button>
+                <button type="button" class="step-btn" data-astep="1" aria-pressed="false">02. Atur Jadwal</button>
+                <button type="button" class="step-btn" data-astep="2" aria-pressed="false">03. Rangkum Meeting</button>
+                <button type="button" class="step-btn" data-astep="3" aria-pressed="false">04. Kumpul Referensi</button>
+              </div>
+
+              <div class="detail-box" id="agent-step-readout" aria-live="polite">
+                <h3>01 • Menambah Literasi Teknis &amp; Desain</h3>
+                <ul class="clean-list">
+                  <li>Cukup kirim topik dari ponsel lewat <strong>Telegram Bot Gateway</strong>; modul <strong>Skills &amp; File</strong> membedah standar SNI &amp; jurnal</li>
+                  <li>Menyusun ringkasan bacaan harian terstruktur untuk memperkaya wawasan studio</li>
+                  <li>Menandai sumber primer agar bisa dipelajari lebih dalam oleh arsitek</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll-Driven Kinetic Datum Ribbon 02 -->
+    <div class="kinetic-ribbon-wrap kinetic-ribbon-wrap--accent" aria-hidden="true">
+      <div class="kinetic-ribbon kinetic-ribbon--right">
+        <span>ARSITEK SEBAGAI DECIDER</span><span>•</span>
+        <span>JANGAN BIARKAN AI MENENTUKAN</span><span>•</span>
+        <span>TAMBAH LITERASI AGAR TAHU MANA YANG LEBIH BAIK</span><span>•</span>
+        <span>AKUNTABILITAS DESAIN DI TANGAN MANUSIA</span>
+      </div>
+    </div>
+
+    <!-- BAND 04: BAB 03 POSISI ARSITEK SEBAGAI DECIDER & LITERASI (SEC 08 - 09) -->
+    <section id="sec-08" class="flow-band flow-band--contrast parallax-stage scroll-reveal-section" tabindex="-1"
+      data-index="08" data-title="Arsitek Wajib sebagai Decider"
+      data-notes="3.5 menit. Sebelum kita masuk ke implementasi di tiap fase arsitektur, kunci dulu aturan main utamanya di Bab 03: Arsitek HARUS berdiri sebagai DECIDER. Jangan biarkan AI menentukan desain! AI hanya menyodorkan usulan, sedangkan arsiteklah yang memegang kendali kriteria, keselamatan penghuni, dan tanggung jawab profesi.">
+
+      <div class="parallax-watermark parallax-layer parallax-layer--deep" aria-hidden="true">03</div>
+
+      <div class="band-container">
+        <div class="section-plate section-plate--crimson-edge">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 03 • Memposisikan Diri sebelum Implementasi</span>
+            <span class="meta-index">08 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Jangan biarkan AI menentukan:</span> arsitek wajib berdiri sebagai Decider</h2>
+
+          <div class="lens-toolbar" role="group" aria-label="Bandingkan posisi Arsitek Decider dan jebakan AI-Driven">
+            <button type="button" class="lens-btn pos-mode-btn" data-pos="director" aria-pressed="true">Arsitek sebagai Decider (Wajib)</button>
+            <button type="button" class="lens-btn pos-mode-btn" data-pos="passive" aria-pressed="false">Jebakan Membiarkan AI Menentukan</button>
+          </div>
+
+          <div class="decider-mg-grid">
+            <!-- Motion Graphic: Tactile Frosted Amber Switch + Architectural Fulcrum Scale -->
+            <div class="decider-svg-card">
+              <div class="decider-hw-row">
+                <button type="button" role="switch" aria-checked="true" class="tactile-hw-switch" id="decider-hw-switch"
+                  aria-label="Sakelar kendali utama Arsitek sebagai Decider">
+                  <span class="tactile-hw-switch__label-on" aria-hidden="true">ON</span>
+                  <span class="tactile-hw-switch__label-off" aria-hidden="true">OFF</span>
+                  <span class="tactile-hw-switch__glow" aria-hidden="true"></span>
+                  <span class="tactile-hw-switch__thumb" aria-hidden="true">
+                    <span class="tactile-hw-switch__grip"></span>
+                    <span class="tactile-hw-switch__well"></span>
+                  </span>
+                </button>
+                <span class="decider-hw-caption" id="decider-hw-caption">DECIDER AKTIF • KENDALI ARSITEK</span>
+              </div>
+              <div class="decider-pixel-shell" id="decider-pixel-shell">
+                <canvas id="decider-pixel-canvas" class="decider-pixel-canvas" width="480" height="228" aria-hidden="true"></canvas>
+                <svg id="decider-scale-svg" class="decider-pixel-overlay" viewBox="0 0 480 228" width="480" height="228" role="img"
+                  aria-label="Diagram matriks glif silang volumetrik keseimbangan kendali keputusan antara kriteria arsitek dan usulan AI">
+                  <rect x="64" y="10" width="352" height="22" rx="11" class="mg-svg-pill mg-svg-pill--accent" />
+                  <text id="decider-svg-status" x="240" y="24.5" text-anchor="middle" font-family="var(--font-mono)" fill="var(--accent)" font-size="10.2" font-weight="700">KENDALI TERUKUR • KEPUTUSAN BERPIJAK KONTEKS</text>
+                  <g id="decider-beam" transform="rotate(0 240 136)">
+                    <line x1="56" y1="136" x2="424" y2="136" stroke="var(--border)" stroke-width="2.5" />
+                    <rect x="44" y="102" width="144" height="26" rx="13" class="mg-svg-pill mg-svg-pill--accent" />
+                    <text x="116" y="118.5" text-anchor="middle" font-family="var(--font-mono)" fill="currentColor" font-size="10.8" font-weight="700">ARSITEK: DECIDER</text>
+                    <rect x="292" y="102" width="148" height="26" rx="13" class="mg-svg-pill" />
+                    <text x="366" y="118.5" text-anchor="middle" font-family="var(--font-mono)" fill="currentColor" font-size="10.4" font-weight="700">AI: PROPOSER OPSI</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+
+            <div class="detail-box" id="pos-readout" aria-live="polite">
+              <h3>Prinsip Kerja Arsitek sebagai Decider</h3>
+              <ul class="clean-list">
+                <li><strong>Arsitek menetapkan kriteria:</strong> Fungsi, iklim, struktur, anggaran &amp; konteks lokal</li>
+                <li><strong>AI menyodorkan opsi:</strong> Memperluas alternatif, mengolah data &amp; menguji skenario</li>
+                <li><strong>Arsitek memutuskan:</strong> Memilih, mengedit, mengunci geometri &amp; bertanggung jawab penuh</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 09: LITERASI MENENTUKAN KUALITAS KEPUTUSAN -->
+    <section id="sec-09" class="flow-band scroll-reveal-section" tabindex="-1"
+      data-index="09" data-title="Literasi Menentukan Kualitas Keputusan"
+      data-notes="3 menit. Sambungkan dengan tegas: jika arsitek adalah Decider sementara AI, MCP, dan Hermes bisa menghasilkan banyak opsi dengan cepat, apa alat ukur kita untuk tahu mana yang lebih baik? Jawabannya adalah MENAMBAH LITERASI secara terus-menerus.">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 03 • Fondasi Pengambilan Keputusan</span>
+            <span class="meta-index">09 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Tambah literasi terus-menerus</span> agar tahu mana pilihan yang lebih baik</h2>
+
+          <div class="pillars-3">
+            <article class="pillar-col">
+              <span class="meta-kicker">Risiko Minim Literasi</span>
+              <h3>Buta Kurasi</h3>
+              <ul class="clean-list">
+                <li>Mudah silau oleh visual permukaan</li>
+                <li>Gagal mendeteksi cacat struktur &amp; iklim</li>
+                <li>Bingung saat ditanya alasan keputusan</li>
+              </ul>
+            </article>
+
+            <article class="pillar-col">
+              <span class="meta-kicker">Asupan Pengetahuan</span>
+              <h3>Literasi yang Diasah</h3>
+              <ul class="clean-list">
+                <li>Sejarah, teori ruang &amp; kearifan lokal Bali</li>
+                <li>Sains bangunan tropis, material &amp; detail</li>
+                <li>Regulasi, konstruksi &amp; sistem kerja digital</li>
+              </ul>
+            </article>
+
+            <article class="pillar-col pillar-col--architect">
+              <span class="meta-kicker">Dampak Langsung</span>
+              <h3>Ketajaman Decider</h3>
+              <ul class="clean-list">
+                <li>Tahu persis mana alternatif yang lebih baik</li>
+                <li>Mampu mengarahkan revisi secara spesifik</li>
+                <li>Keputusan kokoh di depan dosen &amp; klien</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 10: DELEGASI DESAIN, HAK CIPTA & ETIKA PROFESI (RINGKAS 2 MENIT) -->
+    <section id="sec-10" class="flow-band scroll-reveal-section" tabindex="-1"
+      data-index="10" data-title="Delegasi, Hak Cipta & Etika Profesi"
+      data-notes="Ringkas & padat (maksimal 2 menit; bahan diskusi akademik, bukan pendapat hukum formal). Sampaikan tesis intinya: alur prinsipal yang membuat sketsa lalu mendelegasikan ke tim memang mirip dengan arsitek mengarahkan AI, TETAPI kemiripan workflow tidak berarti kesamaan status kepengarangan (authorship), hak cipta, maupun tanggung jawab profesi. Jangan pernah menyamakan staf manusia dengan AI, simpan jejak proses sketsa/revisi, jaga kerahasiaan data klien, dan cek rujukan UU Hak Cipta No. 28/2014 di Handbook PDF.">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 03 • Kajian Ringkas (2 Menit): Delegasi Desain, Hak Cipta &amp; Etika</span>
+            <span class="meta-index">10 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Kemiripan alur bukan kesetaraan hak:</span> batas delegasi, hak cipta, dan akuntabilitas</h2>
+
+          <div class="ai-paradigm-layout">
+            <div class="ai-paradigm-stage" id="ethics-stage" data-active-layer="0">
+              <div class="mcp-stage-bar">
+                <span class="mg-state-pill" id="ethics-stage-pill">DIMENSI 01 • BATAS ANALOGI</span>
+                <span class="solar-epw-tag" id="ethics-stage-io">Diskusi Akademik • Bukan Pendapat Hukum Formal</span>
+              </div>
+
+              <div class="svg-viewport ai-paradigm-viewport">
+                <svg id="ethics-authorship-svg" viewBox="0 0 560 286" width="560" height="286" role="img"
+                  aria-label="Diagram pemisahan kemiripan alur kerja dari status kepengarangan, rujukan hak cipta, dan tiga skenario etika profesi arsitek">
+                  <!-- Top Thesis Pill -->
+                  <rect x="68" y="10" width="424" height="32" rx="16" class="mg-svg-pill mg-svg-pill--accent" />
+                  <text x="280" y="30" text-anchor="middle" font-family="var(--font-mono)" font-size="10.2" font-weight="700" fill="var(--accent)">TESIS: KEMIRIPAN WORKFLOW != KESAMAAN AUTHORSHIP</text>
+                  <line x1="280" y1="42" x2="280" y2="58" stroke="var(--accent)" stroke-width="1.8" />
+
+                  <!-- Tier 0: Human Team vs AI Instrument -->
+                  <g class="ai-svg-tier" data-tier="0">
+                    <rect class="ai-tier-box" x="28" y="58" width="504" height="52" rx="8" />
+                    <rect class="ai-tier-badge" x="42" y="71" width="36" height="26" rx="6" />
+                    <text class="ai-tier-num" x="60" y="88" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700">01</text>
+                    <text class="ai-tier-title" x="92" y="80" font-family="var(--font-mono)" font-size="11" font-weight="700">TIM MANUSIA VS INSTRUMEN AI</text>
+                    <text class="ai-tier-sub" x="92" y="98" font-size="10.3">Staf = subjek kreatif bermartabat (hak &amp; kredit); AI = alat tanpa lisensi</text>
+                  </g>
+
+                  <line x1="280" y1="110" x2="280" y2="122" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="3 3" />
+
+                  <!-- Tier 1: Copyright & Human Contribution -->
+                  <g class="ai-svg-tier" data-tier="1">
+                    <rect class="ai-tier-box" x="28" y="122" width="504" height="52" rx="8" />
+                    <rect class="ai-tier-badge" x="42" y="135" width="36" height="26" rx="6" />
+                    <text class="ai-tier-num" x="60" y="152" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700">02</text>
+                    <text class="ai-tier-title" x="92" y="144" font-family="var(--font-mono)" font-size="11" font-weight="700">HAK CIPTA &amp; BUKTI KONTRIBUSI MANUSIA</text>
+                    <text class="ai-tier-sub" x="92" y="162" font-size="10.3">Telaah UU 28/2014 (Psl 33, 34, 36, 40), kontrak &amp; jejak sketsa/revisi</text>
+                  </g>
+
+                  <line x1="280" y1="174" x2="280" y2="186" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="3 3" />
+
+                  <!-- Tier 2: Three Studio Scenarios & Ethics -->
+                  <g class="ai-svg-tier" data-tier="2">
+                    <rect class="ai-tier-box" x="28" y="186" width="504" height="52" rx="8" />
+                    <rect class="ai-tier-badge" x="42" y="199" width="36" height="26" rx="6" />
+                    <text class="ai-tier-num" x="60" y="216" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="700">03</text>
+                    <text class="ai-tier-title" x="92" y="208" font-family="var(--font-mono)" font-size="11" font-weight="700">TIGA SKENARIO UJI &amp; ETIKA PROFESI</text>
+                    <text class="ai-tier-sub" x="92" y="226" font-size="10.3">Alat eksplorasi (kuat) vs pilih instan (lemah) vs tanpa validasi (gagal)</text>
+                  </g>
+
+                  <line x1="280" y1="238" x2="280" y2="252" stroke="var(--accent)" stroke-width="1.8" />
+                  <rect x="64" y="252" width="432" height="26" rx="13" class="mg-svg-pill" />
+                  <text x="280" y="268.5" text-anchor="middle" font-family="var(--font-mono)" font-size="9.8" font-weight="700" fill="currentColor">AKUNTABILITAS DESAIN, PRIVASI KLIEN &amp; KREDIT TIM TETAP DI MANUSIA</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="mcp-inspector-col">
+              <div class="mcp-nodes mcp-nodes--stacked" role="group" aria-label="Pilih tiga dimensi kajian delegasi, hak cipta, dan etika AI">
+                <button type="button" class="mcp-node-btn ethics-lens-btn" data-elens="0" aria-pressed="true">
+                  <strong>01. Delegasi Tim vs Instrumen AI</strong>
+                  <span>Serupa di alur kerja, berbeda di martabat &amp; kepengarangan</span>
+                </button>
+                <button type="button" class="mcp-node-btn ethics-lens-btn" data-elens="1" aria-pressed="false">
+                  <strong>02. Rujukan Hak Cipta &amp; Bukti Proses</strong>
+                  <span>UU Hak Cipta 28/2014, kontrak kerja &amp; rekam kontribusi</span>
+                </button>
+                <button type="button" class="mcp-node-btn ethics-lens-btn" data-elens="2" aria-pressed="false">
+                  <strong>03. Tiga Skenario Studio &amp; Etika</strong>
+                  <span>Kapan penggunaan AI sahih vs kapan melanggar tanggung jawab</span>
+                </button>
+              </div>
+
+              <div class="detail-box" id="ethics-readout" aria-live="polite">
+                <h3>01 • Delegasi Tim Manusia vs Bantuan AI</h3>
+                <ul class="clean-list">
+                  <li><strong>Jangan samakan staf dengan AI:</strong> Staf arsitek adalah subjek kreatif mandiri yang memiliki martabat, hak moral, dan pengakuan kredit</li>
+                  <li><strong>Batas kepengarangan:</strong> Sekadar memilih satu keluaran AI tidak otomatis menjadikan seluruh ekspresi visual sebagai ciptaan manusia</li>
+                  <li><strong>Tanggung jawab mutlak:</strong> AI tidak memiliki lisensi arsitek; risiko keselamatan, struktur, dan regulasi tetap dipikul manusia</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAND 05: BAB 04 IMPLEMENTASI DI WORKFLOW ARSITEKTUR FASE 01 -> FASE 07 (SEC 11 - 17) -->
+    <section id="sec-11" class="flow-band parallax-stage scroll-reveal-section" tabindex="-1"
+      data-index="11" data-title="Peta Implementasi AI pada 7 Fase"
+      data-notes="3 menit. Masuk ke Bab 04: setelah memahami workflow arsitektur, mengenal AI/MCP/Hermes, dan memegang prinsip Decider beserta batas etikanya, mari kita petakan implementasi nyatanya secara berurutan pada ketujuh fase kerja arsitektur. Gunakan tombol filter zona untuk membedakan mana tahapan yang dipercepat AI, mana yang menuntut kurasi arsitek, dan mana yang wajib dikerjakan di lapangan serta BIM.">
+
+      <div class="parallax-watermark parallax-layer parallax-layer--deep" aria-hidden="true">04</div>
+
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 04 • Peta Implementasi pada 7 Fase Workflow Arsitektur</span>
+            <span class="meta-index">11 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Implementasi di sepanjang workflow:</span> menempatkan AI, Hermes, dan MCP secara tepat di tiap fase</h2>
+
+          <div class="filter-bar" role="group" aria-label="Filter peran AI pada tujuh tahapan arsitektur">
+            <button type="button" class="lens-btn matrix-filter" data-zone="all" aria-pressed="true">Semua Fase (7)</button>
+            <button type="button" class="lens-btn matrix-filter" data-zone="assist" aria-pressed="false">Akselerasi AI</button>
+            <button type="button" class="lens-btn matrix-filter" data-zone="curate" aria-pressed="false">Kurasi Arsitek</button>
+            <button type="button" class="lens-btn matrix-filter" data-zone="human" aria-pressed="false">Wajib Lapangan &amp; BIM</button>
+          </div>
+
+          <div class="matrix-grid matrix-grid--7" id="capability-matrix">
+            <article class="matrix-item" data-zone="assist">
+              <span class="zone-tag zone-tag--assist">Akselerasi AI</span>
+              <h3>01. Data Collecting - Project Brief</h3>
+              <p>Hermes Agent merangkum meeting klien, klasifikasi brief, &amp; matriks referensi awal.</p>
+            </article>
+            <article class="matrix-item" data-zone="human assist">
+              <div class="zone-tags-row">
+                <span class="zone-tag zone-tag--human">Wajib Lapangan</span>
+                <span class="zone-tag zone-tag--assist">Akselerasi AI</span>
+              </div>
+              <h3>02. Site Analysis &amp; Solar Study</h3>
+              <p>Survei kontur &amp; regulasi lokal di lapangan; simulasi lintasan matahari &amp; cuaca EPW dipercepat aplikasi web hasil AI.</p>
+            </article>
+            <article class="matrix-item" data-zone="curate">
+              <span class="zone-tag zone-tag--curate">Kurasi Arsitek</span>
+              <h3>03. Space Programming</h3>
+              <p>Draf tabel luasan, kapasitas, &amp; matriks kedekatan ruang; wajib cek standar SNI.</p>
+            </article>
+            <article class="matrix-item" data-zone="curate">
+              <span class="zone-tag zone-tag--curate">Kurasi Arsitek</span>
+              <h3>04. Conceptual</h3>
+              <p>Eksplorasi benang merah gagasan ruang, karakter suasana, &amp; respons iklim pasif.</p>
+            </article>
+            <article class="matrix-item" data-zone="curate">
+              <span class="zone-tag zone-tag--curate">Kurasi Arsitek</span>
+              <h3>05. Schematic</h3>
+              <p>Perbandingan alternative design, studi potongan, &amp; komposisi massa tiga dimensi.</p>
+            </article>
+            <article class="matrix-item" data-zone="assist">
+              <span class="zone-tag zone-tag--assist">Akselerasi AI</span>
+              <h3>06. Development</h3>
+              <p>Otomasi geometri &amp; komponen parametrik via MCP (SketchUp/Rhino/CAD) sebelum sinkronisasi BIM.</p>
+            </article>
+            <article class="matrix-item matrix-item--wide" data-zone="human assist">
+              <div class="zone-tags-row">
+                <span class="zone-tag zone-tag--human">Wajib BIM/CAD</span>
+                <span class="zone-tag zone-tag--assist">Akselerasi AI</span>
+              </div>
+              <div class="matrix-wide-copy">
+                <h3>07. Documentation &amp; Presentation</h3>
+                <p>Gambar kerja DED, struktur, &amp; MEP wajib presisi di Revit/CAD; presentasi klien dipercepat multi-image video generation &amp; vibe coding web.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 12: IMPLEMENTASI FASE 02 SITE ANALYSIS (HELIOS SOLAR ENGINE v2.0) -->
+    <section id="sec-12" class="flow-band parallax-stage scroll-reveal-section" tabindex="-1"
+      data-index="12" data-title="Implementasi Fase 02: Helios Solar Study"
+      data-notes="3.5 menit. Implementasi nyata pada Fase 02 (Site Analysis & Solar Study): aplikasi web Helios Solar Engine v2.0 (http://100.76.27.91/solar/) yang dirakit dengan bantuan AI untuk mengimpor data iklim EPW Bandara Ngurah Rai Denpasar dan model 3D bangunan guna menguji bayangan, radiasi 797 W/m2, suhu 29 derajat Celcius, serta arah angin. Klik tombol Live App Interaktif atau tautan 100.76.27.91/solar bila ingin mendemokan orbit 3D secara langsung.">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 04 • Implementasi Fase 02: Site Analysis &amp; Solar Study</span>
+            <span class="meta-index">12 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Implementasi Solar Study:</span> simulasi lintasan surya, bayangan 3D, dan cuaca EPW Denpasar</h2>
+
+          <div class="solar-stage-layout">
+            <div class="solar-stage-col">
+              <div class="solar-stage-bar">
+                <div class="solar-stage-id">
+                  <span class="mg-state-pill">HELIOS SOLAR ENGINE v2.0</span>
+                  <span class="solar-epw-tag">EPW: Denpasar-Ngurah.Rai.Intl.AP</span>
+                </div>
+                <div class="solar-stage-actions" role="group" aria-label="Mode tampilan aplikasi Helios Solar Study">
+                  <button type="button" class="chrome-btn solar-view-btn" data-solar-view="preview" aria-pressed="true">Pratinjau &amp; Anotasi</button>
+                  <button type="button" class="chrome-btn solar-view-btn" data-solar-view="live" aria-pressed="false">Live App Interaktif</button>
+                  <a class="chrome-btn solar-ext-link" href="http://100.76.27.91/solar/" target="_blank" rel="noopener noreferrer">Buka 100.76.27.91/solar ↗</a>
+                </div>
+              </div>
+
+              <div class="solar-viewport-shell parallax-layer parallax-layer--mid" id="solar-viewport-shell" data-solar-mode="preview" data-solar-focus="0">
+                <div class="solar-preview-pane" id="solar-preview-pane">
+                  <img
+                    src="assets/helios-solar-study.png"
+                    width="1024"
+                    height="542"
+                    loading="lazy"
+                    alt="Antarmuka Helios Solar Engine v2.0 hasil AI: panel kiri impor file cuaca EPW Denpasar Ngurah Rai dan kontrol orientasi 3D, kubah tengah lintasan matahari pada model bangunan 3D pukul 12.00, serta panel kanan telemetri radiasi 797 W/m2, suhu 29 derajat Celcius, kelembapan 74 persen, dan angin 3,1 m/s."
+                  >
+                  <svg id="solar-callout-svg" class="solar-callout-svg" viewBox="0 0 1024 542" aria-hidden="true">
+                    <rect id="solar-focus-rect" x="6" y="6" width="172" height="530" rx="10"
+                      fill="rgba(245, 146, 62, 0.08)" stroke="#F5923E" stroke-width="2.6" stroke-dasharray="8 5" />
+                    <circle id="solar-focus-dot" cx="178" cy="24" r="6" fill="#F5923E" />
+                  </svg>
+                </div>
+                <div class="solar-live-pane" id="solar-live-pane" hidden>
+                  <div class="solar-live-status" id="solar-live-status" role="status" aria-live="polite">
+                    Menghubungkan ke <code>http://100.76.27.91/solar/</code>. Bila di luar jaringan Tailscale privat, gunakan mode <strong>Pratinjau &amp; Anotasi</strong>.
+                  </div>
+                  <iframe
+                    id="solar-live-iframe"
+                    class="solar-live-iframe"
+                    width="1024"
+                    height="542"
+                    title="Simulasi Interaktif Helios Solar Engine v2.0 (http://100.76.27.91/solar/)"
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div class="solar-inspector-col">
+              <div class="solar-focus-list" role="group" aria-label="Pilih tiga komponen analisis pada Helios Solar Engine">
+                <button type="button" class="solar-focus-btn" data-sfocus="0" aria-pressed="true">
+                  <strong>01. Impor EPW Denpasar &amp; Model 3D</strong>
+                  <span>Cuaca Bandara Ngurah Rai + kontrol yaw, pitch &amp; skala</span>
+                </button>
+                <button type="button" class="solar-focus-btn" data-sfocus="1" aria-pressed="false">
+                  <strong>02. Kubah Surya &amp; Scrubber Waktu</strong>
+                  <span>4 titik balik musim &amp; bayangan jam 05:50 s.d. 18:18</span>
+                </button>
+                <button type="button" class="solar-focus-btn" data-sfocus="2" aria-pressed="false">
+                  <strong>03. Telemetri Iklim &amp; Laporan Teknis</strong>
+                  <span>Radiasi 797 W/m², suhu 29 °C, angin 3,1 m/s &amp; ekspor PDF</span>
+                </button>
+              </div>
+
+              <div class="detail-box" id="solar-readout" aria-live="polite">
+                <h3>01 • Impor Data Iklim EPW Denpasar &amp; Geometri 3D</h3>
+                <ul class="clean-list">
+                  <li>Memuat file cuaca terukur <strong>Denpasar-Ngurah.Rai.Intl.AP (.epw)</strong> bersama model massa 3D proyek</li>
+                  <li>Menguji putaran orientasi bangunan (<em>Yaw</em>, <em>Pitch</em>, skala &amp; opasitas) secara langsung di browser</li>
+                  <li><strong>Peran Decider:</strong> Menentukan orientasi massa paling sejuk sebelum masuk ke tahap Space Programming</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 13: IMPLEMENTASI FASE 03-05 SPACE PROGRAMMING, CONCEPTUAL & SCHEMATIC -->
+    <section id="sec-13" class="flow-band scroll-reveal-section" tabindex="-1"
+      data-index="13" data-title="Implementasi Fase 03-05: Eksplorasi Awal"
+      data-notes="3.5 menit. Berlanjut ke Fase 03 sampai Fase 05: tiga tahap eksplorasi tempat AI sangat produktif memperluas opsi sementara arsitek memegang kurasi ketat: Space Programming (tabel ruang & matriks kedekatan), Conceptual (menguji benang merah gagasan), dan Schematic / Alternative Design (membandingkan 3 sampai 5 skema secara paralel).">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 04 • Implementasi Fase 03 s.d. 05: Eksplorasi Desain Awal</span>
+            <span class="meta-index">13 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Implementasi fase eksplorasi:</span> space programming, conceptual, hingga schematic</h2>
+
+          <div class="tabs-container">
+            <div class="tablist-scroller" role="tablist" focusgroup="tablist nomemory" aria-label="Tiga tahap eksplorasi desain awal">
+              <button type="button" role="tab" id="tab-hulu-1" aria-selected="true" focusgroupstart>01. Space Programming</button>
+              <button type="button" role="tab" id="tab-hulu-2" aria-selected="false">02. Conceptual</button>
+              <button type="button" role="tab" id="tab-hulu-3" aria-selected="false">03. Schematic &amp; Alt</button>
+            </div>
+
+            <div class="tabpanels-stack">
+              <div role="tabpanel" id="panel-hulu-1" aria-labelledby="tab-hulu-1" tabindex="0">
+                <div class="tabpanel-inner">
+                  <div>
+                    <h3>Kontribusi AI pada Space Programming</h3>
+                    <ul class="clean-list">
+                      <li>Mengolah daftar kebutuhan pengguna menjadi tabel ruang</li>
+                      <li>Menyusun variasi matriks kedekatan aktivitas (zonasi)</li>
+                      <li>Mendeteksi potensi benturan fungsi bising vs tenang</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Kendali Penuh Arsitek</h3>
+                    <ul class="clean-list">
+                      <li>Memvalidasi standar dimensi, sirkulasi &amp; evakuasi</li>
+                      <li>Menentukan prioritas ruang saat lahan terbatas</li>
+                      <li>Menyelaraskan luasan terhadap anggaran proyek</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div role="tabpanel" id="panel-hulu-2" aria-labelledby="tab-hulu-2" hidden="until-found">
+                <div class="tabpanel-inner">
+                  <div>
+                    <h3>Kontribusi AI pada Conceptual</h3>
+                    <ul class="clean-list">
+                      <li>Lawan diskusi menguji kekuatan narasi konsep</li>
+                      <li>Eksplorasi karakter material, cahaya &amp; bukaan awal</li>
+                      <li>Menerjemahkan data iklim menjadi ide respons pasif</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Kendali Penuh Arsitek</h3>
+                    <ul class="clean-list">
+                      <li>Menjaga keaslian jiwa ruang &amp; nilai budaya lokal</li>
+                      <li>Mengikat konsep pada konteks nyata hasil Site Analysis</li>
+                      <li>Memastikan gagasan dapat diwujudkan secara struktural</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div role="tabpanel" id="panel-hulu-3" aria-labelledby="tab-hulu-3" hidden="until-found">
+                <div class="tabpanel-inner">
+                  <div>
+                    <h3>Kontribusi AI pada Schematic</h3>
+                    <ul class="clean-list">
+                      <li>Membangkitkan 3 sampai 5 skema gubahan pembanding</li>
+                      <li>Variasi ritme fasad, bukaan &amp; konfigurasi atap</li>
+                      <li>Mempercepat perbandingan plus-minus di depan klien</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3>Kendali Penuh Arsitek</h3>
+                    <ul class="clean-list">
+                      <li>Menilai kualitas potongan, bayangan &amp; aliran udara</li>
+                      <li>Memilih opsi terbaik, bukan sekadar gambar termegah</li>
+                      <li>Mengunci alternatif terpilih ke model 3D terukur</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 14: IMPLEMENTASI FASE 04-05 UJI ALTERNATIVE DESIGN TROPIS -->
+    <section id="sec-14" class="flow-band parallax-stage scroll-reveal-section" tabindex="-1"
+      data-index="14" data-title="Implementasi Fase 04: Uji Konsep Tropis"
+      data-notes="3 menit. Contoh kurasi seorang Decider pada Fase Conceptual ke Schematic: membandingkan tiga skema alternatif paviliun tropis ini dengan prinsip iklim seperti pada bangunan nyata SDE4 NUS. Klik Opsi A, B, dan C: perhatikan diagram potongan iklim tropis yang berubah sesuai karakter aliran angin dan peneduhan tiap opsi.">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 04 • Implementasi Fase 04: Menguji Alternatif Konsep Tropis</span>
+            <span class="meta-index">14 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Tiga skema alternatif:</span> diuji dengan nalar potongan iklim tropis</h2>
+
+          <figure class="concept-plate-figure parallax-layer parallax-layer--mid" id="concept-plate-shell" data-concept-mode="0">
+            <div class="concept-plate-img-wrap">
+              <img src="assets/concepts.png" width="2172" height="724" loading="lazy"
+                alt="Tiga skema alternatif paviliun belajar tropis: Opsi A Veranda Terbuka bertritisan lebar, Opsi B Courtyard Tengah dengan taman berpori, dan Opsi C Kisi Peneduh vertikal di fasad barat.">
+              <svg class="concept-plate-callout" viewBox="0 0 2172 724" aria-hidden="true">
+                <rect id="concept-plate-rect" x="8" y="8" width="714" height="708" rx="14"
+                  fill="none" stroke="var(--accent)" stroke-width="10" />
+              </svg>
+            </div>
+          </figure>
+
+          <div class="concept-Grid3" role="group" aria-label="Pilih alternatif desain ruang belajar tropis">
+            <button type="button" class="concept-choice-btn" data-concept="0" aria-pressed="true">
+              <h3>Opsi A • Veranda Terbuka</h3>
+              <p>Tritisan lebar • menyatu dengan lanskap luar</p>
+            </button>
+            <button type="button" class="concept-choice-btn" data-concept="1" aria-pressed="false">
+              <h3>Opsi B • Courtyard Tengah</h3>
+              <p>Taman berpori • orientasi tenang ke dalam</p>
+            </button>
+            <button type="button" class="concept-choice-btn" data-concept="2" aria-pressed="false">
+              <h3>Opsi C • Kisi Peneduh</h3>
+              <p>Sirip vertikal • saringan matahari timur/barat</p>
+            </button>
+          </div>
+
+          <div class="tropical-mg-bar">
+            <svg id="concept-section-svg" viewBox="0 0 420 132" width="420" height="132" role="img"
+              aria-label="Diagram potongan prinsip iklim tropis untuk skema yang dipilih">
+              <line x1="16" y1="104" x2="404" y2="104" stroke="currentColor" stroke-width="2" opacity="0.7" />
+              <polygon points="44,44 210,18 376,44 376,50 44,50" fill="var(--surface-strong)" stroke="currentColor" stroke-width="1.8" />
+              <line x1="118" y1="50" x2="118" y2="104" stroke="currentColor" stroke-width="4" />
+              <line x1="302" y1="50" x2="302" y2="104" stroke="currentColor" stroke-width="4" />
+              <path d="M 28 74 C 110 66, 175 82, 255 72 S 355 68, 386 74" fill="none" stroke="var(--accent)" stroke-width="3" stroke-dasharray="8 5" />
+              <polygon points="384,68 398,74 384,80" fill="var(--accent)" />
+              <text x="210" y="122" text-anchor="middle" font-family="var(--font-mono)" font-size="10.5" font-weight="700" fill="var(--accent)">VERANDA: ANGIN SILANG BEBAS</text>
+            </svg>
+            <div class="concept-readout" id="concept-readout" aria-live="polite">
+              <strong>Evaluasi Opsi A:</strong> Unggul pada aliran angin silang • Wajib hitung sudut tampias hujan &amp; bising luar.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 15: IMPLEMENTASI FASE 05-06 SIMULASI PARAMETRIK KE MCP & BIM -->
+    <section id="sec-15" class="flow-band scroll-reveal-section" tabindex="-1"
+      data-index="15" data-title="Implementasi Fase 05-06: Parametrik & MCP"
+      data-notes="4 menit. Masuk ke Fase 05 & 06 (Schematic & Development): demo langsung di layar Zoom! Geser slider sudut sirip dan jarak modul untuk memperlihatkan bagaimana aturan arsitek pada fasad barat langsung mengubah geometri peneduh sekaligus menghasilkan parameter Python yang dikirim melalui jembatan MCP ke SketchUp/Rhino sebelum dikunci ke Revit BIM.">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 04 • Implementasi Fase 05 &amp; 06: Logika Parametrik ke MCP</span>
+            <span class="meta-index">15 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Aturan arsitek menjadi parameter:</span> simulasi sirip fasad barat siap kirim via MCP</h2>
+
+          <div class="simulator-grid">
+            <div>
+              <div class="sim-controls">
+                <div class="control-group">
+                  <label for="fin-angle">
+                    <span>Sudut Putar Sirip</span>
+                    <span id="fin-angle-val">30°</span>
+                  </label>
+                  <input type="range" id="fin-angle" min="0" max="60" step="5" value="30">
+                </div>
+
+                <div class="control-group">
+                  <label for="fin-spacing">
+                    <span>Jarak Modul Sirip</span>
+                    <span id="fin-spacing-val">0.60 m</span>
+                  </label>
+                  <input type="range" id="fin-spacing" min="0.4" max="1.0" step="0.1" value="0.6">
+                </div>
+              </div>
+
+              <pre class="code-block" id="live-python-code" aria-live="polite"><code># Parameter fasad barat (meter)
+lebar_fasad = 6.0
+jarak_modul = 0.60
+sudut_sirip = 30
+
+jumlah_sirip = int(lebar_fasad / jarak_modul) + 1
+posisi_x = [
+    round(i * jarak_modul, 2)
+    for i in range(jumlah_sirip)
+]  # diteruskan ke Rhino / SketchUp via MCP</code></pre>
+            </div>
+
+            <div>
+              <div class="svg-viewport">
+                <svg id="louver-svg" viewBox="0 0 520 250" width="520" height="250" role="img"
+                  aria-label="Diagram potongan horizontal teknis fasad barat yang memperlihatkan deretan sirip peneduh berputar menghalau sinar matahari sore sebelum menyentuh bidang kaca ruang studio.">
+                  <!-- Interior Studio Shaded Zone -->
+                  <rect x="28" y="148" width="464" height="74" rx="4" fill="var(--surface)" stroke="var(--border-subtle)" stroke-width="1" />
+                  <!-- Double-Line Low-E Glazing Plane -->
+                  <line x1="28" y1="146" x2="492" y2="146" stroke="currentColor" stroke-width="2" opacity="0.78" />
+                  <line x1="28" y1="150" x2="492" y2="150" stroke="currentColor" stroke-width="1" opacity="0.45" />
+                  <!-- Structural End Columns (6.0 m Span) -->
+                  <rect x="24" y="140" width="12" height="16" fill="currentColor" />
+                  <rect x="484" y="140" width="12" height="16" fill="currentColor" />
+
+                  <!-- Dynamic Solar Rays & Louver Blades -->
+                  <g id="solar-rays"></g>
+                  <g id="louver-blades"></g>
+
+                  <!-- Crisp Architectural Labels & Span Dimension -->
+                  <text x="34" y="24" font-family="var(--font-mono)" font-size="10.5" font-weight="700" fill="var(--accent)">ARAH DATANG MATAHARI SORE • BARAT</text>
+                  <text id="louver-svg-dim" x="486" y="24" text-anchor="end" font-family="var(--font-mono)" font-size="10" font-weight="700" fill="currentColor" opacity="0.82">MODUL 0.60 M • SUDUT 30°</text>
+                  <rect x="112" y="182" width="296" height="22" rx="11" class="mg-svg-pill" />
+                  <text x="260" y="196.5" text-anchor="middle" font-family="var(--font-mono)" font-size="10.2" font-weight="700" fill="currentColor">RUANG STUDIO DALAM (BIDANG KACA LOW-E)</text>
+                  <line x1="36" y1="236" x2="484" y2="236" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity="0.55" />
+                  <text x="260" y="246" text-anchor="middle" font-family="var(--font-mono)" font-size="9.5" font-weight="600" fill="currentColor" opacity="0.78">BENTANG FASAD BARAT 6,00 METER</text>
+                </svg>
+              </div>
+
+              <div class="sim-metrics">
+                <div class="sim-metric-box">
+                  <strong>Jumlah Modul:</strong>
+                  <div id="metric-count">11 sirip (bentang 6,0 m)</div>
+                </div>
+                <div class="sim-metric-box">
+                  <strong>Indikasi Desain:</strong>
+                  <div id="metric-note">Seimbang menahan silau &amp; menjaga view</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 16: IMPLEMENTASI FASE 07 PRESENTATION (MULTI-IMAGE KE VIDEO) -->
+    <section id="sec-16" class="flow-band parallax-stage scroll-reveal-section" tabindex="-1"
+      data-index="16" data-title="Implementasi Fase 07: Multi-Image ke Video"
+      data-notes="3 menit. Memasuki Fase 07 (Presentation): contoh nyata alur Multi-Image ke Video. Tiga citra render hunian tropis yang sudah terkunci proporsi dan materialnya di model 3D diolah menjadi satu video pergerakan kamera sinematik berdurasi 10 detik tanpa mengubah modul kisi kayu. Klik tiap Source Image di kiri lalu putar Video Output di kanan.">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 04 • Implementasi Fase 07: AI Video Generation (Multi-Image ke Video)</span>
+            <span class="meta-index">16 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Dari citra terukur ke ruang bergerak:</span> narasi video presentasi arsitektur</h2>
+
+          <div class="vidgen-layout">
+            <div class="vidgen-source-col">
+              <div class="vidgen-col-head">
+                <span class="meta-kicker">01 • Source Images (3 Keyframes Render 4K)</span>
+                <span class="vidgen-step-tag">Input Terukur</span>
+              </div>
+
+              <div class="vidgen-thumb-grid" role="group" aria-label="Pilih tiga citra sumber pembentuk video">
+                <button type="button" class="vidgen-src-btn" data-vsrc="0" aria-pressed="true">
+                  <img src="assets/vidgen-src-01.jpg" width="896" height="1200" loading="lazy"
+                    alt="Citra sumber 01: paviliun gym tepi kolam renang dengan dek kursi santai dan tritisan kayu">
+                  <span class="vidgen-thumb-caption">
+                    <strong>Image 01</strong>
+                    <span>Paviliun &amp; Kolam</span>
+                  </span>
+                </button>
+
+                <button type="button" class="vidgen-src-btn" data-vsrc="1" aria-pressed="false">
+                  <img src="assets/vidgen-src-02.jpg" width="896" height="1200" loading="lazy"
+                    alt="Citra sumber 02: halaman rumput dan kolam renang menghadap massa utama dua lantai berkisi kayu">
+                  <span class="vidgen-thumb-caption">
+                    <strong>Image 02</strong>
+                    <span>Massa Utama</span>
+                  </span>
+                </button>
+
+                <button type="button" class="vidgen-src-btn" data-vsrc="2" aria-pressed="false">
+                  <img src="assets/vidgen-src-03.jpg" width="896" height="1200" loading="lazy"
+                    alt="Citra sumber 03: tampak frontal deretan kisi kayu putar lantai atas dan bukaan teras kolam">
+                  <span class="vidgen-thumb-caption">
+                    <strong>Image 03</strong>
+                    <span>Detail Kisi Kayu</span>
+                  </span>
+                </button>
+              </div>
+
+              <div class="detail-box" id="vidgen-readout" aria-live="polite">
+                <h3>Source Image 01 • Paviliun &amp; Tepi Kolam</h3>
+                <ul class="clean-list">
+                  <li>Mengunci suasana tepi air, dek kursi santai, dan bukaan kaca lebar</li>
+                  <li>Menetapkan karakter material kayu hangat, batu alam, dan vegetasi tropis</li>
+                  <li>Menjadi jangkar pencahayaan alami sebelum diinterpolasi menjadi gerak kamera</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="vidgen-output-col parallax-layer parallax-layer--mid">
+              <div class="vidgen-col-head">
+                <span class="meta-kicker">02 • Video Output (Hasil Rangkaian)</span>
+                <span class="mg-state-pill">720×1280 • 10s</span>
+              </div>
+
+              <div class="vidgen-player-frame">
+                <video
+                  id="vidgen-player"
+                  class="vidgen-video"
+                  controls
+                  loading="lazy"
+                  preload="metadata"
+                  loop
+                  muted
+                  playsinline
+                  width="720"
+                  height="1280"
+                  poster="assets/vidgen-poster.jpg"
+                >
+                  <source src="assets/vidgen-output.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="vidgen-player-bar">
+                <button type="button" class="chrome-btn" id="vidgen-play-btn" aria-pressed="false">Putar Video</button>
+                <span class="vidgen-caption">Transisi kamera sinematik dengan geometri kisi kayu dan tritisan tetap konsisten.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 17: IMPLEMENTASI FASE 07 DOCUMENTATION DRAWING & VIBE CODING WEB -->
+    <section id="sec-17" class="flow-band scroll-reveal-section" tabindex="-1"
+      data-index="17" data-title="Implementasi Fase 07: DED BIM & Vibe Web"
+      data-notes="3 menit. Penutup Bab 04 pada tahap hilir Fase 07: Documentation Drawing wajib tetap presisi di Revit BIM dan CAD untuk konstruksi lapangan, sedangkan tahap Presentation maupun utilitas internal seperti Helios Solar Engine kini dapat dirakit secara cepat dengan Vibe Coding berbasis web.">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 04 • Implementasi Fase 07: Dokumen Teknis &amp; Komunikasi Interaktif</span>
+            <span class="meta-index">17 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Hilir yang meyakinkan:</span> documentation drawing &amp; vibe coding web presentation</h2>
+
+          <div class="friction-grid">
+            <article class="panel-box">
+              <span class="meta-kicker">Ketepatan Konstruksi • Revit BIM &amp; CAD</span>
+              <h3>Documentation Drawing</h3>
+              <ul class="clean-list">
+                <li>Konsistensi tunggal denah, tampak, potongan &amp; detail</li>
+                <li>Koordinasi bebas benturan (struktur, MEP, drainase)</li>
+                <li>Otomasi penomoran lembar, jadwal kusen &amp; tabel volume</li>
+                <li>Dokumen hukum &amp; pedoman kerja presisi di lapangan</li>
+              </ul>
+            </article>
+
+            <article class="panel-box panel-box--highlight">
+              <span class="meta-kicker">Komunikasi Imersif • HTML / CSS / JS</span>
+              <h3>Presentation via Vibe Coding Web-Based</h3>
+              <ul class="clean-list">
+                <li>Merakit kanvas presentasi continuous parallax dengan cepat</li>
+                <li>Menyematkan komparasi opsi, tab program &amp; motion graphic</li>
+                <li>Mudah dibuka klien atau penguji dari perangkat apa pun</li>
+                <li>Presentasi web malam ini adalah contoh nyata alur tersebut</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAND 06: BAB 05 RELEVANSI ARSITEK & TERMINAL CLOSING STAGE (SEC 18 - 20) -->
+    <section id="sec-18" class="flow-band parallax-stage scroll-reveal-section" tabindex="-1"
+      data-index="18" data-title="Pergeseran Nilai Profesi"
+      data-notes="3 menit. Masuk ke Bab 05: saat produksi gambar permukaan makin instan, nilai mahal seorang arsitek justru naik pada ketajaman keputusan Decider, kepekaan ruang budaya Bali, serta penguasaan keterbangunan.">
+
+      <div class="parallax-watermark parallax-layer parallax-layer--deep" aria-hidden="true">05</div>
+
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 05 • Tetap Relevan sebagai Arsitek di Dunia AI</span>
+            <span class="meta-index">18 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Saat produksi gambar makin instan,</span> di mana letak nilai mahal arsitek?</h2>
+
+          <div class="friction-grid">
+            <div class="panel-box">
+              <h3>Makin Mudah Terotomasi</h3>
+              <ul class="clean-list">
+                <li>Render kosmetik tanpa logika struktur &amp; talang hujan</li>
+                <li>Variasi fasad generik yang lepas dari konteks tapak</li>
+                <li>Drafting berulang tanpa pemahaman detail sambungan</li>
+                <li>Teks konsep klise yang tidak menjawab masalah ruang</li>
+              </ul>
+            </div>
+
+            <div class="panel-box panel-box--highlight">
+              <h3>Makin Bernilai Tinggi</h3>
+              <ul class="clean-list">
+                <li>Ketajaman Decider memilih solusi paling tepat guna</li>
+                <li>Kepekaan skala, cahaya, urutan ruang &amp; budaya Bali</li>
+                <li>Penguasaan keterbangunan, anggaran &amp; koordinasi nyata</li>
+                <li>Empati membaca manusia &amp; integritas tanggung jawab</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 19: LIMA KOMPAS RELEVANSI -->
+    <section id="sec-19" class="flow-band scroll-reveal-section" tabindex="-1"
+      data-index="19" data-title="Lima Kompas Relevansi Arsitek"
+      data-notes="3 menit. Klik satu per satu lima kompas ini sebagai bekal praktis bagi rekan-rekan mahasiswa Arsitektur Unud: jadilah Decider tegas, terus tambah literasi, kuasai tektonika dan iklim, rangkai ekosistem alat dengan luwes, dan rawat kepekaan ruang nyata.">
+      <div class="band-container">
+        <div class="section-plate">
+          <div class="section-meta">
+            <span class="meta-kicker">Bab 05 • Masukan Praktis untuk Mahasiswa &amp; Arsitek Muda</span>
+            <span class="meta-index">19 <small>/20</small></span>
+          </div>
+          <h2 class="section-h2"><span class="tone-smoke">Lima kompas agar tetap relevan</span> di era kecerdasan buatan</h2>
+
+          <div class="audit-layout">
+            <div class="kinetic-focus-list" role="group" aria-label="Lima kompas relevansi arsitek">
+              <button type="button" class="kinetic-row-btn" data-prep="0" aria-pressed="true">
+                <strong>01. Posisikan Diri sebagai Decider</strong>
+                <span>Inti</span>
+              </button>
+              <button type="button" class="kinetic-row-btn" data-prep="1" aria-pressed="false">
+                <strong>02. Tambah Literasi Lintas Ilmu</strong>
+                <span>Inti</span>
+              </button>
+              <button type="button" class="kinetic-row-btn" data-prep="2" aria-pressed="false">
+                <strong>03. Perkuat Fundamental Tektonika &amp; Iklim</strong>
+                <span>Inti</span>
+              </button>
+              <button type="button" class="kinetic-row-btn" data-prep="3" aria-pressed="false">
+                <strong>04. Rangkai Alur Alat secara Luwes</strong>
+                <span>Inti</span>
+              </button>
+              <button type="button" class="kinetic-row-btn" data-prep="4" aria-pressed="false">
+                <strong>05. Rawat Kepekaan Ruang Nyata</strong>
+                <span>Inti</span>
+              </button>
+            </div>
+
+            <div class="detail-box" id="prep-readout" aria-live="polite">
+              <h3>01 • Posisikan Diri sebagai Decider</h3>
+              <ul class="clean-list">
+                <li>Jangan serahkan keputusan desain kepada mesin</li>
+                <li>Gunakan AI untuk memperkaya perbandingan opsi</li>
+                <li>Pegang penuh kendali alasan di setiap garis gambar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEC 20: MONUMENTAL TERMINAL CLOSING STAGE -->
+    <section id="sec-20" class="flow-band flow-band--closing parallax-stage" tabindex="-1"
+      data-index="20" data-title="Penutup & Diskusi"
+      data-notes="Penutup (2 menit). Sampaikan tiga pertanyaan refleksi seorang Decider ini, ingatkan peserta bahwa pembahasan lengkap dan 6 template instruksi tersedia di Handbook PDF, lalu buka sesi tanya jawab bersama Kelompok Studi Cipta Loka Universitas Udayana.">
+
+      <div class="parallax-layer parallax-layer--deep closing-bg-lines" aria-hidden="true">
+        <svg viewBox="0 0 1200 520" width="1200" height="520">
+          <line x1="80" y1="500" x2="500" y2="290" stroke="currentColor" stroke-width="1" opacity="0.22" />
+          <line x1="1120" y1="500" x2="700" y2="290" stroke="currentColor" stroke-width="1" opacity="0.22" />
+          <line x1="0" y1="290" x2="1200" y2="290" stroke="currentColor" stroke-width="1" opacity="0.24" />
+          <line x1="420" y1="290" x2="780" y2="290" stroke="var(--accent)" stroke-width="2.5" />
+        </svg>
+      </div>
+
+      <div class="band-container closing-atelier-stage parallax-layer parallax-layer--fore">
+        <div class="glyph-stage-shell closing-glyph-shell" id="closing-glyph-shell" aria-hidden="true">
+          <canvas id="closing-glyph-canvas" class="glyph-canvas" width="880" height="250"></canvas>
+        </div>
+        <span class="eyebrow-centered">20 / 20 • REFLEKSI PENUTUP &amp; DISKUSI CIPTA LOKA</span>
+        <h2 class="closing-display">
+          Tetap Berdiri<br>
+          <span class="tone-smoke">Sebagai</span> Decider
+        </h2>
+
+        <div class="closing-questions">
+          <div class="closing-q">
+            <span class="closing-q-num">01</span>
+            <p>Apakah keputusan ini lahir dari data tapak nyata, bukan asumsi mesin?</p>
+          </div>
+          <div class="closing-q closing-q--crimson">
+            <span class="closing-q-num">02</span>
+            <p>Literasi apa yang membuktikan opsi ini lebih baik bagi penghuninya?</p>
+          </div>
+          <div class="closing-q">
+            <span class="closing-q-num">03</span>
+            <p>Mampukah saya mempertanggungjawabkan setiap garisnya di lapangan?</p>
+          </div>
+        </div>
+
+        <!-- QR Code & Full Experience + PDF Download Hub -->
+        <div class="qr-hub-card" id="closing-qr-hub">
+          <div class="qr-code-column">
+            <div class="qr-svg-plate" id="closing-qr-plate">
+              <svg id="closing-qr-svg" role="img" aria-labelledby="closing-qr-svg-title" viewBox="0 0 37 37" width="196" height="196" shape-rendering="crispEdges">
+                <title id="closing-qr-svg-title">Kode QR menuju Presentasi Web Interaktif dan Unduhan Handbook PDF</title>
+                <path id="closing-qr-bg" fill="#FAF8F5" d="M0 0h37v37H0z"/>
+                <path id="closing-qr-path" stroke="#090A0C" d="M2 2.5h7m1 0h4m2 0h1m2 0h2m3 0h1m3 0h7M2 3.5h1m5 0h1m1 0h1m2 0h1m4 0h1m1 0h3m1 0h1m3 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m4 0h2m1 0h1m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m3 0h2m3 0h1m1 0h5m1 0h2m1 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h2m1 0h5m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m5 0h3m5 0h1m2 0h2m1 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M13 9.5h1m1 0h1m5 0h2m1 0h3M2 10.5h1m2 0h7m1 0h1m3 0h3m1 0h1m4 0h2m2 0h1m1 0h3M2 11.5h3m1 0h2m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2m4 0h3M5 12.5h2m1 0h2m2 0h1m3 0h2m5 0h6m1 0h3m1 0h1M2 13.5h2m3 0h1m1 0h5m2 0h2m1 0h1m1 0h2m2 0h2m2 0h1m2 0h2M2 14.5h2m4 0h3m1 0h2m1 0h2m1 0h1m1 0h3m5 0h1m4 0h1M3 15.5h1m1 0h2m5 0h3m3 0h2m5 0h1m1 0h1m1 0h1m1 0h1M8 16.5h1m1 0h1m3 0h2m2 0h1m1 0h2m1 0h2m3 0h1m1 0h3M2 17.5h2m1 0h1m4 0h1m1 0h2m2 0h2m3 0h1m5 0h1m3 0h2m1 0h1M4 18.5h2m2 0h1m1 0h2m1 0h1m7 0h1m2 0h8M2 19.5h4m1 0h1m1 0h3m1 0h7m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1M2 20.5h2m1 0h6m2 0h1m2 0h3m2 0h3m1 0h1m2 0h2m1 0h2m1 0h1M2 21.5h1m1 0h4m7 0h3m4 0h1m2 0h2m1 0h1m1 0h3m1 0h1M3 22.5h1m1 0h2m1 0h1m1 0h1m1 0h3m2 0h2m1 0h2m7 0h1m1 0h1m1 0h1M2 23.5h3m1 0h1m3 0h1m1 0h2m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m1 0h1M2 24.5h1m1 0h2m1 0h2m4 0h2m1 0h2m1 0h1m3 0h4m1 0h1m1 0h1m1 0h3M2 25.5h1m2 0h3m2 0h2m3 0h2m2 0h2m3 0h2m1 0h1m2 0h1m1 0h1M2 26.5h3m2 0h3m1 0h3m3 0h2m2 0h1m3 0h6m3 0h1M10 27.5h2m1 0h1m1 0h4m1 0h1m1 0h1m3 0h1m3 0h1m1 0h2M2 28.5h7m1 0h1m1 0h1m1 0h2m1 0h1m2 0h7m1 0h1m1 0h1m1 0h1M2 29.5h1m5 0h1m1 0h1m2 0h1m1 0h2m3 0h3m2 0h2m3 0h4M2 30.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m1 0h7m2 0h1M2 31.5h1m1 0h3m1 0h1m1 0h3m1 0h2m1 0h1m2 0h3m2 0h1m1 0h1m1 0h1m1 0h4M2 32.5h1m1 0h3m1 0h1m2 0h3m2 0h1m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2M2 33.5h1m5 0h1m2 0h2m3 0h1m1 0h1m1 0h3m1 0h2m1 0h1m1 0h6M2 34.5h7m1 0h2m2 0h1m2 0h1m1 0h1m2 0h1m2 0h2m1 0h4"/>
+              </svg>
+            </div>
+            <span class="qr-scan-caption" id="closing-qr-caption">PINDAI KAMERA • WEB + PDF</span>
+          </div>
+
+          <div class="qr-info-column">
+            <span class="meta-kicker">AKSES TERBUKA PESERTA • FULL EXPERIENCE &amp; REPOSITORI</span>
+            <h3 class="qr-hub-title">Pindai untuk Membuka Presentasi Interaktif sekaligus Mengunduh Handbook PDF</h3>
+            <p class="qr-hub-desc" id="closing-qr-desc">
+              Satu tautan membuka dek web interaktif 20 bagian secara utuh di ponsel atau laptop peserta, lengkap dengan unduhan buku pegangan PDF 12 halaman dan contoh gambar kerja AutoCAD MCP (<code>.dxf</code>).
+            </p>
+
+            <div class="lens-group qr-target-bar" role="group" aria-label="Pilih tujuan tautan pada kode QR">
+              <button type="button" class="lens-btn qr-mode-btn" data-qrmode="web" aria-pressed="true">01. Web + PDF (Full Experience)</button>
+              <button type="button" class="lens-btn qr-mode-btn" data-qrmode="pdf" aria-pressed="false">02. Unduh PDF Saja (12 Hlm)</button>
+              <button type="button" class="lens-btn qr-mode-btn" data-qrmode="repo" aria-pressed="false">03. Repositori GitHub</button>
+            </div>
+
+            <div class="qr-url-readout" aria-live="polite">
+              <span class="mcp-rpc-badge">URL AKTIF</span>
+              <code id="closing-qr-url">https://archimades27.github.io/ai-arsitektur-udayana-2026/</code>
+            </div>
+
+            <div class="qr-download-actions">
+              <a class="chrome-btn qr-action-primary" href="../output/Handbook-AI-in-Architecture-Udayana-2026.pdf" download="Handbook-AI-in-Architecture-Udayana-2026.pdf">Unduh Handbook PDF (12 Hlm)</a>
+              <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.dxf" download="Paviliun-Studio-Tropis-MCP.dxf">Unduh Contoh AutoCAD (.DXF)</a>
+              <a class="chrome-btn" href="https://github.com/archimades27/ai-arsitektur-udayana-2026" target="_blank" rel="noopener noreferrer">Buka Repositori GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="closing-signoff">
+          Terima kasih • Pembahasan lengkap tersedia pada Handbook PDF Peserta • <strong>Ar. I Made Sucita Ariasandika (@archi.mades)</strong>
+        </p>
+
+        <a class="atelier-bracket-btn back-top-link" href="#sec-01">KEMBALI KE ATAS</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="band-container footer-inner">
+      <span>Webinar “AI in Architecture: Redefining the Design Process” • Kelompok Studi Cipta Loka • Universitas Udayana</span>
+      <span>Jumat, 13 November 2026 • Ar. I Made Sucita Ariasandika (@archi.mades)</span>
+    </div>
+  </footer>
+
+  <!-- Bottom-Edge Hairline Progress Scrubber (`scroll-progress-indicator` & Forge Reference) -->
+  <div class="scrubber-rail" aria-hidden="true">
+    <div id="scroll-progress" class="scroll-progress"></div>
+  </div>
+
+  <!-- Modal Referensi & Sumber Terverifikasi -->
+  <dialog id="refs-dialog" class="refs-modal" closedby="any" aria-labelledby="refs-title">
+    <div class="dialog-header">
+      <h2 id="refs-title">Sumber Studi Kasus &amp; Dokumentasi Teknis</h2>
+      <form method="dialog">
+        <button type="submit" class="chrome-btn" autofocus>Tutup</button>
+      </form>
+    </div>
+    <ul class="clean-list">
+      <li>
+        <strong>National University of Singapore (SDE4 Net-Zero Building):</strong>
+        <a href="https://news.nus.edu.sg/nus-opens-first-net-zero-energy-building/" target="_blank" rel="noopener noreferrer">NUS opens first net-zero energy building</a>
+      </li>
+      <li>
+        <strong>Multiply Architects (Dokumentasi SDE4 &amp; Kredit Foto Rory Gardiner):</strong>
+        <a href="https://www.m-ply.com.sg/project/alocassia-apartments/" target="_blank" rel="noopener noreferrer">Arsip Proyek Multiply Architects</a>
+      </li>
+      <li>
+        <strong>Transsolar KlimaEngineering (Strategi Iklim Tropis SDE4):</strong>
+        <a href="https://transsolar.com/publications/videos/how-to-create-a-net-zero-university-in-the-tropics-the-school-of-design-4-at-the-nus" target="_blank" rel="noopener noreferrer">How to create a Net Zero University in the Tropics</a>
+      </li>
+      <li>
+        <strong>Hermes Agent Documentation (Nous Research):</strong>
+        <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/tools" target="_blank" rel="noopener noreferrer">Hermes Agent Tools &amp; Workflow Guide</a>
+      </li>
+      <li>
+        <strong>Integrasi Model Context Protocol (MCP) pada Hermes Agent:</strong>
+        <a href="https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/features/mcp.md" target="_blank" rel="noopener noreferrer">Dokumentasi Fitur MCP</a>
+      </li>
+      <li>
+        <strong>Helios Solar Engine v2.0 (Hasil AI untuk Tahap Solar Study &amp; Simulasi Angin):</strong>
+        <a href="http://100.76.27.91/solar/" target="_blank" rel="noopener noreferrer">http://100.76.27.91/solar/</a>
+      </li>
+      <li>
+        <strong>Undang-Undang RI No. 28 Tahun 2014 tentang Hak Cipta (Pasal 33, 34, 36 &amp; 40):</strong>
+        <a href="https://peraturan.bpk.go.id/Details/38690/uu-no-28-tahun-2014" target="_blank" rel="noopener noreferrer">Peraturan BPK: UU No. 28 Tahun 2014</a>
+      </li>
+      <li>
+        <strong>U.S. Copyright Office (Perbandingan Internasional Kepengarangan &amp; AI, 2025):</strong>
+        <a href="https://www.copyright.gov/ai/" target="_blank" rel="noopener noreferrer">Copyright and Artificial Intelligence, Part 2: Copyrightability</a>
+      </li>
+    </ul>
+    <p class="slide-takeaway">
+      Catatan metodologi: Bangunan SDE4 NUS adalah referensi arsitektur nyata; bagian hak cipta &amp; etika disusun sebagai bahan diskusi akademik dan bukan pendapat hukum formal.
+    </p>
+  </dialog>
+
+  <!-- Modal QR Code & Unduhan Materi Peserta (Bisa Dibuka Kapan Saja Saat Presentasi) -->
+  <dialog id="qr-dialog" class="refs-modal qr-modal" closedby="any" aria-labelledby="qr-dialog-title">
+    <div class="dialog-header">
+      <h2 id="qr-dialog-title">Kode QR Presentasi Interaktif, PDF &amp; GitHub</h2>
+      <form method="dialog">
+        <button type="submit" class="chrome-btn" autofocus>Tutup</button>
+      </form>
+    </div>
+
+    <div class="qr-modal-grid">
+      <div class="qr-code-column">
+        <div class="qr-svg-plate">
+          <svg id="modal-qr-svg" role="img" aria-labelledby="modal-qr-svg-title" viewBox="0 0 37 37" width="212" height="212" shape-rendering="crispEdges">
+            <title id="modal-qr-svg-title">Kode QR menuju Presentasi Web Interaktif dan Unduhan Handbook PDF</title>
+            <path id="modal-qr-bg" fill="#FAF8F5" d="M0 0h37v37H0z"/>
+            <path id="modal-qr-path" stroke="#090A0C" d="M2 2.5h7m1 0h4m2 0h1m2 0h2m3 0h1m3 0h7M2 3.5h1m5 0h1m1 0h1m2 0h1m4 0h1m1 0h3m1 0h1m3 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m4 0h2m1 0h1m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m3 0h2m3 0h1m1 0h5m1 0h2m1 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h2m1 0h5m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m5 0h3m5 0h1m2 0h2m1 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M13 9.5h1m1 0h1m5 0h2m1 0h3M2 10.5h1m2 0h7m1 0h1m3 0h3m1 0h1m4 0h2m2 0h1m1 0h3M2 11.5h3m1 0h2m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2m4 0h3M5 12.5h2m1 0h2m2 0h1m3 0h2m5 0h6m1 0h3m1 0h1M2 13.5h2m3 0h1m1 0h5m2 0h2m1 0h1m1 0h2m2 0h2m2 0h1m2 0h2M2 14.5h2m4 0h3m1 0h2m1 0h2m1 0h1m1 0h3m5 0h1m4 0h1M3 15.5h1m1 0h2m5 0h3m3 0h2m5 0h1m1 0h1m1 0h1m1 0h1M8 16.5h1m1 0h1m3 0h2m2 0h1m1 0h2m1 0h2m3 0h1m1 0h3M2 17.5h2m1 0h1m4 0h1m1 0h2m2 0h2m3 0h1m5 0h1m3 0h2m1 0h1M4 18.5h2m2 0h1m1 0h2m1 0h1m7 0h1m2 0h8M2 19.5h4m1 0h1m1 0h3m1 0h7m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1M2 20.5h2m1 0h6m2 0h1m2 0h3m2 0h3m1 0h1m2 0h2m1 0h2m1 0h1M2 21.5h1m1 0h4m7 0h3m4 0h1m2 0h2m1 0h1m1 0h3m1 0h1M3 22.5h1m1 0h2m1 0h1m1 0h1m1 0h3m2 0h2m1 0h2m7 0h1m1 0h1m1 0h1M2 23.5h3m1 0h1m3 0h1m1 0h2m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m1 0h1M2 24.5h1m1 0h2m1 0h2m4 0h2m1 0h2m1 0h1m3 0h4m1 0h1m1 0h1m1 0h3M2 25.5h1m2 0h3m2 0h2m3 0h2m2 0h2m3 0h2m1 0h1m2 0h1m1 0h1M2 26.5h3m2 0h3m1 0h3m3 0h2m2 0h1m3 0h6m3 0h1M10 27.5h2m1 0h1m1 0h4m1 0h1m1 0h1m3 0h1m3 0h1m1 0h2M2 28.5h7m1 0h1m1 0h1m1 0h2m1 0h1m2 0h7m1 0h1m1 0h1m1 0h1M2 29.5h1m5 0h1m1 0h1m2 0h1m1 0h2m3 0h3m2 0h2m3 0h4M2 30.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m1 0h7m2 0h1M2 31.5h1m1 0h3m1 0h1m1 0h3m1 0h2m1 0h1m2 0h3m2 0h1m1 0h1m1 0h1m1 0h4M2 32.5h1m1 0h3m1 0h1m2 0h3m2 0h1m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2M2 33.5h1m5 0h1m2 0h2m3 0h1m1 0h1m1 0h3m1 0h2m1 0h1m1 0h6M2 34.5h7m1 0h2m2 0h1m2 0h1m1 0h1m2 0h1m2 0h2m1 0h4"/>
+          </svg>
+        </div>
+        <span class="qr-scan-caption" id="modal-qr-caption">PINDAI KAMERA • WEB + PDF</span>
+      </div>
+
+      <div class="qr-info-column">
+        <p class="qr-hub-desc" id="modal-qr-desc">
+          Pindai kode QR ini untuk membuka presentasi web interaktif 20 bagian secara langsung sekaligus mengunduh buku pegangan PDF 12 halaman dan contoh gambar kerja AutoCAD MCP.
+        </p>
+
+        <div class="lens-group qr-target-bar" role="group" aria-label="Pilih tujuan tautan pada kode QR di jendela ini">
+          <button type="button" class="lens-btn qr-mode-btn" data-qrmode="web" aria-pressed="true">01. Web + PDF (Full Experience)</button>
+          <button type="button" class="lens-btn qr-mode-btn" data-qrmode="pdf" aria-pressed="false">02. Unduh PDF Saja (12 Hlm)</button>
+          <button type="button" class="lens-btn qr-mode-btn" data-qrmode="repo" aria-pressed="false">03. Repositori GitHub</button>
+        </div>
+
+        <div class="qr-url-readout" aria-live="polite">
+          <span class="mcp-rpc-badge">URL AKTIF</span>
+          <code id="modal-qr-url">https://archimades27.github.io/ai-arsitektur-udayana-2026/</code>
+        </div>
+
+        <div class="qr-download-actions">
+          <a class="chrome-btn qr-action-primary" href="../output/Handbook-AI-in-Architecture-Udayana-2026.pdf" download="Handbook-AI-in-Architecture-Udayana-2026.pdf">Unduh Handbook PDF (12 Hlm)</a>
+          <a class="chrome-btn" href="../output/Paviliun-Studio-Tropis-MCP.dxf" download="Paviliun-Studio-Tropis-MCP.dxf">Unduh Contoh AutoCAD (.DXF)</a>
+          <a class="chrome-btn" href="https://github.com/archimades27/ai-arsitektur-udayana-2026" target="_blank" rel="noopener noreferrer">Buka Repositori GitHub</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Panel Non-Modal Catatan Lisan Pembicara (Auto-Sync Saat Scroll) -->
+  <dialog id="notes-panel" popover="manual" aria-labelledby="notes-title">
+    <div class="dialog-header">
+      <h2 id="notes-title">Catatan Lisan (<span id="notes-sec-badge">Bagian 01</span>)</h2>
+      <button type="button" class="chrome-btn" id="close-notes" popovertarget="notes-panel" popovertargetaction="hide">Tutup</button>
+    </div>
+    <p id="notes-content">Memuat panduan lisan untuk bagian yang sedang tampil...</p>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Handbook AI in Architecture: Redefining the Design Process - Universitas Udayana 2026</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #E5E1D6;
+      color: #14332E;
+      font-family: "Avenir Next", "Plus Jakarta Sans", "Segoe UI", -apple-system, sans-serif;
+      font-size: 9.4pt;
+      line-height: 1.44;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 14mm 16.5mm 13mm 16.5mm;
+      background: #FAF8F3;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    .page--cover {
+      background: #14332E;
+      color: #F3F0E8;
+    }
+
+    .running-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 2.8mm;
+      margin-bottom: 4.2mm;
+      border-bottom: 0.35mm solid #9BA6A0;
+      font-size: 8pt;
+      color: #3B4F49;
+    }
+
+    .running-kicker {
+      font-weight: 700;
+      color: #9A3E1A;
+    }
+
+    .page-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3.8mm;
+    }
+
+    .running-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2.8mm;
+      border-top: 0.3mm solid #C2C8C3;
+      font-size: 7.8pt;
+      color: #3B4F49;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.18;
+    }
+
+    .cover-title {
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      font-size: 26.5pt;
+      color: #F3F0E8;
+      margin: 2.5mm 0 3.5mm 0;
+    }
+
+    .cover-title span {
+      color: #CFE0DC;
+      font-weight: 400;
+    }
+
+    .sec-title {
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      font-size: 16.8pt;
+      color: #14332E;
+      margin-bottom: 1.4mm;
+    }
+
+    .sec-lead {
+      margin: 0;
+      font-size: 9.5pt;
+      color: #3B4F49;
+    }
+
+    .card {
+      background: #F3F0E8;
+      border: 0.3mm solid #8C9993;
+      padding: 3.4mm 4.2mm;
+      border-radius: 1mm;
+    }
+
+    .card--accent {
+      background: #EAE4D6;
+      border: 0.45mm solid #14332E;
+    }
+
+    .card h3 {
+      font-size: 10.2pt;
+      margin-bottom: 1.4mm;
+      color: #14332E;
+    }
+
+    .card p {
+      margin: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 7.3pt;
+      font-weight: 700;
+      color: #9A3E1A;
+      margin-bottom: 0.8mm;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5mm;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3.2mm;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.4pt;
+    }
+
+    th, td {
+      border: 0.25mm solid #9AA6A0;
+      padding: 2.1mm 2.6mm;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #E7E2D5;
+      color: #14332E;
+      font-weight: 700;
+      font-size: 8.1pt;
+    }
+
+    ul, ol {
+      margin: 1mm 0 0 0;
+      padding-left: 4.4mm;
+    }
+
+    li {
+      margin-bottom: 1.1mm;
+    }
+
+    .code-box {
+      background: #162B27;
+      color: #EFECE4;
+      font-family: "SF Mono", "Menlo", "Consolas", monospace;
+      font-size: 8pt;
+      line-height: 1.42;
+      padding: 3.2mm 4mm;
+      border-radius: 1mm;
+      white-space: pre-wrap;
+    }
+
+    code {
+      font-family: "SF Mono", "Menlo", "Consolas", monospace;
+      font-size: 8.2pt;
+      background: #E7E2D5;
+      padding: 0.15mm 0.9mm;
+      border-radius: 0.6mm;
+    }
+
+    .cover-hero-img {
+      width: 100%;
+      height: 66mm;
+      object-fit: cover;
+      border: 0.35mm solid rgba(243, 240, 232, 0.35);
+      margin: 2.5mm 0;
+    }
+
+    .cover-bio {
+      background: rgba(243, 240, 232, 0.08);
+      border: 0.3mm solid rgba(243, 240, 232, 0.3);
+      padding: 3.8mm;
+      display: grid;
+      grid-template-columns: 30mm 1fr;
+      gap: 4.2mm;
+      align-items: center;
+    }
+
+    .cover-bio img {
+      width: 30mm;
+      height: 34mm;
+      object-fit: cover;
+      border-radius: 1mm;
+    }
+
+    .concepts-img {
+      width: 100%;
+      height: 50mm;
+      object-fit: cover;
+      border: 0.3mm solid #8C9993;
+    }
+
+    .prompt-template {
+      background: #F3F0E8;
+      border: 0.3mm solid #8C9993;
+      padding: 2.5mm 3.4mm;
+      border-radius: 0.8mm;
+    }
+
+    .prompt-template strong {
+      display: block;
+      font-size: 8.8pt;
+      color: #9A3E1A;
+      margin-bottom: 0.6mm;
+    }
+
+    .prompt-template p {
+      margin: 0;
+      font-size: 8.3pt;
+      color: #203732;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HALAMAN 01: SAMPUL & PROFIL -->
+  <section class="page page--cover">
+    <div style="border-bottom:0.3mm solid rgba(243,240,232,0.28);padding-bottom:3mm;display:flex;justify-content:space-between;font-size:8.2pt;color:#CFE0DC;">
+      <span>HANDBOOK LENGKAP PESERTA WEBINAR • KELOMPOK STUDI CIPTA LOKA</span>
+      <span>UNIVERSITAS UDAYANA • 13 NOVEMBER 2026</span>
+    </div>
+
+    <div class="page-body" style="justify-content:center;gap:4.2mm;">
+      <div>
+        <div style="color:#F29A74;font-weight:700;font-size:8.8pt;">PROGRAM STUDI ARSITEKTUR • FAKULTAS TEKNIK • UNIVERSITAS UDAYANA</div>
+        <h1 class="cover-title"><span>AI in Architecture:</span><br>Redefining the Design Process</h1>
+        <p style="font-size:10.2pt;color:#E2ECE9;margin:0;">
+          Panduan terstruktur mulai dari memahami rantai kerja arsitektur tujuh fase, mengenal cara kerja AI (LLM, generatif, dan sistem agen), jembatan protokol MCP ke SketchUp/Rhino/CAD, serta asisten kerja Hermes Agent, menetapkan posisi arsitek sebagai Decider yang tajam berliterasi, hingga implementasi nyata dari Solar Study, konsep tropis, simulasi parametrik, gambar kerja BIM, video, dan presentasi web berbasis vibe coding.
+        </p>
+      </div>
+
+      <img class="cover-hero-img" src="../deck/assets/sde4-exterior.jpg" alt="Gedung pendidikan tropis SDE4 NUS Singapura">
+
+      <div class="cover-bio">
+        <img src="../deck/assets/speaker-portrait.png" alt="Potret Ar. I Made Sucita Ariasandika">
+        <div>
+          <div style="color:#F29A74;font-weight:700;font-size:8pt;">NARASUMBER &amp; PENYUSUN MATERI</div>
+          <h2 style="font-size:12.8pt;color:#F3F0E8;margin:1mm 0;">Ar. I Made Sucita Ariasandika (@archi.mades)</h2>
+          <p style="margin:0 0 1.8mm 0;font-size:8.6pt;color:#CFE0DC;">
+            Alumni Program Studi Arsitektur Universitas Udayana (2006 sampai 2010) dengan pengalaman lebih dari 16 tahun praktik perancangan dan koordinasi proyek di Bali Lawang Design (2010 sampai 2012), Nusantara Karya (2014 sampai 2023), dan Emporio Architect (2023 sampai sekarang). Perangkat utama: Revit, SketchUp, dan Rhino.
+          </p>
+          <div style="font-size:8pt;color:#F3F0E8;"><strong>Pelaksanaan:</strong> Jumat, 13 November 2026 • Pukul 18.00 sampai 21.00 WITA • Zoom Meeting</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="border-top:0.3mm solid rgba(243,240,232,0.25);padding-top:2.8mm;display:flex;justify-content:space-between;font-size:7.5pt;color:#CFE0DC;">
+      <span>Foto sampul: SDE4 NUS Singapura, Rory Gardiner melalui Multiply Architects (referensi bangunan nyata).</span>
+      <span>Halaman 01 / 12</span>
+    </div>
+  </section>
+
+  <!-- HALAMAN 02: BAB 01 - WORKFLOW ARSITEKTUR END-TO-END -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 01 • Workflow &amp; Rantai Kerja Arsitektur End-to-End</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Tujuh Fase Rantai Kerja Arsitektur yang Saling Menguji</h2>
+        <p class="sec-lead">Baik di bangku studio kampus maupun di biro konsultan profesional, perancangan arsitektur bukan garis lurus sekali jalan dari ide langsung menjadi gambar akhir. Ia merupakan siklus pengujian berulang dalam tujuh fase dari hulu data lapangan hingga dokumen konstruksi dan penyajian akhir.</p>
+      </div>
+
+      <table style="font-size:8.05pt;">
+        <thead>
+          <tr>
+            <th style="width:24%;padding:1.6mm 2.2mm;">Fase Rantai Kerja</th>
+            <th style="width:37%;padding:1.6mm 2.2mm;">Praktik di Studio Mahasiswa</th>
+            <th style="width:39%;padding:1.6mm 2.2mm;">Praktik di Biro Konsultan Arsitektur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:1.55mm 2.2mm;"><strong>01. Data Collecting - Project Brief</strong></td>
+            <td style="padding:1.55mm 2.2mm;">Membaca TOR tugas, memetakan profil pengguna, serta mengumpulkan data ukur dan aturan dasar lahan.</td>
+            <td style="padding:1.55mm 2.2mm;">Menggali brief klien, target investasi, regulasi daerah (GSB, KDB, KLB), dan pengukuran topografi/utilitas.</td>
+          </tr>
+          <tr>
+            <td style="padding:1.55mm 2.2mm;"><strong>02. Site Analysis</strong></td>
+            <td style="padding:1.55mm 2.2mm;">Mengamati lintasan matahari, arah angin, kebisingan, akses, dan memodelkan konteks sekitar tapak.</td>
+            <td style="padding:1.55mm 2.2mm;">Menganalisis iklim mikro, kemiringan tanah, arah view, serta membangun Digital Twin tapak eksisting.</td>
+          </tr>
+          <tr>
+            <td style="padding:1.55mm 2.2mm;"><strong>03. Space Programming</strong></td>
+            <td style="padding:1.55mm 2.2mm;">Menyusun daftar kebutuhan ruang, kapasitas pengguna, matriks kedekatan, dan diagram zonasi fungsi.</td>
+            <td style="padding:1.55mm 2.2mm;">Menghitung efisiensi luas bersih-kotor, pemisahan sirkulasi publik-servis, serta kelayakan program ruang.</td>
+          </tr>
+          <tr>
+            <td style="padding:1.55mm 2.2mm;"><strong>04. Conceptual</strong></td>
+            <td style="padding:1.55mm 2.2mm;">Merumuskan gagasan utama perancangan, karakter ruang, dan studi gubahan massa awal.</td>
+            <td style="padding:1.55mm 2.2mm;">Mengunci ide dasar arsitektur yang menjawab konteks tapak, iklim tropis, dan identitas proyek.</td>
+          </tr>
+          <tr>
+            <td style="padding:1.55mm 2.2mm;"><strong>05. Schematic</strong></td>
+            <td style="padding:1.55mm 2.2mm;">Menyusun denah, potongan, tampak skematik, dan membandingkan alternatif massa di SketchUp/Rhino.</td>
+            <td style="padding:1.55mm 2.2mm;">Menguji alternatif skematik terukur, pemodelan 3D berbantuan MCP, serta studi transisi suasana.</td>
+          </tr>
+          <tr>
+            <td style="padding:1.55mm 2.2mm;"><strong>06. Development</strong></td>
+            <td style="padding:1.55mm 2.2mm;">Mematangkan sistem struktur, selubung fasad, penghawaan alami, dan pemilihan material utama.</td>
+            <td style="padding:1.55mm 2.2mm;">Koordinasi lintas disiplin (struktur, MEP, lanskap, estimasi biaya) di model BIM agar bebas benturan.</td>
+          </tr>
+          <tr>
+            <td style="padding:1.55mm 2.2mm;"><strong>07. Documentation &amp; Presentation</strong></td>
+            <td style="padding:1.55mm 2.2mm;">Menyelaraskan gambar kerja prinsip, maket studi, dan mempertahankan argumen saat sidang.</td>
+            <td style="padding:1.55mm 2.2mm;">Menerbitkan paket DED presisi di Revit/CAD dan menyajikan dek web interaktif (vibe coding) ke klien.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="tag">Mengapa Bersifat Iteratif?</span>
+          <h3>Umpan Balik dari Hilir ke Hulu</h3>
+          <p>Dalam proyek nyata, temuan benturan struktur pada Fase 06 (Development) atau tingginya beban panas matahari pada Fase 05 (Schematic) kerap memaksa arsitek meninjau kembali konsep di Fase 04 maupun susunan ruang di Fase 03. Pemahaman rantai inilah yang mencegah arsitek melompat langsung ke hasil visual instan.</p>
+        </div>
+        <div class="card card--accent">
+          <span class="tag">Sasaran Penataan Ulang dengan AI</span>
+          <h3>Memangkas Friksi, Menebalkan Esensi</h3>
+          <p>Kehadiran teknologi AI bukan untuk menghapus salah satu dari tujuh fase di atas, melainkan mengurangi beban pekerjaan mekanis yang berulang di tiap fase agar energi intelektual arsitek tercurah pada kualitas ruang, proporsi, keterbangunan, dan kenyamanan penghuni.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Kelompok Studi Cipta Loka • Universitas Udayana</span>
+      <span>Halaman 02 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 03: BAB 02 - MENGENAL AI & MODEL CONTEXT PROTOCOL (MCP) -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 02 • Mengenal Cara Kerja AI &amp; Model Context Protocol (MCP)</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body" style="gap:3.1mm;">
+      <div>
+        <h2 class="sec-title">Tiga Lapisan AI bagi Arsitek &amp; Jembatan Protokol MCP ke 3D</h2>
+        <p class="sec-lead">Sebelum mengintegrasikan kecerdasan buatan ke dalam tujuh fase perancangan, seorang arsitek perlu membedakan tiga lapisan kemampuan AI modern serta memahami bagaimana <strong>MCP (Model Context Protocol)</strong> menghubungkan agen langsung ke perangkat lunak pemodelan tiga dimensi.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="padding:2.8mm 3.4mm;">
+          <span class="tag">Lapisan 01 • Teks &amp; Kode</span>
+          <h3>LLM &amp; Analitik</h3>
+          <p style="font-size:8.35pt;">Mengolah struktur bahasa, tabel luasan <em>Space Programming</em>, ringkasan regulasi, serta menulis skrip Python atau HTML/JS. Wajib diverifikasi terhadap dokumen SNI/Perda asli.</p>
+        </div>
+        <div class="card" style="padding:2.8mm 3.4mm;">
+          <span class="tag">Lapisan 02 • Citra &amp; Gerak</span>
+          <h3>AI Generatif Multimodal</h3>
+          <p style="font-size:8.35pt;">Membangkitkan studi atmosfer material, utilitas simulasi web iklim surya, hingga transisi kamera <em>multi-image ke video</em> berdasarkan jangkar visual terukur.</p>
+        </div>
+        <div class="card card--accent" style="padding:2.8mm 3.4mm;">
+          <span class="tag">Lapisan 03 • Eksekusi Kerja</span>
+          <h3>AI Agent + Tools / MCP</h3>
+          <p style="font-size:8.35pt;">Sistem agen yang memegang peralatan kerja nyata: membaca berkas lokal, mengatur jadwal, hingga mengeksekusi perintah geometri di SketchUp, Rhino, dan CAD.</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card card--accent" style="padding:2.8mm 3.4mm;">
+          <span class="tag">MCP 01 • SketchUp 2027</span>
+          <h3>Komponen &amp; Bayangan</h3>
+          <p style="font-size:8.25pt;">Via <code>sketchup_mcp (:8080)</code>, agen membangun grid 8 kolom <code>6,0 m</code>, 11 komponen <code>West_Fin_Module</code> putar <code>30°</code>, atap tritisan <code>1,8 m</code>, dan uji bayangan Denpasar.</p>
+        </div>
+        <div class="card" style="padding:2.8mm 3.4mm;">
+          <span class="tag">MCP 02 • Rhino 8 &amp; Grasshopper</span>
+          <h3>Dataflow NURBS Hidup</h3>
+          <p style="font-size:8.25pt;">Via <code>rhinomcp (:1999)</code> &amp; <code>gh_build_graph</code>, agen merakit <em>Number Slider</em>, <em>Series</em>, <em>Rotate</em>, dan <em>Extrude/Loft</em> sehingga parameter fasad tetap hidup sebelum di-<em>Bake</em>.</p>
+        </div>
+        <div class="card" style="padding:2.8mm 3.4mm;">
+          <span class="tag">MCP 03 • AutoCAD 2026</span>
+          <h3>Denah &amp; Tabel .DXF</h3>
+          <p style="font-size:8.25pt;">Via <code>autocad-mcp-pro</code> (<code>arch_grid</code>, <code>arch_wall</code>, <code>block_insert</code>, <code>arch_schedule</code>), agen menyusun denah terukur sekaligus menghitung <em>Room &amp; Window Schedule</em>.</p>
+        </div>
+      </div>
+
+      <div>
+        <span class="tag">Contoh Logika Parameter Python Lintas SketchUp, Rhino/Grasshopper &amp; AutoCAD MCP</span>
+        <div class="code-box" style="padding:2.5mm 3.6mm;font-size:7.75pt;">lebar_fasad = 6.0    # meter bentang fasad barat (6000 mm di AutoCAD / SketchUp)
+jarak_modul = 0.60   # meter jarak antar sirip (Number Slider Grasshopper = 0.60)
+sudut_putar = 30     # derajat putar terhadap bidang kaca barat
+jumlah_sirip = int(lebar_fasad / jarak_modul) + 1  # 11 modul konsisten lintas 3D &amp; 2D .dxf</div>
+      </div>
+
+      <div class="card" style="padding:2.6mm 3.8mm;">
+        <span class="tag">Alur Menuju Revit BIM &amp; Disiplin Audit Viewport</span>
+        <p style="font-size:8.35pt;">Periksa selalu satuan milimeter/meter, titik origin, definisi blok/komponen, dan penamaan layer (<code>ARS-FASAD-SIRIP</code>) setiap menjalankan otomasi MCP sebelum mengunci dokumen akhir di <strong>Revit BIM</strong>.</p>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Ar. I Made Sucita Ariasandika (@archi.mades)</span>
+      <span>Halaman 03 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 04: BAB 02 - MENGENAL HERMES AGENT & KANAL TELEGRAM BOT -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 02 • Mengenalkan Hermes Agent &amp; Kanal Telegram Bot</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Hermes Agent &amp; Integrasi Telegram Bot dalam Keseharian Arsitek</h2>
+        <p class="sec-lead">Berbeda dari chatbot biasa, sistem agen otonom seperti <strong>Hermes Agent</strong> (Nous Research) memegang akses langsung ke <em>tools</em> pembacaan berkas, penelusuran web, penjadwalan Cron, Kanban, MCP, serta kanal pesan seperti <strong>Telegram Bot Gateway</strong> agar arsitek dapat mendelegasikan tugas saat berada di lapangan:</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card card--accent">
+          <span class="tag">Fungsi 01 • Menambah Literasi</span>
+          <h3>Asisten Belajar &amp; Bedah Literatur</h3>
+          <p style="font-size:8.7pt;">Kirim topik teknis melalui chat bot atau konsol (misalnya standar SNI pencahayaan alami atau strategi peneduhan pasif); Hermes menelusuri rujukan primer, merangkum inti teorinya, serta menyusun daftar bacaan terstruktur untuk dipelajari lebih dalam.</p>
+        </div>
+
+        <div class="card">
+          <span class="tag">Fungsi 02 • Mengatur Jadwal</span>
+          <h3>Manajemen Waktu via Cron &amp; Kanban</h3>
+          <p style="font-size:8.7pt;">Arsitek kerap menangani beberapa tenggat sekaligus. Melalui modul <em>Cron</em> dan <em>Kanban</em>, Hermes menyusun lini masa mundur dari tenggat sidang/DED, memperbarui status kartu tugas studio, dan mengirim pengingat otomatis di kanal tim.</p>
+        </div>
+
+        <div class="card">
+          <span class="tag">Fungsi 03 • Merangkum Meeting</span>
+          <h3>Notulensi Klien, Asistensi &amp; Konsultan</h3>
+          <p style="font-size:8.7pt;">Catatan asistensi atau rapat koordinasi struktur/MEP yang panjang dirapikan menjadi tiga bagian tegas: (a) keputusan desain yang telah dikunci, (b) daftar revisi denah/potongan/3D, serta (c) pertanyaan terbuka untuk rapat berikutnya.</p>
+        </div>
+
+        <div class="card card--accent">
+          <span class="tag">Fungsi 04 • Mengumpulkan Referensi</span>
+          <h3>Riset Preseden &amp; Material Terverifikasi</h3>
+          <p style="font-size:8.7pt;">Dengan tool peramban dan pembaca dokumen, Hermes mencari preseden bangunan beriklim serupa beserta tautan resminya, sambil menandai secara jujur apabila suatu angka teknis belum tersedia di sumber publik.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="tag">Etika Kerahasiaan Komunikasi Klien pada Kanal Telegram Bot</span>
+        <h3>Gunakan Lingkungan Privat &amp; Contoh Fiktif untuk Demonstrasi Publik</h3>
+        <p style="font-size:8.65pt;">Saat menghubungkan Hermes Agent ke kanal pesan seperti <strong>Telegram Bot</strong>, pastikan server gateway berjalan pada infrastruktur privat yang terkendali, batasi ID pengguna yang diizinkan (<em>allowlist</em>), jangan mengunggah dokumen rahasia klien tanpa izin kontrak, dan selalu gunakan <strong>simulasi kasus fiktif</strong> ketika mempresentasikan alur kerja di ruang publik atau akademik.</p>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Kelompok Studi Cipta Loka • Universitas Udayana</span>
+      <span>Halaman 04 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 05: BAB 03 - ARSITEK SEBAGAI DECIDER & PENTINGNYA LITERASI -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 03 • Arsitek sebagai Decider &amp; Peran Kunci Literasi</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Arsitek Wajib Menjadi Decider: Jangan Biarkan AI Menentukan</h2>
+        <p class="sec-lead">Sebelum menerapkan AI, MCP, dan Hermes Agent ke dalam alur proyek, pegang teguh hierarki kepemimpinan ini: <strong>AI adalah pemberi usulan (<em>proposer</em>), sedangkan Arsitek adalah penentu keputusan (<em>Decider</em>).</strong></p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="tag">Bahaya Menyerahkan Kemudi</span>
+          <h3>Mengapa AI Tidak Boleh Menentukan Desain?</h3>
+          <ul>
+            <li><strong>Tanpa Pengalaman Bertubuh:</strong> AI memproses pola piksel dan teks statistik, tetapi tidak pernah merasakan pengapnya ruang tanpa ventilasi silang atau silaunya matahari barat pukul empat sore.</li>
+            <li><strong>Tanpa Akuntabilitas Hukum &amp; Etis:</strong> Ketika struktur bermasalah, anggaran membengkak, atau ruang gagal mewadahi penggunanya, tanggung jawab profesional sepenuhnya berada di pundak arsitek, bukan perangkat lunak.</li>
+            <li><strong>Risiko Homogenisasi Desain:</strong> Membiarkan mesin memilihkan desain akan melahirkan bangunan seragam yang tercerabut dari identitas tempat dan budaya masyarakat setempat.</li>
+          </ul>
+        </div>
+        <div class="card card--accent">
+          <span class="tag">Posisi Bermartabat</span>
+          <h3>Cara Kerja Seorang Arsitek Decider</h3>
+          <ul>
+            <li><strong>Merumuskan Kriteria Sejak Awal:</strong> Menentukan apa ukuran keberhasilan proyek sebelum meminta AI menghasilkan satu alternatif pun.</li>
+            <li><strong>Membedah &amp; Mengombinasikan:</strong> Tidak menelan bulat-bulat satu keluaran AI, melainkan mengambil logika terbaik, membuang bagian yang keliru, dan menyempurnakannya di atas model terukur.</li>
+            <li><strong>Memiliki Alasan yang Tegas:</strong> Mampu menjelaskan secara lisan dan teknis mengapa sebuah proporsi, material, atau orientasi dipilih di hadapan dosen penguji maupun pemberi tugas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card card--accent">
+        <span class="tag">Kunci Ketajaman Memilih</span>
+        <h3>Tambah Literasi Terus-Menerus Agar Tahu Mana yang Lebih Baik</h3>
+        <p>Bayangkan AI sanggup menyodorkan sepuluh alternatif gubahan fasad dan lima skenario program ruang dalam waktu sepuluh menit. Pertanyaan besarnya: <strong>dengan alat ukur apa Anda menilai bahwa Opsi ke-3 jauh lebih sehat dan layak bangun daripada Opsi ke-1?</strong> Jawabannya adalah <strong>kedalaman literasi arsiteknya</strong>.</p>
+        <div class="grid-3" style="margin-top:2.5mm;">
+          <div>
+            <strong>1. Literasi Ruang &amp; Budaya</strong>
+            <p style="font-size:8.4pt;margin-top:0.8mm;">Memahami sejarah arsitektur, proporsi klasik hingga kontemporer, tata ruang tradisional Bali (seperti kosmologi, skala manusia, dan ruang transisi), serta psikologi penghuni.</p>
+          </div>
+          <div>
+            <strong>2. Literasi Sains &amp; Tektonika</strong>
+            <p style="font-size:8.4pt;margin-top:0.8mm;">Menguasai fisika bangunan tropis, aliran panas dan cahaya, perilaku material terhadap cuaca lembap, penyaluran beban struktur, hingga detail konstruksi tahan bocor.</p>
+          </div>
+          <div>
+            <strong>3. Literasi Sistem &amp; Data Digital</strong>
+            <p style="font-size:8.4pt;margin-top:0.8mm;">Memahami logika kerja BIM, pemodelan parametrik, cara kerja agen AI, keterbatasan halusinasi model bahasa, serta pembacaan regulasi dan anggaran proyek.</p>
+          </div>
+        </div>
+        <p style="margin-top:2.2mm;">Semakin luas literasi seorang arsitek, semakin tajam mata dan nalarnya dalam menyaring keluaran AI. Tanpa literasi, kecepatan AI justru mempercepat lahirnya kesalahan desain.</p>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Ar. I Made Sucita Ariasandika (@archi.mades)</span>
+      <span>Halaman 05 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 06: BAB 04 - PETA IMPLEMENTASI AI PADA 7 FASE & BATAS ZONA MERAH -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 04 • Peta Implementasi AI pada 7 Fase &amp; Batas Zona Merah</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Matriks Implementasi AI, MCP, dan Hermes di Sepanjang Workflow</h2>
+        <p class="sec-lead">Gunakan matriks tujuh fase ini sebagai peta implementasi harian agar tim studio maupun biro tahu persis tugas mana yang dipercepat AI dan titik kritis mana yang wajib dikerjakan langsung di lapangan atau di perangkat BIM.</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:19%;">Tahap Proses</th>
+            <th style="width:29%;">Implementasi AI, Hermes &amp; MCP</th>
+            <th style="width:25%;">Zona Merah (Batas Keras AI)</th>
+            <th style="width:27%;">Kendali Wajib Arsitek</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>01. Data Collecting - Project Brief</strong></td>
+            <td>Hermes Agent merangkum transkrip wawancara klien, menyusun draf brief, dan mengelompokkan referensi awal.</td>
+            <td>Tidak dapat merasakan suasana lingkungan atau menangkap kebutuhan tak terucap penghuni.</td>
+            <td>Turun langsung ke lokasi, berdialog empatik, dan memeriksa dokumen regulasi tata ruang asli.</td>
+          </tr>
+          <tr>
+            <td><strong>02. Site Analysis</strong></td>
+            <td>Simulasi surya &amp; cuaca EPW melalui aplikasi web hasil AI (Helios Solar Engine) serta daftar periksa iklim mikro.</td>
+            <td>Satu foto tapak tidak membuktikan arah angin, kebisingan, atau kondisi tanah aktual.</td>
+            <td>Memverifikasi ukuran batas tanah, kontur nyata, lintasan matahari-angin, dan GSB/KDB/KLB.</td>
+          </tr>
+          <tr>
+            <td><strong>03. Space Programming</strong></td>
+            <td>Menyusun draf tabel luasan ruang, kapasitas pengguna, serta variasi matriks kedekatan fungsi.</td>
+            <td>Angka dari model bahasa kerap meleset dalam penjumlahan dan belum tentu sesuai standar SNI.</td>
+            <td>Menghitung ulang total luasan bersih-kotor, lebar sirkulasi keselamatan, servis, dan anggaran.</td>
+          </tr>
+          <tr>
+            <td><strong>04. Conceptual</strong></td>
+            <td>Menjadi lawan diskusi untuk menguji kekuatan narasi konsep, karakter suasana, dan respons iklim pasif.</td>
+            <td>Gagasan tekstual atau visual awal belum menjamin keaslian konteks maupun kejujuran struktur.</td>
+            <td>Mengikat jiwa ruang pada kearifan lokal, iklim tropis, dan arah keputusan Decider.</td>
+          </tr>
+          <tr>
+            <td><strong>05. Schematic</strong></td>
+            <td>Memicu variasi alternatif skema ruang serta eksplorasi awal modul tiga dimensi di SketchUp/Rhino.</td>
+            <td>Visual memikat belum membuktikan potongan bangunan bebas panas berlebih dan tampias hujan.</td>
+            <td>Menyeleksi skema terbaik berdasarkan potongan, aliran udara, proporsi, dan model 3D terukur.</td>
+          </tr>
+          <tr>
+            <td><strong>06. Development</strong></td>
+            <td>Membangkitkan geometri dan komponen parametrik via MCP di SketchUp, Rhino, atau AutoCAD.</td>
+            <td>Otomasi skrip tidak otomatis mendeteksi tabrakan jalur pemipaan MEP maupun detail sambungan.</td>
+            <td>Mengunci sistem struktur, selubung fasad, dan koordinasi lintas disiplin di model Revit BIM.</td>
+          </tr>
+          <tr>
+            <td><strong>07. Documentation &amp; Presentation</strong></td>
+            <td>Mempercepat dek presentasi web interaktif (vibe coding), rangkuman spek, dan video multi-image ke klien.</td>
+            <td>Tampilan interaktif tidak menggantikan ketepatan gambar kerja hukum maupun tanggung jawab profesi.</td>
+            <td>Menuntaskan paket DED presisi di Revit/CAD dan mempertanggungjawabkan setiap garis desain.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="running-foot">
+      <span>Kelompok Studi Cipta Loka • Universitas Udayana</span>
+      <span>Halaman 06 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 07: BAB 04 - IMPLEMENTASI FASE 01 & 02 (DATA COLLECTING, SOLAR STUDY & DIGITAL TWIN) -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 04 • Implementasi Fase 01 &amp; 02: Data Collecting, Solar Study &amp; Digital Twin</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Implementasi Hulu: Data Tapak, Helios Solar Study, dan Digital Twin</h2>
+        <p class="sec-lead">Kesalahan terbesar dalam pemakaian AI di arsitektur adalah meminta mesin membuat konsep sebelum arsiteknya sendiri memahami medan tapak. Implementasi di hulu selalu dimulai dari fakta lapangan yang terukur.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">1. Fase 01 • Data Collecting &amp; Project Brief</span>
+        <h3>Mengumpulkan Fakta Lapangan dan Merapikannya dengan Hermes Agent</h3>
+        <p>Model AI tidak mengetahui pohon besar mana yang harus dipertahankan di sudut lahan, bagaimana karakter tanah di lokasi proyek, atau kebiasaan harian keluarga klien Anda kecuali data tersebut dikumpulkan secara nyata. Setelah arsitek menuntaskan wawancara penghuni, pengukuran batas serta elevasi tanah, pencatatan utilitas sekitar, dan telaah GSB/KDB/KLB, <strong>Hermes Agent</strong> membantu menata transkrip wawancara dan regulasi tersebut menjadi dokumen <em>Project Brief</em> yang rapi dan mudah dilacak.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">2. Fase 02 • Site Analysis &amp; Solar Study (Helios Solar Engine v2.0)</span>
+        <h3>Mengubah Data Iklim EPW dan Konteks Tapak Menjadi Batasan Ruang</h3>
+        <p>Dari data tapak, arsitek memetakan lintasan matahari tahunan, potensi tampias hujan, kebisingan jalan, <em>view</em> terbaik, dan privasi tetangga. Melalui aplikasi web hasil AI seperti <strong>Helios Solar Engine v2.0</strong> (<code>http://100.76.27.91/solar/</code>), arsitek dapat mengimpor file cuaca terukur <strong>Denpasar-Ngurah.Rai.Intl.AP (.epw)</strong> beserta model massa 3D untuk menguji orientasi <em>yaw/pitch</em>, bayangan harian (05.50 s.d. 18.18), radiasi 797 W/m², suhu 29 °C, hingga angin 3,1 m/s, sementara kepekaan <em>sense of place</em> tetap diputuskan langsung oleh arsitek.</p>
+      </div>
+
+      <div class="card card--accent">
+        <span class="tag">3. Jangkar Konteks • Proses Digital Twin Tapak Eksisting</span>
+        <h3>Menghadirkan Konteks Nyata ke Dalam Ruang Kerja Digital</h3>
+        <p><strong>Digital Twin</strong> pada tahap hulu perancangan adalah representasi tiga dimensi digital yang akurat dari kondisi fisik tapak beserta lingkungan sekitarnya: mulai dari kemiringan kontur tanah, posisi vegetasi eksisting, lebar jalan, hingga tinggi massa bangunan tetangga yang membayangi lahan.</p>
+        <ul>
+          <li><strong>Sumber Pembentukan:</strong> Dapat dibangun dari gabungan gambar ukur topografi (CAD/titik elevasi), pemodelan konteks di SketchUp/Rhino/Revit, hingga pengolahan fotogrametri udara atau pemindaian LiDAR.</li>
+          <li><strong>Manfaat Krusial:</strong> Ketika gubahan massa alternatif diuji di atas Digital Twin, arsitek dapat langsung mengevaluasi jatuhnya bayangan nyata pada jam tertentu, kesinambungan skala terhadap tetangga, potongan kemiringan tanah (<em>cut and fill</em>), serta sudut pandang aktual dari tiap lantai.</li>
+          <li><strong>Penjaga Realitas:</strong> Digital Twin bertindak sebagai jangkar realitas supaya eksplorasi berbantuan AI tidak menghasilkan bangunan yang mengambang tanpa pijakan konteks.</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Ar. I Made Sucita Ariasandika (@archi.mades)</span>
+      <span>Halaman 07 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 08: BAB 04 - IMPLEMENTASI FASE 03 S.D. 05 (PROGRAMMING, CONCEPTUAL & ALTERNATIVE DESIGN) -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 04 • Implementasi Fase 03 s.d. 05: Programming, Conceptual &amp; Schematic</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Implementasi Eksplorasi: Program Ruang, Konsep, dan Alternatif Tropis</h2>
+        <p class="sec-lead">Setelah data tapak, Solar Study, dan Digital Twin siap, AI menjadi rekan kerja yang sangat produktif untuk mempercepat skenario program ruang, menguji ketajaman konsep, serta membandingkan alternatif desain secara kritis.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <span class="tag">Fase 03 • Space Programming</span>
+          <h3>Struktur Kebutuhan Ruang</h3>
+          <p>AI membantu mengolah catatan wawancara menjadi draf tabel ruang, pengelompokan zona publik-privat-servis, dan diagram kedekatan fungsi. <strong>Tugas Arsitek:</strong> memverifikasi standar dimensi minimum, rasio sirkulasi, jalur evakuasi, dan kesesuaian luasan terhadap anggaran.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Fase 04 • Conceptual</span>
+          <h3>Benang Merah Gagasan</h3>
+          <p>AI dipakai sebagai lawan diskusi untuk menguji argumen konsep serta mengeksplorasi suasana ruang dan material awal secara cepat. <strong>Tugas Arsitek:</strong> mengikat gagasan pada kearifan lokal, iklim tropis, dan kejujuran sistem struktur.</p>
+        </div>
+        <div class="card card--accent">
+          <span class="tag">Fase 05 • Schematic &amp; Alt</span>
+          <h3>Komparasi Opsi Terukur</h3>
+          <p>Alih-alih terpaku pada satu ide tunggal sejak awal, bantuan AI dan MCP memungkinkan kita menyusun 3 sampai 5 skema alternatif gubahan massa atau fasad secara paralel. <strong>Tugas Arsitek:</strong> menguji untung-rugi tiap opsi dan memilih solusi paling tepat.</p>
+        </div>
+      </div>
+
+      <img class="concepts-img" src="../deck/assets/concepts.png" alt="Tiga sketsa alternatif paviliun belajar tropis: veranda terbuka, courtyard tengah, dan kisi peneduh vertikal">
+      <div style="font-size:7.6pt;color:#3B4F49;margin-top:-2.2mm;">Contoh studi tiga Alternative Design paviliun belajar kampus tropis: Opsi A Veranda Terbuka (kiri), Opsi B Courtyard Tengah (tengah), dan Opsi C Kisi Peneduh Vertikal (kanan).</div>
+
+      <div class="card">
+        <span class="tag">Belajar dari Bangunan Nyata: SDE4, NUS Singapura</span>
+        <h3>Cara Seorang Decider Menguji Alternatif Melalui Potongan Iklim Tropis</h3>
+        <p>Pada bangunan nyata SDE4 di National University of Singapore (Serie + Multiply Architects, Surbana Jurong, dan Transsolar), kenyamanan ruang tropis tidak lahir dari dekorasi permukaan, melainkan atap peneduh beroverhang lebar, teras berpori tempat angin bergerak, serta sistem pendinginan hibrida terukur. Saat membandingkan tiga alternatif seperti gambar di atas, seorang arsitek menguji: bagaimana panjang tritisan Opsi A menahan tampias hujan miring, apakah rasio lebar <em>courtyard</em> Opsi B mampu melepas udara panas siang hari, dan bagaimana jarak sirip Opsi C menyeimbangkan penahan silau barat dengan keleluasaan pandangan keluar.</p>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Kelompok Studi Cipta Loka • Universitas Udayana</span>
+      <span>Halaman 08 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 09: BAB 04 - IMPLEMENTASI FASE 06 & 07 (DED BIM, VIDEO & VIBE CODING WEB) -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 04 • Implementasi Fase 06 &amp; 07: BIM, Video &amp; Vibe Coding Web</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Implementasi Hilir: Ketepatan DED BIM, Narasi Video &amp; Presentasi Web</h2>
+        <p class="sec-lead">Memasuki Fase 06 (Development) dan Fase 07 (Documentation &amp; Presentation), seluruh eksplorasi parameter dikunci ke dalam dokumen konstruksi presisi sekaligus disajikan secara imersif kepada klien maupun penguji.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Pilar Hilir 01 • Documentation Drawing (Revit BIM &amp; CAD)</span>
+        <h3>Menjaga Kebenaran Teknis Menuju Lapangan Konstruksi</h3>
+        <p>Sebagus apa pun konsep awal dan modul MCP yang dieksplorasi, kontraktor di lapangan membangun berdasarkan <strong>Documentation Drawing (Gambar Kerja / DED)</strong> yang terukur, jelas, dan bebas multitafsir.</p>
+        <ul>
+          <li><strong>Sumber Kebenaran Tunggal di BIM:</strong> Di perangkat seperti Revit, denah, tampak, potongan, detail konstruksi, hingga tabel jadwal pintu-jendela (<em>schedule</em>) terhubung dalam satu basis data model. Perubahan posisi bukaan pada denah secara otomatis memperbarui tampak dan tabel volume.</li>
+          <li><strong>Koordinasi Lintas Disiplin:</strong> Arsitek memimpin penyelarasan jalur balok struktur, kemiringan pipa air kotor, saluran air hujan atap tropis, serta ruang mesin MEP agar tidak terjadi pembongkaran di lapangan.</li>
+          <li><strong>Bantuan AI yang Tepat di Tahap Ini:</strong> Membantu menyusun daftar periksa kelengkapan notasi gambar, mengotomasi skrip kerapian penamaan lembar kerja, serta merangkum spesifikasi teknis material pendamping gambar.</li>
+        </ul>
+      </div>
+
+      <div class="card card--accent">
+        <span class="tag">Pilar Hilir 02 • Multi-Image Video &amp; Vibe Coding Web Presentation</span>
+        <h3>Komunikasi Ruang Sinematik dan Dek Interaktif di Peramban</h3>
+        <p>Pada tahap penyajian akhir, kombinasi <strong>AI Video Generation (Multi-Image ke Video)</strong> dan metode <strong>vibe coding berbasis web</strong> (HTML, CSS, dan JavaScript standar) melampaui keterbatasan slide PDF statis:</p>
+        <ul>
+          <li><strong>Rangkaian Multi-Image ke Video:</strong> Tiga citra render 4K yang sudah terkunci proporsi struktur, modul kisi kayu, dan materialnya diinterpolasi menjadi pergerakan kamera sinematik 10 detik tanpa merusak geometri rancangan.</li>
+          <li><strong>Perbandingan Opsi Secara Langsung di Web:</strong> Klien atau dosen penguji dapat menekan tab perbandingan <em>Alternative Design</em>, membuka simulasi surya, atau menggeser slider peneduh fasad langsung di layar saat diskusi berlangsung.</li>
+          <li><strong>Bukti Langsung:</strong> Dek presentasi HTML interaktif 20 bagian pada webinar Cipta Loka malam ini dirancang menggunakan pendekatan <em>vibe coding web-based</em> yang dipasangkan dengan buku saku PDF ini.</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Ar. I Made Sucita Ariasandika (@archi.mades)</span>
+      <span>Halaman 09 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 10: LEMBAR KERJA 6 TEMPLATE INSTRUKSI LINTAS TAHAP -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Panduan Praktis • Enam Template Instruksi Lintas Tahap</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Enam Template Instruksi Kerja seorang Arsitek Decider</h2>
+        <p class="sec-lead">Gunakan dan sesuaikan enam kerangka instruksi berikut pada pekerjaan studio maupun proyek biro. Selalu sertakan konteks nyata Anda dan minta pemisahan tegas antara fakta terverifikasi dan hipotesis awal.</p>
+      </div>
+
+      <div class="prompt-template">
+        <strong>01. Data Collecting &amp; Site Analysis (Memisahkan Fakta Survei dari Dugaan)</strong>
+        <p>“Saya baru melakukan survei tapak di [lokasi, mis. Denpasar Selatan] pukul [jam] dengan kondisi berikut [lampirkan catatan ukuran, kontur, vegetasi, jalan]. Kelompokkan menjadi faktor iklim, akses, kebisingan, dan regulasi, lalu pisahkan mana fakta yang sudah terukur dan mana data yang wajib saya cek ulang di lapangan untuk melengkapi Digital Twin.”</p>
+      </div>
+
+      <div class="prompt-template">
+        <strong>02. Programming &amp; Alternative Design (Menimbang Untung-Rugi Skema)</strong>
+        <p>“Berdasarkan kebutuhan ruang berikut [lampirkan daftar fungsi &amp; luas lahan], susun tiga skenario Alternative Design organisasi massa (misalnya massa kompak, courtyard tengah, dan paviliun berpori). Bandingkan kelebihan dan kelemahan tiap skema terhadap penghawaan silang, privasi akustik, serta efisiensi sirkulasi.”</p>
+      </div>
+
+      <div class="prompt-template">
+        <strong>03. Hermes Agent untuk Rangkuman Meeting &amp; Tindak Lanjut Revisi</strong>
+        <p>“Baca catatan rapat asistensi / koordinasi klien berikut [lampirkan teks]. Susun ringkasan terstruktur berisi: (1) keputusan desain yang telah dikunci, (2) daftar revisi spesifik untuk denah, potongan, dan model 3D, serta (3) jadwal tindak lanjut beserta pertanyaan yang masih harus dikonfirmasi.”</p>
+      </div>
+
+      <div class="prompt-template">
+        <strong>04. Hermes Agent untuk Menambah Literasi &amp; Referensi Terverifikasi</strong>
+        <p>“Carikan lima referensi bangunan pendidikan atau komunal di iklim tropis lembap yang menonjolkan strategi peneduhan pasif. Rangkum prinsip potongan atap dan material selubungnya, sertakan tautan sumber publikasi aslinya, dan tulis ‘data belum tersedia’ bila suatu angka tidak tercantum di sumber resmi.”</p>
+      </div>
+
+      <div class="prompt-template">
+        <strong>05. Modeling Parametrik Terukur melalui Jembatan MCP</strong>
+        <p>“Saya ingin membuat deretan sirip peneduh vertikal pada fasad barat sepanjang 6,0 meter di [SketchUp/Rhino] dengan jarak modul 60 cm, lebar sirip 25 cm, tebal 5 cm, dan sudut putar 30 derajat. Susun parameter koordinat dalam satuan meter dan buat komponen berulang pada layer bernama ‘ARS-FASAD-SIRIP’ agar mudah saya periksa di viewport.”</p>
+      </div>
+
+      <div class="prompt-template">
+        <strong>06. Vibe Coding Web-Based Presentation untuk Design Review</strong>
+        <p>“Bantu saya membuat halaman presentasi web satu berkas HTML/CSS/JS yang bersih dan responsif untuk memaparkan tiga opsi konsep proyek ini. Tampilkan hanya poin-poin kunci di tiap slide, sediakan tab pembanding untuk ketiga opsi massa, dan tambahkan panel catatan pembicara yang dapat dibuka-tutup.”</p>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Kelompok Studi Cipta Loka • Universitas Udayana</span>
+      <span>Halaman 10 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 11: KAJIAN DELEGASI DESAIN, HAK CIPTA, ETIKA PROFESI & 4 SARINGAN AUDIT -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 03 &amp; Audit Kualitas • Delegasi Desain, Hak Cipta &amp; Etika Profesi</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Batas Analogi Delegasi, Hak Cipta, Etika Profesi &amp; Saringan Audit</h2>
+        <p class="sec-lead"><em>Catatan metodologis: bahan diskusi akademik dan etika praktik, bukan pendapat hukum formal.</em> Kemiripan alur kerja <strong>Prinsipal ke Tim</strong> dengan <strong>Arsitek ke AI</strong> hanya berlaku pada tingkat proses, bukan kesamaan otomatis dalam status kepengarangan (<em>authorship</em>), hak cipta, maupun akuntabilitas profesi.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="tag">01 • Delegasi Tim Manusia vs Instrumen AI</span>
+          <h3>Martabat Subjek Kreatif &amp; Akuntabilitas</h3>
+          <p style="font-size:8.6pt;">Jangan pernah menyamakan staf manusia dengan AI: anggota tim adalah subjek kreatif bermartabat yang memiliki penilaian moral, hak moral, dan pengakuan kredit profesi. AI hanyalah instrumen komputasi tanpa lisensi arsitek; tanggung jawab keselamatan, struktur, dan regulasi tetap melekat pada manusia.</p>
+        </div>
+        <div class="card">
+          <span class="tag">02 • Rujukan Hak Cipta &amp; Bukti Kontribusi</span>
+          <h3>UU No. 28/2014 &amp; Rekam Jejak Desain</h3>
+          <p style="font-size:8.6pt;">Karya arsitektur dilindungi dalam <strong>UU RI No. 28 Tahun 2014 tentang Hak Cipta</strong> (telaah <strong>Pasal 33, 34, 36, dan 40</strong> beserta perjanjian kerja). Namun aturan tim manusia (Pasal 34) tidak otomatis berlaku identik pada AI. Sebagai pembanding (<em>US Copyright Office, 2025</em>), simpan selalu sketsa awal, revisi, dan log kurasi manusia.</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <span class="tag">Skenario A • Posisi Kuat</span>
+          <h3>AI sebagai Eksplorator</h3>
+          <p style="font-size:8.3pt;">Sketsa tapak, program ruang, dan potongan iklim dikunci manusia; AI dipakai menguji variasi awal yang dimodel ulang secara substansial.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Skenario B • Posisi Lemah</span>
+          <h3>Sekadar Memilih Prompt</h3>
+          <p style="font-size:8.3pt;">Memasukkan <em>prompt</em> singkat lalu memilih satu gambar AI nyaris tanpa olahan arsitektural lanjutan membuat klaim kepengarangan visual rapuh.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Skenario C • Gagal Etika</span>
+          <h3>Tanpa Validasi Teknis</h3>
+          <p style="font-size:8.3pt;">Menyerahkan keluaran AI ke klien atau kampus tanpa uji struktur, SNI, regulasi daerah, privasi data klien, dan keterbukaan akademik.</p>
+        </div>
+      </div>
+
+      <div class="card card--accent">
+        <span class="tag">Empat Saringan Audit Wajib Sebelum Keluaran AI Masuk ke Dokumen Desain</span>
+        <h3>Daftar Periksa Kendali Mutu seorang Arsitek Decider</h3>
+        <ul style="font-size:8.5pt;">
+          <li><strong>01. Validitas Sumber &amp; Regulasi:</strong> Buka langsung rujukan asli preseden/jurnal, cek ulang ketentuan GSB, KDB, KLB, ram, dan tangga darurat pada Perda/SNI resmi, serta hitung ulang tabel luasan program ruang.</li>
+          <li><strong>02. Konsistensi Geometri Model-ke-Visual:</strong> Audit empat titik antara model 3D/BIM dan visualisasi: ketepatan grid kolom struktur, elevasi potongan lantai, logika tritisan hujan tropis, serta skala tubuh manusia.</li>
+          <li><strong>03. Pembuktian Klaim Performa:</strong> Pisahkan hipotesis teks dari bukti terukur melalui simulasi bayangan matahari (<em>Digital Twin</em> / <em>Helios</em>), penghawaan silang, dan hitungan struktur yang jelas parameternya.</li>
+          <li><strong>04. Etika Akademik, Privasi Klien &amp; Kredit Tim:</strong> Patuhi aturan keterbukaan penggunaan AI di kampus, lindungi kerahasiaan dokumen/data tapak klien di biro, dan beri pengakuan kredit yang adil bagi rekan tim manusia.</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Ar. I Made Sucita Ariasandika (@archi.mades)</span>
+      <span>Halaman 11 / 12</span>
+    </footer>
+  </section>
+
+  <!-- HALAMAN 12: BAB 05 - KOMPAS RELEVANSI ARSITEK & SUMBER RUJUKAN -->
+  <section class="page">
+    <header class="running-head">
+      <span class="running-kicker">Bab 05 • Menjaga Relevansi Arsitek &amp; Sumber Rujukan</span>
+      <span>AI in Architecture: Redefining the Design Process</span>
+    </header>
+
+    <div class="page-body">
+      <div>
+        <h2 class="sec-title">Lima Kompas Agar Tetap Relevan sebagai Arsitek di Dunia AI</h2>
+        <p class="sec-lead">Ketika produksi visual permukaan makin cepat terotomasi, nilai seorang arsitek justru melompat naik pada ketajaman keputusan, keluasan literasi, penguasaan keterbangunan, dan kepekaan kemanusiaan.</p>
+      </div>
+
+      <div class="card">
+        <ol style="font-size:8.35pt;">
+          <li><strong>Berdirilah Tegas sebagai Decider:</strong> Latih keberanian merumuskan kriteria, menyaring alternatif secara kritis, dan mengambil keputusan akhir yang dapat Anda pertanggungjawabkan sepenuhnya tanpa bersembunyi di balik mesin.</li>
+          <li><strong>Perluas Literasi Secara Berkelanjutan:</strong> Rajinlah menambah literasi teori ruang, kearifan arsitektur lokal Bali dan Nusantara, sains bangunan, hingga literasi teknologi. Semakin kaya literasi Anda, semakin jernih Anda mengenali mana pilihan desain yang sungguh-sungguh lebih baik.</li>
+          <li><strong>Kuasai Fundamental Tektonika dan Fisika Bangunan:</strong> Pemahaman struktur, sambungan material, aliran air hujan, dan kenyamanan termal adalah radar utama Anda untuk mendeteksi kekeliruan keluaran AI dalam sekejap.</li>
+          <li><strong>Rangkai Ekosistem Alat dengan Luwes:</strong> Jangan terpaku menghafal tombol satu aplikasi; padukan keandalan Digital Twin, SketchUp, Rhino, dan Revit BIM dengan akselerasi Hermes Agent, jembatan MCP, video presentasi AI, serta komunikasi <em>vibe coding</em> berbasis web.</li>
+          <li><strong>Rawat Empati dan Pengalaman Ruang Nyata:</strong> Kunjungi bangunan terbangun, rasakan peralihan terang ke teduh di bawah tritisan, dengarkan cerita penghuninya, dan hadirkan arsitektur yang memuliakan kehidupan manusia.</li>
+        </ol>
+      </div>
+
+      <div class="card card--accent" style="display:grid;grid-template-columns:1fr auto;gap:4mm;align-items:center;">
+        <div>
+          <span class="tag">Refleksi Decider &amp; Akses Presentasi Web Interaktif (Full Experience)</span>
+          <p style="font-size:8.2pt;margin:0 0 1.4mm 0;"><strong>1.</strong> Berpijak pada data tapak nyata? <strong>2.</strong> Teruji literasi &amp; iklim bagi penghuni? <strong>3.</strong> Siap dipertanggungjawabkan di lapangan?</p>
+          <p style="font-size:7.8pt;margin:0;"><strong>Presentasi Web &amp; Unduhan:</strong> https://archimades27.github.io/ai-arsitektur-udayana-2026/<br><strong>Repositori GitHub (.DXF &amp; PDF):</strong> https://github.com/archimades27/ai-arsitektur-udayana-2026</p>
+        </div>
+        <div style="background:#FAF8F5;border:1pt solid #9E3B06;border-radius:2mm;padding:1.2mm;text-align:center;">
+          <svg role="img" aria-label="Kode QR Presentasi Web Interaktif" viewBox="0 0 37 37" width="66" height="66" shape-rendering="crispEdges" style="display:block;">
+            <path fill="#FAF8F5" d="M0 0h37v37H0z"/>
+            <path stroke="#090A0C" d="M2 2.5h7m1 0h4m2 0h1m2 0h2m3 0h1m3 0h7M2 3.5h1m5 0h1m1 0h1m2 0h1m4 0h1m1 0h3m1 0h1m3 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m4 0h2m1 0h1m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m3 0h2m3 0h1m1 0h5m1 0h2m1 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h2m1 0h5m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m5 0h3m5 0h1m2 0h2m1 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M13 9.5h1m1 0h1m5 0h2m1 0h3M2 10.5h1m2 0h7m1 0h1m3 0h3m1 0h1m4 0h2m2 0h1m1 0h3M2 11.5h3m1 0h2m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2m4 0h3M5 12.5h2m1 0h2m2 0h1m3 0h2m5 0h6m1 0h3m1 0h1M2 13.5h2m3 0h1m1 0h5m2 0h2m1 0h1m1 0h2m2 0h2m2 0h1m2 0h2M2 14.5h2m4 0h3m1 0h2m1 0h2m1 0h1m1 0h3m5 0h1m4 0h1M3 15.5h1m1 0h2m5 0h3m3 0h2m5 0h1m1 0h1m1 0h1m1 0h1M8 16.5h1m1 0h1m3 0h2m2 0h1m1 0h2m1 0h2m3 0h1m1 0h3M2 17.5h2m1 0h1m4 0h1m1 0h2m2 0h2m3 0h1m5 0h1m3 0h2m1 0h1M4 18.5h2m2 0h1m1 0h2m1 0h1m7 0h1m2 0h8M2 19.5h4m1 0h1m1 0h3m1 0h7m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1M2 20.5h2m1 0h6m2 0h1m2 0h3m2 0h3m1 0h1m2 0h2m1 0h2m1 0h1M2 21.5h1m1 0h4m7 0h3m4 0h1m2 0h2m1 0h1m1 0h3m1 0h1M3 22.5h1m1 0h2m1 0h1m1 0h1m1 0h3m2 0h2m1 0h2m7 0h1m1 0h1m1 0h1M2 23.5h3m1 0h1m3 0h1m1 0h2m1 0h2m1 0h1m1 0h2m2 0h2m3 0h2m1 0h1M2 24.5h1m1 0h2m1 0h2m4 0h2m1 0h2m1 0h1m3 0h4m1 0h1m1 0h1m1 0h3M2 25.5h1m2 0h3m2 0h2m3 0h2m2 0h2m3 0h2m1 0h1m2 0h1m1 0h1M2 26.5h3m2 0h3m1 0h3m3 0h2m2 0h1m3 0h6m3 0h1M10 27.5h2m1 0h1m1 0h4m1 0h1m1 0h1m3 0h1m3 0h1m1 0h2M2 28.5h7m1 0h1m1 0h1m1 0h2m1 0h1m2 0h7m1 0h1m1 0h1m1 0h1M2 29.5h1m5 0h1m1 0h1m2 0h1m1 0h2m3 0h3m2 0h2m3 0h4M2 30.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m1 0h7m2 0h1M2 31.5h1m1 0h3m1 0h1m1 0h3m1 0h2m1 0h1m2 0h3m2 0h1m1 0h1m1 0h1m1 0h4M2 32.5h1m1 0h3m1 0h1m2 0h3m2 0h1m1 0h4m1 0h1m1 0h2m2 0h3m1 0h2M2 33.5h1m5 0h1m2 0h2m3 0h1m1 0h1m1 0h3m1 0h2m1 0h1m1 0h6M2 34.5h7m1 0h2m2 0h1m2 0h1m1 0h1m2 0h1m2 0h2m1 0h4"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="tag">Sumber Studi Kasus, Regulasi &amp; Dokumentasi Teknis</span>
+        <ul style="font-size:7.1pt;">
+          <li style="margin-bottom:0.55mm;"><strong>National University of Singapore (SDE4 Net-Zero Building):</strong> https://news.nus.edu.sg/nus-opens-first-net-zero-energy-building/</li>
+          <li style="margin-bottom:0.55mm;"><strong>Multiply Architects (Dokumentasi SDE4 &amp; Kredit Foto Rory Gardiner):</strong> https://www.m-ply.com.sg/project/alocassia-apartments/</li>
+          <li style="margin-bottom:0.55mm;"><strong>Transsolar KlimaEngineering (Strategi Iklim Tropis SDE4):</strong> https://transsolar.com/publications/videos/how-to-create-a-net-zero-university-in-the-tropics-the-school-of-design-4-at-the-nus</li>
+          <li style="margin-bottom:0.55mm;"><strong>Hermes Agent &amp; MCP Documentation (Nous Research):</strong> https://hermes-agent.nousresearch.com/docs/user-guide/features/tools</li>
+          <li style="margin-bottom:0.55mm;"><strong>Helios Solar Engine v2.0 (Solar Study &amp; Wind Simulation):</strong> http://100.76.27.91/solar/</li>
+          <li style="margin-bottom:0.55mm;"><strong>UU RI No. 28 Tahun 2014 tentang Hak Cipta (Peraturan BPK):</strong> https://peraturan.bpk.go.id/Details/38690/uu-no-28-tahun-2014</li>
+          <li style="margin-bottom:0;"><strong>U.S. Copyright Office (2025, Copyright and AI Part 2: Copyrightability):</strong> https://www.copyright.gov/ai/</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="running-foot">
+      <span>Kelompok Studi Cipta Loka • Prodi Arsitektur Universitas Udayana • 13 November 2026</span>
+      <span>Halaman 12 / 12</span>
+    </footer>
+  </section>
+
+</body>
+</html>
